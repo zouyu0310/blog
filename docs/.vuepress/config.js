@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'TypeScript4 文档',
-  description: 'TypeScript4 最新官方文档翻译',
+  title: '邹宇的博客',
+  description: '',
   base: '/blog/',
   
   locales: {
@@ -12,6 +12,12 @@ module.exports = {
   themeConfig: {
         nav: [
             { text: '首页', link: '/' },
+			{
+				text: 'Elasticsearch', items: [
+				  { text: '核心知识篇', link: '/elasticsearch-core/' },
+				  { text: '高级知识篇', link: '/elasticsearch-senior/' }
+				]
+			 },
             { 
                 text: '邹宇的Blog', 
                 items: [
