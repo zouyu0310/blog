@@ -1,0 +1,13 @@
+# Springcloud笔记
+
+## 07_复习DependencyManagement和Dependencies
+
+Maven使用dependencyManagement元素来提供了一种管理依赖版本号的方式。
+
+通常会在一个组织或者项目的最顶层的父POM中看到dependencyManagement元素。
+
+使用pom.xml中的dependencyManagement元素能让所有在子项目中引用各依赖而不用显式的列出版本量。
+
+Maven会沿着父子层次向上走，直到找到一个拥有dependencyManagement元素的项目，然后它就会使用这个
+dependencyManagement元素中指定的版本号。
+

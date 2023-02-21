@@ -1,3 +1,10 @@
+//插件
+const pluginConf = require('../../config/pluginConfig.js');
+// 导航栏
+const navConf = require('../../config/navConfig.js');
+// 侧边栏 -- 使用自动生成侧边栏
+// const sidebarConf = require('../../config/sidebarConfig.js');
+
 module.exports = {
   // 标题
   title: '邹宇的博客',
@@ -11,61 +18,19 @@ module.exports = {
       lang: 'zh-CN'
     }
   },
-// 主题配置
+  markdown: {
+    lineNumbers: true,  // 代码显示行号
+  }, 
+  plugins: pluginConf,
+  // 主题配置
   themeConfig: {
     //最后更新时间
-    lastUpdated: 'Last Updated', 
-    nav: [
-      { text: '首页', link: '/' },
-      {
-        text: 'Elasticsearch', items: [
-          { text: '核心知识篇', link: '/elasticsearch-core/' },
-          { text: '高级知识篇', link: '/elasticsearch-senior/' }
-        ]
-      },
-      {
-        text: '邹宇的Blog',
-        items: [
-          { text: '搭建', link: 'https://github.com/mqyqingfeng/Blog/issues/235' },
-        ]
-      },
-      {
-        text: '官方文档学习',
-        items: [
-          { text: '跳转', link: 'https://www.vuepress.cn/' },
-        ]
-      }
-    ],
+    lastUpdated: 'Last Updated',
+    nav: navConf,
     // 左侧导航
-    sidebar: [
-      {
-        // 标题
-        title: '欢迎学习',
-        path: '/',
-        collapsable: false, // 下级列表不折叠
-        children: [
-          { title: "学前必读", path: "/" }
-        ]
-      },
-      {
-        title: "基础学习",
-        path: '/handbook/ConditionalTypes',
-        collapsable: false, // 不折叠
-        children: [
-          { title: "条件类型", path: "/handbook/ConditionalTypes" },
-          { title: "泛型", path: "/handbook/Generics" }
-        ],
-      },
-      {
-        title: "ES-core",
-        path: '/elasticsearch-core',
-        collapsable: false, // 不折叠
-        children: [
-          { title: "ES", path: "/elasticsearch-core/" }
-        ],
-      }
-    ]
+    // sidebar: sidebarConf
+    sidebarDepth: 1 // 侧边栏显示深度，默认为1，即显示一级标题
   },
 
-  plugins: ['@vuepress/nprogress']
+
 }
