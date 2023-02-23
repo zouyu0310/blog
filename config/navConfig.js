@@ -4,6 +4,8 @@ module.exports = [
         text: '文章',
         items: [
             { text: 'SpringCloud', link: '/SpringCloud_note/' },
+            { text: 'Jenkins', link: '/Deploy/Jenkins/Jenkins资料/' },
+            { text: 'Deploy', link: '/Deploy/' },
            
         ]
     }, 
