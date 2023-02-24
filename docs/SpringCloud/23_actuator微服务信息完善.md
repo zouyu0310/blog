@@ -26,7 +26,7 @@ eureka:
 
 eureka主页将显示payment8001，payment8002代替原来显示的IP地址。
 
-![](https://gitee.com/zouyu0310/images/raw/master/img/20211219231843.png)
+![](./images/20211219231843.png)
 
 
 
@@ -54,4 +54,4 @@ eureka:
 
 ```
 
-![image-20211219232319280](https://gitee.com/zouyu0310/images/raw/master/img/20211219232319.png)
+![image-20211219232319280](./images/20211219232319.png)

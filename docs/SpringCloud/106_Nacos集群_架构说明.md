@@ -4,7 +4,7 @@
 
 真实业务场景: 
 
-![image-20220103231001983](https://gitee.com/zouyu0310/images/raw/master/img/20220103231002.png)
+![image-20220103231001983](./images/20220103231002.png)
 
 
 

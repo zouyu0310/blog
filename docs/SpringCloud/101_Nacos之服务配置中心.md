@@ -145,7 +145,7 @@ ${prefix}-${spring-profile.active}.${file-extension}
 
 ```
 
-![image-20220103221259539](https://gitee.com/zouyu0310/images/raw/master/img/20220103221306.png)
+![image-20220103221259539](./images/20220103221306.png)
 
 
 
@@ -173,5 +173,4 @@ config:
 自带动态刷新   @RefreshScope
 
 修改下Nacos中的yaml配置文件，再次调用查看配置的接口，就会发现配置已经刷新。
-
 

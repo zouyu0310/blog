@@ -9,7 +9,7 @@
 在Spring Cloud框架里，熔断机制通过Hystrix实现。Hystrix会监控微服务间调用的状况，当失败的调用到一定阈值，缺省是5秒内20次调用失败，就会启动熔断机制。熔断机制的注解是@HystrixCommand。
 
 
-![image-20211229001517595](https://gitee.com/zouyu0310/images/raw/master/img/20211229001517.png)
+![image-20211229001517595](./images/20211229001517.png)
 
 
 

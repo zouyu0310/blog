@@ -60,13 +60,13 @@ cp cluster.conf.example  cluster.conf
 修改内容
 
 
-![image-20220104213248646](https://gitee.com/zouyu0310/images/raw/master/img/20220104213255.png)
+![image-20220104213248646](./images/20220104213255.png)
 
 
 
 注意: nacos2.0.3不需要修改此配置
 
-![image-20220104213739636](C:\Users\geecity\AppData\Roaming\Typora\typora-user-images\image-20220104213739636.png)
+![image-20220104213739636](./images/image-20220104213739636.png)
 
 执行方式 - `startup.sh - p 端口号`
 

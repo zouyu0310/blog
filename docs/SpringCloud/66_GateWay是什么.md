@@ -10,7 +10,7 @@ Cloud全家桶中有个很重要的组件就是网关，在1.x版本中都是采
 
 
 
-![image-20211229124906358](https://gitee.com/zouyu0310/images/raw/master/img/20211229124906.png)
+![image-20211229124906358](./images/20211229124906.png)
 
 Gateway是在Spring生态系统之上构建的API网关服务，基于Spring 5，Spring Boot 2和Project Reactor等技术。
 
@@ -34,4 +34,4 @@ Spring Cloud Gateway的目标提供统一的路由方式且基于 Filter链的�
 微服务架构中网关的位置
 
 
-![image-20211229125522975](https://gitee.com/zouyu0310/images/raw/master/img/20211229125523.png)
+![image-20211229125522975](./images/20211229125523.png)

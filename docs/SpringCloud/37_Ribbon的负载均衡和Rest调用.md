@@ -4,7 +4,7 @@
 
 总结：Ribbon其实就是一个软负载均衡的客户端组件，它可以和其他所需请求的客户端结合使用，和Eureka结合只是其中的一个实例。
 
-![image-20211226182731028](https://gitee.com/zouyu0310/images/raw/master/img/20211226182738.png)
+![image-20211226182731028](./images/20211226182738.png)
 
 
 
@@ -33,7 +33,7 @@ POM
 
 这是因为spring-cloud-starter-netflix-eureka-client自带了spring-cloud-starter-ribbon引用。
 
-![image-20211226183704403](https://gitee.com/zouyu0310/images/raw/master/img/20211226183704.png)
+![image-20211226183704403](./images/20211226183704.png)
 
 
 

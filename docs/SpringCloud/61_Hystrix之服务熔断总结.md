@@ -1,6 +1,6 @@
 ## 61_Hystrix之服务熔断总结
 
-![image-20211229104855442](https://gitee.com/zouyu0310/images/raw/master/img/20211229104902.png)
+![image-20211229104855442](./images/20211229104902.png)
 
 
 
@@ -12,7 +12,7 @@
 
 官网断路器流程图
 
-![image-20211229104925843](https://gitee.com/zouyu0310/images/raw/master/img/20211229104925.png)
+![image-20211229104925843](./images/20211229104925.png)
 
 **断路器在什么情况下开始起作用**
 

@@ -6,11 +6,11 @@
 
 - 新建dev配置DatalD
 
-![image-20220103223441403](https://gitee.com/zouyu0310/images/raw/master/img/20220103223441.png)
+![image-20220103223441403](./images/20220103223441.png)
 
 通过spring.profile.active属性就能进行多环境下配置文件的读取
 
-![image-20220103223455831](https://gitee.com/zouyu0310/images/raw/master/img/20220103223455.png)
+![image-20220103223455831](./images/20220103223455.png)
 
 **测试**
 

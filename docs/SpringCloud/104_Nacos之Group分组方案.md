@@ -4,7 +4,7 @@
 
 
 
-![image-20220103224032295](https://gitee.com/zouyu0310/images/raw/master/img/20220103224032.png)
+![image-20220103224032295](./images/20220103224032.png)
 
 
 

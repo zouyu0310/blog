@@ -2,7 +2,7 @@
 
 创建cloud-eureka-server7002工程，过程参考16_EurekaServer服务端安装
 
-![image-20211219202429571](https://gitee.com/zouyu0310/images/raw/master/img/20211219202429.png)
+![image-20211219202429571](./images/20211219202429.png)
 
 找到C:\Windows\System32\drivers\etc路径下的hosts文件，修改映射配置添加进hosts文件
 
@@ -11,7 +11,7 @@
 127.0.0.1 eureka7002.com
 ```
 
-![image-20211219202508050](https://gitee.com/zouyu0310/images/raw/master/img/20211219202508.png)
+![image-20211219202508050](./images/20211219202508.png)
 
 修改cloud-eureka-server7001配置文件，集群指向其他eureka
 
@@ -64,4 +64,4 @@ eureka:
 
 
 
-![image-20211219202419698](https://gitee.com/zouyu0310/images/raw/master/img/20211219202419.png)
+![image-20211219202419698](./images/20211219202419.png)

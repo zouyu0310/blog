@@ -54,15 +54,15 @@
     先访问正确地址，再访问错误地址，再正确地址，会发现图示断路器都是慢慢放开的。
 
 
-![image-20211229124102640](https://gitee.com/zouyu0310/images/raw/master/img/20211229124102.png)
+![image-20211229124102640](./images/20211229124102.png)
 
-![image-20211229124130831](https://gitee.com/zouyu0310/images/raw/master/img/20211229124130.png)
+![image-20211229124130831](./images/20211229124130.png)
 
 **如何看?**
 
 - 7色
 
-![image-20211229124401765](https://gitee.com/zouyu0310/images/raw/master/img/20211229124401.png)
+![image-20211229124401765](./images/20211229124401.png)
 
     1圈
 
@@ -75,7 +75,7 @@
 曲线：用来记录2分钟内流量的相对变化，可以通过它来观察到流量的上升和下降趋势。
 
     整图说明
-![image-20211229124419422](https://gitee.com/zouyu0310/images/raw/master/img/20211229124419.png)
+![image-20211229124419422](./images/20211229124419.png)
 
-![image-20211229124435714](https://gitee.com/zouyu0310/images/raw/master/img/20211229124435.png)
+![image-20211229124435714](./images/20211229124435.png)
 

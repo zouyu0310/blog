@@ -14,7 +14,7 @@ CAP：
 - A（可用性）：每个请求都能接受到一个响应，无论响应成功或失败
 - P（分区容错）：系统应该能持续提供服务，即使系统内部有消息丢失（分区）
 
-![image-20211220235126896](https://gitee.com/zouyu0310/images/raw/master/img/20211220235126.png)
+![image-20211220235126896](./images/20211220235126.png)
 
 
 
@@ -37,7 +37,7 @@ AP架构（Eureka）
 结论：违背了一致性C的要求，只满足可用性和分区容错，即AP
 
 
-![image-20211220235705257](https://gitee.com/zouyu0310/images/raw/master/img/20211220235705.png)
+![image-20211220235705257](./images/20211220235705.png)
 
 CP架构（ZooKeeper/Consul）
 
@@ -45,6 +45,6 @@ CP架构（ZooKeeper/Consul）
 
 结论：违背了可用性A的要求，只满足一致性和分区容错，即CP。
 
-![image-20211220235719317](https://gitee.com/zouyu0310/images/raw/master/img/20211220235719.png)
+![image-20211220235719317](./images/20211220235719.png)
 
 CP 与 AP 对立同一的矛盾关系。

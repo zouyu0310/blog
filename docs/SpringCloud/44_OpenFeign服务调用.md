@@ -188,5 +188,5 @@ Feign自带负载均衡配置项
 
 小结: 
 
-![image-20211227002830585](https://gitee.com/zouyu0310/images/raw/master/img/20211227002830.png)
+![image-20211227002830585](./images/20211227002830.png)
 

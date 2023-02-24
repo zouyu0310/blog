@@ -58,4 +58,4 @@ public class OrderHytrixController {
 
 
 
-![image-20211228234349010](https://gitee.com/zouyu0310/images/raw/master/img/20211228234356.png)
+![image-20211228234349010](./images/20211228234356.png)

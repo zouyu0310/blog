@@ -216,7 +216,7 @@ public class OrderController {
 
 ```
 
-![image-20211226231728059](https://gitee.com/zouyu0310/images/raw/master/img/20211226231728.png)
+![image-20211226231728059](./images/20211226231728.png)
 
 
 
@@ -224,7 +224,7 @@ public class OrderController {
 
 1 % 2取下标为1 的服务所以为8002
 
-![image-20211226231852347](https://gitee.com/zouyu0310/images/raw/master/img/20211226231852.png)
+![image-20211226231852347](./images/20211226231852.png)
 
 
 

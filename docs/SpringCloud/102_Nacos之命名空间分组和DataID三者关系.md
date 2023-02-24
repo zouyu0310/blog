@@ -22,7 +22,7 @@
 
 Nacos的图形化管理界面
 
-![image-20220103221714284](https://gitee.com/zouyu0310/images/raw/master/img/20220103221714.png)
+![image-20220103221714284](./images/20220103221714.png)
 
 
 
@@ -36,7 +36,7 @@ Nacos的图形化管理界面
 
 2三者情况
 
-![image-20220103221827760](https://gitee.com/zouyu0310/images/raw/master/img/20220103221827.png)
+![image-20220103221827760](./images/20220103221827.png)
 
 
 
@@ -52,5 +52,5 @@ Service就是微服务:一个Service可以包含多个Cluster (集群)，Nacos�
 最后是Instance，就是微服务的实例。
 
 
-![image-20220103222254516](https://gitee.com/zouyu0310/images/raw/master/img/20220103222254.png)
+![image-20220103222254516](./images/20220103222254.png)
 

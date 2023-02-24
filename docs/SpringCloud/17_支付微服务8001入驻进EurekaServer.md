@@ -24,7 +24,7 @@ EurekaClient端cloud-provider-payment8001将注册进EurekaServer成为服务提
     浏览器输入 - http://localhost:7001/ 主页内的Instances currently registered with Eureka会显示cloud-provider-payment8001的配置文件application.yml设置的应用名cloud-payment-service
 即  http://localhost:7001/  会显示Eureka注册了的client服务.
 
-![image-20211218234808079](https://gitee.com/zouyu0310/images/raw/master/img/20211218234808.png)
+![image-20211218234808079](./images/20230224175445.png)
 
 6.自我保护机制
 

@@ -88,24 +88,24 @@ PaymentHystrixMain8001启动
 
 8001未关闭
 
-![image-20211228235540245](https://gitee.com/zouyu0310/images/raw/master/img/20211228235540.png)
+![image-20211228235540245](./images/20211228235540.png)
 
 8001已关闭
 
 
 
-![image-20211228235641568](https://gitee.com/zouyu0310/images/raw/master/img/20211228235641.png)
+![image-20211228235641568](./images/20211228235641.png)
 
-![image-20211228235713128](https://gitee.com/zouyu0310/images/raw/master/img/20211228235713.png)
+![image-20211228235713128](./images/20211228235713.png)
 
 
 
 ## 如果方法上没有/或者有    @HystrixCommand  注解  访问8001服务的方法都是显示异常实现类中的方法
 
-![image-20211229000005731](https://gitee.com/zouyu0310/images/raw/master/img/20211229000005.png)
+![image-20211229000005731](./images/20211229000005.png)
 
 ## 但是,如果是80服务自身报错和8001方法无关就会调用80全局异常处理逻辑
 
-![image-20211229000255300](https://gitee.com/zouyu0310/images/raw/master/img/20211229000255.png)
+![image-20211229000255300](./images/20211229000255.png)
 
-![image-20211229000245309](https://gitee.com/zouyu0310/images/raw/master/img/20211229000245.png)
+![image-20211229000245309](./images/20211229000245.png)

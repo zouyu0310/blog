@@ -2,7 +2,7 @@
 
 lRule：根据特定算法中从服务列表中选取一个要访问的服务
 
-![image-20211226204137183](https://gitee.com/zouyu0310/images/raw/master/img/20211226204137.png)
+![image-20211226204137183](./images/20211226204137.png)
 
 
 

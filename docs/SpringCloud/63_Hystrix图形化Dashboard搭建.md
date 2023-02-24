@@ -92,4 +92,4 @@ public class HystrixDashboardMain9001 {
 
 访问成功说明搭建完成.
 
-![image-20211229122957992](https://gitee.com/zouyu0310/images/raw/master/img/20211229122958.png)
+![image-20211229122957992](./images/20211229122958.png)

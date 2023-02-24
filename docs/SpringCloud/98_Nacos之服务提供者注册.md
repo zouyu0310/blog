@@ -121,7 +121,7 @@ public class PaymentController {
 
 
 
-![image-20220101012215339](https://gitee.com/zouyu0310/images/raw/master/img/20220101012222.png)
+![image-20220101012215339](./images/20220101012222.png)
 
 
 
@@ -129,5 +129,5 @@ public class PaymentController {
 
 配置新的module9002后 同9001注册进nacos   -- 验证nacos自带负载均衡 用到了ribbon
 
-![image-20220101013213069](https://gitee.com/zouyu0310/images/raw/master/img/20220101013213.png)
+![image-20220101013213069](./images/20220101013213.png)
 

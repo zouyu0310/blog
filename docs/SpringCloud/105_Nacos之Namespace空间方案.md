@@ -2,7 +2,7 @@
 
 新建dev/test的Namespace
 
-![image-20220103224520143](https://gitee.com/zouyu0310/images/raw/master/img/20220103224520.png)
+![image-20220103224520143](./images/20220103224520.png)
 
 
 

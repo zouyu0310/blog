@@ -67,4 +67,4 @@ logging:
 
 
 
-![image-20211227005448185](https://gitee.com/zouyu0310/images/raw/master/img/20211227005448.png)
+![image-20211227005448185](./images/20211227005448.png)

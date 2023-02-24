@@ -66,9 +66,9 @@ public class PaymentMain8001 {
 
 浏览器输出：
 
-![image-20211220001309389](https://gitee.com/zouyu0310/images/raw/master/img/20211220001309.png)
+![image-20211220001309389](./images/20211220001309.png)
 
 日志输出:
 
-![image-20211220001514664](https://gitee.com/zouyu0310/images/raw/master/img/20211220001514.png)
+![image-20211220001514664](./images/20211220001514.png)
 

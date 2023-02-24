@@ -2,7 +2,7 @@
 
 1.Eureka集群原理说明
 
-![image-20211219200056244](https://gitee.com/zouyu0310/images/raw/master/img/20211219200056.png)
+![image-20211219200056244](./images/20211219200056.png)
 
 服务注册：将服务信息注册进注册中心
 

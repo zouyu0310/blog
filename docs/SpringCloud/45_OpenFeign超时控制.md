@@ -63,7 +63,7 @@ OpenFeign默认等待1秒钟，超过后报错
 
 
 
-![image-20211227004130689](https://gitee.com/zouyu0310/images/raw/master/img/20211227004130.png)
+![image-20211227004130689](./images/20211227004130.png)
 
 
 
