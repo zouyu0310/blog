@@ -1,11 +1,12 @@
 module.exports = [
     { text: '首页', link: '/' },
     {
-        text: '文章',
+        text: '笔记文章',
         items: [
-            { text: 'SpringCloud', link: '/SpringCloud_note/' },
-            { text: 'Jenkins', link: '/Deploy/Jenkins/Jenkins资料/' },
+            { text: 'SpringCloud', link: '/SpringCloud/' },
+            { text: 'Jenkins', link: '/Deploy/Jenkins/Jenkins/' },
             { text: 'Deploy', link: '/Deploy/' },
+            { text: 'MySQL', link: '/MySQL/' },
            
         ]
     }, 

@@ -1,15 +1,22 @@
 //插件
-const pluginConf = require('../../config/pluginConfig.js');
+const pluginConf = require('./config/pluginConfig.js');
 // 导航栏
-const navConf = require('../../config/navConfig.js');
+const navConf = require('./config/navConfig.js');
 // 侧边栏 -- 使用自动生成侧边栏
 // const sidebarConf = require('../../config/sidebarConfig.js');
 
 module.exports = {
   // 标题
   title: '邹宇的博客',
+   head: [
+        [
+            'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
+            { rel: 'icon', href: '/images/man.png' }
+        ]
+    ],
   // 标题下的描述
-  description: 'https://www.vuepress.cn/',
+  // description: 'https://www.vuepress.cn/',
+  description: '求知若渴，虚心若愚。</br> 愿你每天都在成长',
   /* github项目仓库名称 */
   base: '/blog/',
 

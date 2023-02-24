@@ -1,3 +1,9 @@
+---
+
+typora-copy-images-to: images
+typora-root-url: ./images
+---
+
 # Jenkins
 
 Jenkins，原名 Hudson，2011 年改为现在的名字。它是一个开源的实现持续集成的软件工具。
@@ -275,11 +281,11 @@ Jenkins 安装maven插件
 
 #### 1 Git配置
 
-![image-20220726213303821](images/image-20220726213303821.png)
+![image-20220726213303821](./images/image-20220726213303821.png)
 
 
 
-![image-20220726213505879](images/image-20220726213505879.png)
+![image-20220726213505879](./images/image-20220726213505879.png)
 
 
 
@@ -287,7 +293,7 @@ Jenkins 安装maven插件
 
 #### 2 Maven配置
 
-![image-20220726214239888](images/image-20220726214239888.png)
+![image-20220726214239888](./images/image-20220726214239888.png)
 
 
 
@@ -297,7 +303,7 @@ Jenkins 安装maven插件
 
 #### 3 Pom.xml配置
 
-![image-20220726214200732](images/image-20220726214200732.png)
+![image-20220726214200732](./images/image-20220726214200732.png)
 
 
 
@@ -622,16 +628,15 @@ under the License.
 
 在Configure System菜单里 往下来
 
-
 2 添加一台目标服务器
 
-![image-20220726223917263](images/image-20220726223917263.png)
+![image-20220726223917263](./images/image-20220726223917263.png)
 
-![image-20220726223937722](images/image-20220726223937722.png)
+![image-20220726223937722](./images/image-20220726223937722.png)
 
 3 修改配置
 
-![image-20220727165700419](images/image-20220727165700419.png)
+![image-20220727165700419](./images/image-20220727165700419.png)
 
 
 
@@ -732,7 +737,7 @@ fi
 
 在构建触发器中配置接口和token
 
-![image-20220728170250273](images/image-20220728170250273.png)
+![image-20220728170250273](./images/image-20220728170250273.png)
 
 
 
