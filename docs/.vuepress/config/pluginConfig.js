@@ -7,7 +7,7 @@ module.exports = {
     //   }}, // 自动侧边栏
     'vuepress-plugin-nuggets-style-copy':
     {
-      copyText: '复制代码',
+      copyText: '复制',
       tip: {
         content: '复制成功!'
       }
