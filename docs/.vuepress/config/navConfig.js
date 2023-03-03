@@ -6,7 +6,6 @@ module.exports = [
             { text: 'SpringCloud', link: '/SpringCloud/' },
             { text: 'Jenkins', link: '/Deploy/Jenkins/Jenkins/' },
             { text: 'Deploy', link: '/Deploy/' },
-            { text: 'MySQL', link: '/MySQL/' },
            
         ]
     }, 
@@ -16,6 +15,7 @@ module.exports = [
       text: '邹宇的Blog',
       items: [
         { text: '搭建', link: 'https://github.com/mqyqingfeng/Blog/issues/235' },
+        { text: 'chatGPT', link: 'https://zouyu0310.github.io/chatGPT_html/' },
       ]
     },
     {

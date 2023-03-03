@@ -14,8 +14,8 @@
 
 - 写作预览：
 
-  npm docs:dev
+  npm run docs:dev
 - 打包发布：
 
-  npm docs:build
+  npm run docs:build
 ---
