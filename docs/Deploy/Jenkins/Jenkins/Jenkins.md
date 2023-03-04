@@ -1,7 +1,7 @@
 ---
 
 typora-copy-images-to: images
-typora-root-url: ./images
+
 ---
 
 # Jenkins
@@ -281,19 +281,17 @@ Jenkins 安装maven插件
 
 #### 1 Git配置
 
-![image-20220726213303821](./images/image-20220726213303821.png)
-
-
-
-![image-20220726213505879](./images/image-20220726213505879.png)
+![image-20220726213303821](./images/image-20220726213303821.12a28158-1677832595013-10.png)
 
 
 
 
+
+![image-20220726213505879](./images/image-20220726213505879.6f05facb-1677832577516-7-1677832603878-13.png)
 
 #### 2 Maven配置
 
-![image-20220726214239888](./images/image-20220726214239888.png)
+![image-20220726214239888](./images/image-20220726214239888-1677832616258-15.png)
 
 
 
@@ -303,7 +301,7 @@ Jenkins 安装maven插件
 
 #### 3 Pom.xml配置
 
-![image-20220726214200732](./images/image-20220726214200732.png)
+![image-20220726214200732](./images/image-20220726214200732-1677832622635-17.png)
 
 
 
