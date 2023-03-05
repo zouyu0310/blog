@@ -226,6 +226,10 @@ systemctl stop firewalld.service
 
 
 
+```
+http://192.168.152.139:8080/
+```
+
 
 
 
@@ -265,7 +269,7 @@ https://maven.apache.org/
 
 Jenkins 安装maven插件
 
-![image-20230107224929580](https://gitee.com/zouyu0310/images/raw/master/img/20230107224936.png)
+![image-20230107224929580](./images/20230107224936.png)
 
 
 
