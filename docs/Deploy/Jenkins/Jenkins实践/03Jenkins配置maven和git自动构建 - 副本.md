@@ -1,3 +1,9 @@
+---
+title:  03Jenkins配置maven和git自动构建Jar
+date: 2023-3-6 19:19:58
+
+---
+
 # 03Jenkins配置maven和git自动构建Jar
 
 

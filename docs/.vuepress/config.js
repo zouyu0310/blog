@@ -39,7 +39,7 @@ module.exports = {
     nav: navConf,
     // 左侧导航
     // sidebar: sidebarConf
-    sidebarDepth: 2, // 侧边栏显示深度，默认为1，即显示一级标题
+    sidebarDepth: 5, // 侧边栏显示深度，默认为1，即显示一级标题
     editLinks: true,  // 开启编辑链接功能
     editLinkText: '帮助我改善此页面',  // 自定义超链接的文本内容
     repoLabel: 'GitHub',  // 链接的名称
