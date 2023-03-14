@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>03Jenkins配置maven和git自动构建Jar | 邹宇的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/images/man.png">
+    <meta name="description" content="求知若渴，虚心若愚。 愿你每天都在成长">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.bea8c83c.css" as="style"><link rel="preload" href="/blog/assets/js/app.75e80051.js" as="script"><link rel="preload" href="/blog/assets/js/2.79288f4f.js" as="script"><link rel="preload" href="/blog/assets/js/8.aa1c0a86.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.f3664f61.js"><link rel="prefetch" href="/blog/assets/js/100.05a66747.js"><link rel="prefetch" href="/blog/assets/js/101.5d9757a7.js"><link rel="prefetch" href="/blog/assets/js/102.49ca5ce1.js"><link rel="prefetch" href="/blog/assets/js/103.d65eb17f.js"><link rel="prefetch" href="/blog/assets/js/104.5bb2116b.js"><link rel="prefetch" href="/blog/assets/js/105.0ec13239.js"><link rel="prefetch" href="/blog/assets/js/106.963fffe9.js"><link rel="prefetch" href="/blog/assets/js/107.b1c6260e.js"><link rel="prefetch" href="/blog/assets/js/108.63a50938.js"><link rel="prefetch" href="/blog/assets/js/109.1607f0c5.js"><link rel="prefetch" href="/blog/assets/js/11.34ebdf99.js"><link rel="prefetch" href="/blog/assets/js/110.08db57e3.js"><link rel="prefetch" href="/blog/assets/js/111.577baf23.js"><link rel="prefetch" href="/blog/assets/js/112.cdc3bd0c.js"><link rel="prefetch" href="/blog/assets/js/113.abcb968d.js"><link rel="prefetch" href="/blog/assets/js/114.963512f8.js"><link rel="prefetch" href="/blog/assets/js/115.b486ccbb.js"><link rel="prefetch" href="/blog/assets/js/116.9a87766e.js"><link rel="prefetch" href="/blog/assets/js/117.3eb24965.js"><link rel="prefetch" href="/blog/assets/js/118.90665c4d.js"><link rel="prefetch" href="/blog/assets/js/119.8a3143c4.js"><link rel="prefetch" href="/blog/assets/js/12.c18c7c07.js"><link rel="prefetch" href="/blog/assets/js/120.88d736f3.js"><link rel="prefetch" href="/blog/assets/js/121.49d1e3b7.js"><link rel="prefetch" href="/blog/assets/js/122.078ed9f7.js"><link rel="prefetch" href="/blog/assets/js/123.902a1111.js"><link rel="prefetch" href="/blog/assets/js/124.23f2e5c6.js"><link rel="prefetch" href="/blog/assets/js/125.d27e5aa3.js"><link rel="prefetch" href="/blog/assets/js/126.ddd19284.js"><link rel="prefetch" href="/blog/assets/js/127.ab6af9dd.js"><link rel="prefetch" href="/blog/assets/js/128.862bce86.js"><link rel="prefetch" href="/blog/assets/js/129.d93f50aa.js"><link rel="prefetch" href="/blog/assets/js/13.d13185e8.js"><link rel="prefetch" href="/blog/assets/js/130.e7d44380.js"><link rel="prefetch" href="/blog/assets/js/131.535eda70.js"><link rel="prefetch" href="/blog/assets/js/132.bfe143c9.js"><link rel="prefetch" href="/blog/assets/js/133.587bdc1a.js"><link rel="prefetch" href="/blog/assets/js/134.f24bf81b.js"><link rel="prefetch" href="/blog/assets/js/135.6a94dbbd.js"><link rel="prefetch" href="/blog/assets/js/136.984c7e1d.js"><link rel="prefetch" href="/blog/assets/js/137.d7e75c9a.js"><link rel="prefetch" href="/blog/assets/js/138.412d2971.js"><link rel="prefetch" href="/blog/assets/js/139.8fcfafb9.js"><link rel="prefetch" href="/blog/assets/js/14.80f46097.js"><link rel="prefetch" href="/blog/assets/js/140.3c16b32f.js"><link rel="prefetch" href="/blog/assets/js/141.e10517a7.js"><link rel="prefetch" href="/blog/assets/js/142.61b955a9.js"><link rel="prefetch" href="/blog/assets/js/143.b2063d5e.js"><link rel="prefetch" href="/blog/assets/js/144.c05dabce.js"><link rel="prefetch" href="/blog/assets/js/145.e13bf420.js"><link rel="prefetch" href="/blog/assets/js/146.a8fedf1c.js"><link rel="prefetch" href="/blog/assets/js/147.c780bc35.js"><link rel="prefetch" href="/blog/assets/js/148.1598f7bf.js"><link rel="prefetch" href="/blog/assets/js/149.57bb1d67.js"><link rel="prefetch" href="/blog/assets/js/15.e97a55e9.js"><link rel="prefetch" href="/blog/assets/js/150.c6bed58b.js"><link rel="prefetch" href="/blog/assets/js/151.04657c7c.js"><link rel="prefetch" href="/blog/assets/js/152.a37b767f.js"><link rel="prefetch" href="/blog/assets/js/153.e6d5027b.js"><link rel="prefetch" href="/blog/assets/js/154.bd9b51b6.js"><link rel="prefetch" href="/blog/assets/js/155.6c8dc6b5.js"><link rel="prefetch" href="/blog/assets/js/156.720803e0.js"><link rel="prefetch" href="/blog/assets/js/157.207f2419.js"><link rel="prefetch" href="/blog/assets/js/158.e975333b.js"><link rel="prefetch" href="/blog/assets/js/159.220338a0.js"><link rel="prefetch" href="/blog/assets/js/16.5a75532a.js"><link rel="prefetch" href="/blog/assets/js/160.408b063d.js"><link rel="prefetch" href="/blog/assets/js/161.225c4e93.js"><link rel="prefetch" href="/blog/assets/js/162.ac97213a.js"><link rel="prefetch" href="/blog/assets/js/163.d2088525.js"><link rel="prefetch" href="/blog/assets/js/164.2c6d96d1.js"><link rel="prefetch" href="/blog/assets/js/165.c51d9348.js"><link rel="prefetch" href="/blog/assets/js/166.faaadfd5.js"><link rel="prefetch" href="/blog/assets/js/167.be4fcf29.js"><link rel="prefetch" href="/blog/assets/js/168.6b72c5a2.js"><link rel="prefetch" href="/blog/assets/js/169.96d3f965.js"><link rel="prefetch" href="/blog/assets/js/17.1030e3b6.js"><link rel="prefetch" href="/blog/assets/js/170.d2a72e48.js"><link rel="prefetch" href="/blog/assets/js/171.5aca2366.js"><link rel="prefetch" href="/blog/assets/js/172.fc30c625.js"><link rel="prefetch" href="/blog/assets/js/173.7c308ddc.js"><link rel="prefetch" href="/blog/assets/js/174.9db1d949.js"><link rel="prefetch" href="/blog/assets/js/175.81feb0f8.js"><link rel="prefetch" href="/blog/assets/js/176.25475112.js"><link rel="prefetch" href="/blog/assets/js/177.0f540079.js"><link rel="prefetch" href="/blog/assets/js/178.435c004b.js"><link rel="prefetch" href="/blog/assets/js/179.a8bdb524.js"><link rel="prefetch" href="/blog/assets/js/18.ce4962a7.js"><link rel="prefetch" href="/blog/assets/js/180.acb18476.js"><link rel="prefetch" href="/blog/assets/js/181.4ac436a9.js"><link rel="prefetch" href="/blog/assets/js/182.20fcc64d.js"><link rel="prefetch" href="/blog/assets/js/183.e3e77534.js"><link rel="prefetch" href="/blog/assets/js/184.9ed6d85c.js"><link rel="prefetch" href="/blog/assets/js/185.961c0967.js"><link rel="prefetch" href="/blog/assets/js/186.73ea848a.js"><link rel="prefetch" href="/blog/assets/js/187.cbe7ae38.js"><link rel="prefetch" href="/blog/assets/js/188.7b7618c7.js"><link rel="prefetch" href="/blog/assets/js/189.e4b4d096.js"><link rel="prefetch" href="/blog/assets/js/19.0f99f034.js"><link rel="prefetch" href="/blog/assets/js/190.3c692de4.js"><link rel="prefetch" href="/blog/assets/js/191.0ff6d115.js"><link rel="prefetch" href="/blog/assets/js/192.e3f09216.js"><link rel="prefetch" href="/blog/assets/js/193.361b33a8.js"><link rel="prefetch" href="/blog/assets/js/194.d41c19cb.js"><link rel="prefetch" href="/blog/assets/js/195.e05d8beb.js"><link rel="prefetch" href="/blog/assets/js/196.3ffc6b5c.js"><link rel="prefetch" href="/blog/assets/js/197.a2ca5bb9.js"><link rel="prefetch" href="/blog/assets/js/198.010d39ba.js"><link rel="prefetch" href="/blog/assets/js/199.0a03d11b.js"><link rel="prefetch" href="/blog/assets/js/20.f0c2ca48.js"><link rel="prefetch" href="/blog/assets/js/200.5249c9bd.js"><link rel="prefetch" href="/blog/assets/js/201.4e8f51fe.js"><link rel="prefetch" href="/blog/assets/js/202.30300cb2.js"><link rel="prefetch" href="/blog/assets/js/203.50f272b5.js"><link rel="prefetch" href="/blog/assets/js/204.6e0d3015.js"><link rel="prefetch" href="/blog/assets/js/205.65e15d17.js"><link rel="prefetch" href="/blog/assets/js/206.1290cce0.js"><link rel="prefetch" href="/blog/assets/js/207.f8343ab0.js"><link rel="prefetch" href="/blog/assets/js/208.9788f59d.js"><link rel="prefetch" href="/blog/assets/js/209.995b8ddb.js"><link rel="prefetch" href="/blog/assets/js/21.219e90e3.js"><link rel="prefetch" href="/blog/assets/js/210.524bce54.js"><link rel="prefetch" href="/blog/assets/js/211.57135f9e.js"><link rel="prefetch" href="/blog/assets/js/212.1a9b1a8c.js"><link rel="prefetch" href="/blog/assets/js/213.c6ac50e9.js"><link rel="prefetch" href="/blog/assets/js/214.e630a410.js"><link rel="prefetch" href="/blog/assets/js/215.7c756a96.js"><link rel="prefetch" href="/blog/assets/js/22.c202cb5e.js"><link rel="prefetch" href="/blog/assets/js/23.780beaf8.js"><link rel="prefetch" href="/blog/assets/js/24.c7e3cdbd.js"><link rel="prefetch" href="/blog/assets/js/25.c246cec7.js"><link rel="prefetch" href="/blog/assets/js/26.48af7966.js"><link rel="prefetch" href="/blog/assets/js/27.350b4e9d.js"><link rel="prefetch" href="/blog/assets/js/28.ba4ca4c5.js"><link rel="prefetch" href="/blog/assets/js/29.a065a25a.js"><link rel="prefetch" href="/blog/assets/js/3.0116482d.js"><link rel="prefetch" href="/blog/assets/js/30.2e0f64c9.js"><link rel="prefetch" href="/blog/assets/js/31.e7e5511c.js"><link rel="prefetch" href="/blog/assets/js/32.ef829d0a.js"><link rel="prefetch" href="/blog/assets/js/33.83e6b41d.js"><link rel="prefetch" href="/blog/assets/js/34.a49e4fbc.js"><link rel="prefetch" href="/blog/assets/js/35.58d85ac4.js"><link rel="prefetch" href="/blog/assets/js/36.b6766f1e.js"><link rel="prefetch" href="/blog/assets/js/37.dd9882c3.js"><link rel="prefetch" href="/blog/assets/js/38.5f98318e.js"><link rel="prefetch" href="/blog/assets/js/39.24b19b05.js"><link rel="prefetch" href="/blog/assets/js/4.25e2a846.js"><link rel="prefetch" href="/blog/assets/js/40.d5383d82.js"><link rel="prefetch" href="/blog/assets/js/41.55a63833.js"><link rel="prefetch" href="/blog/assets/js/42.25418d42.js"><link rel="prefetch" href="/blog/assets/js/43.d7297776.js"><link rel="prefetch" href="/blog/assets/js/44.34b0105a.js"><link rel="prefetch" href="/blog/assets/js/45.00c5f7d4.js"><link rel="prefetch" href="/blog/assets/js/46.5902c025.js"><link rel="prefetch" href="/blog/assets/js/47.65fdf4ad.js"><link rel="prefetch" href="/blog/assets/js/48.56c8b2f1.js"><link rel="prefetch" href="/blog/assets/js/49.918c23b2.js"><link rel="prefetch" href="/blog/assets/js/5.3a97d6eb.js"><link rel="prefetch" href="/blog/assets/js/50.ccc2034a.js"><link rel="prefetch" href="/blog/assets/js/51.b9526bd0.js"><link rel="prefetch" href="/blog/assets/js/52.39548195.js"><link rel="prefetch" href="/blog/assets/js/53.688decb7.js"><link rel="prefetch" href="/blog/assets/js/54.cf854ad0.js"><link rel="prefetch" href="/blog/assets/js/55.8e38e759.js"><link rel="prefetch" href="/blog/assets/js/56.c58299f5.js"><link rel="prefetch" href="/blog/assets/js/57.61eae49e.js"><link rel="prefetch" href="/blog/assets/js/58.10a6932e.js"><link rel="prefetch" href="/blog/assets/js/59.900a5746.js"><link rel="prefetch" href="/blog/assets/js/6.684aeca6.js"><link rel="prefetch" href="/blog/assets/js/60.c7c1414e.js"><link rel="prefetch" href="/blog/assets/js/61.e4596bcf.js"><link rel="prefetch" href="/blog/assets/js/62.4dc6ecd8.js"><link rel="prefetch" href="/blog/assets/js/63.1b91ca6c.js"><link rel="prefetch" href="/blog/assets/js/64.12d9c12f.js"><link rel="prefetch" href="/blog/assets/js/65.42853df5.js"><link rel="prefetch" href="/blog/assets/js/66.44631978.js"><link rel="prefetch" href="/blog/assets/js/67.b667cdd8.js"><link rel="prefetch" href="/blog/assets/js/68.93e88884.js"><link rel="prefetch" href="/blog/assets/js/69.c534d840.js"><link rel="prefetch" href="/blog/assets/js/7.f1b5fbf0.js"><link rel="prefetch" href="/blog/assets/js/70.3ff8ddb8.js"><link rel="prefetch" href="/blog/assets/js/71.e2b8ca1a.js"><link rel="prefetch" href="/blog/assets/js/72.6c64fce9.js"><link rel="prefetch" href="/blog/assets/js/73.d1dfa8c1.js"><link rel="prefetch" href="/blog/assets/js/74.4e9255b5.js"><link rel="prefetch" href="/blog/assets/js/75.9e533f8d.js"><link rel="prefetch" href="/blog/assets/js/76.2187edfd.js"><link rel="prefetch" href="/blog/assets/js/77.5bcc57ba.js"><link rel="prefetch" href="/blog/assets/js/78.186eed2e.js"><link rel="prefetch" href="/blog/assets/js/79.7ce935f9.js"><link rel="prefetch" href="/blog/assets/js/80.fe3a494c.js"><link rel="prefetch" href="/blog/assets/js/81.1e00c5b8.js"><link rel="prefetch" href="/blog/assets/js/82.a6849fa2.js"><link rel="prefetch" href="/blog/assets/js/83.e07777a9.js"><link rel="prefetch" href="/blog/assets/js/84.3cc627d7.js"><link rel="prefetch" href="/blog/assets/js/85.c7fae1d0.js"><link rel="prefetch" href="/blog/assets/js/86.ea14785a.js"><link rel="prefetch" href="/blog/assets/js/87.a065a863.js"><link rel="prefetch" href="/blog/assets/js/88.fa02b3af.js"><link rel="prefetch" href="/blog/assets/js/89.9a936be6.js"><link rel="prefetch" href="/blog/assets/js/9.62ed05c1.js"><link rel="prefetch" href="/blog/assets/js/90.f27fc9b7.js"><link rel="prefetch" href="/blog/assets/js/91.a2fd476a.js"><link rel="prefetch" href="/blog/assets/js/92.42f19bf9.js"><link rel="prefetch" href="/blog/assets/js/93.46bfe3b1.js"><link rel="prefetch" href="/blog/assets/js/94.095a757f.js"><link rel="prefetch" href="/blog/assets/js/95.247250ca.js"><link rel="prefetch" href="/blog/assets/js/96.21c7043c.js"><link rel="prefetch" href="/blog/assets/js/97.6b4737c2.js"><link rel="prefetch" href="/blog/assets/js/98.53dd7d0c.js"><link rel="prefetch" href="/blog/assets/js/99.7d9a9295.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.bea8c83c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/man.png" alt="邹宇的博客" class="logo"> <span class="site-name can-hide">邹宇的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a href="https://github.com/zouyu0310/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a href="https://github.com/zouyu0310/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Business</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Database</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Deploy</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/" aria-current="page" class="sidebar-link">Deploy笔记</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Jenkins</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/Jenkins/Jenkins/" class="sidebar-link">Jenkins笔记</a></li><li><a href="/blog/jenkins/" class="sidebar-link">Jenkins - 知识体系</a></li><li><a href="/blog/pages/3dedc8/" class="sidebar-link">Jenkins - 介绍</a></li><li><a href="/blog/pages/ec9790/" class="sidebar-link">从零开始用Jenkins自动构建部署SpringBoot项目</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html" class="sidebar-link">Jenkins</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/01环境准备.html" class="sidebar-link">01环境准备</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/02Jenkins启动配置.html" class="sidebar-link">02 配置</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html" class="active sidebar-link">03Jenkins配置maven和git自动构建Jar</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#构建新建item" class="sidebar-link">构建新建item</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#安装git" class="sidebar-link">安装git</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#配置git" class="sidebar-link">配置git</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#新增凭证" class="sidebar-link">新增凭证</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#配置maven" class="sidebar-link">配置maven</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#构建" class="sidebar-link">构建</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html#说明" class="sidebar-link">说明</a></li></ul></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/04自动发布到目标服务器.html" class="sidebar-link">04自动发布到目标服务器</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Other</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Server</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Cloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_03jenkins配置maven和git自动构建jar"><a href="#_03jenkins配置maven和git自动构建jar" class="header-anchor">#</a> 03Jenkins配置maven和git自动构建Jar</h1> <h2 id="构建新建item"><a href="#构建新建item" class="header-anchor">#</a> 构建新建item</h2> <p><img src="/blog/assets/img/image-20230305164556467.47580c97.png" alt="image-20230305164556467"></p> <h2 id="安装git"><a href="#安装git" class="header-anchor">#</a> 安装git</h2> <p>首次新增item请先安装git,拉取线上代码</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install git
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="配置git"><a href="#配置git" class="header-anchor">#</a> 配置git</h2> <p><img src="/blog/assets/img/image-20230305164929719.88982799.png" alt="image-20230305164929719"></p> <p>分支修改(默认master)</p> <p><img src="/blog/assets/img/image-20230305165301223.66887c7c.png" alt="image-20230305165301223"></p> <h3 id="新增凭证"><a href="#新增凭证" class="header-anchor">#</a> 新增凭证</h3> <p><img src="/blog/assets/img/image-20230305165914252.086d3c08.png" alt="image-20230305165914252"></p> <p><img src="/blog/assets/img/image-20230305165946622.d9d30bf5.png" alt="image-20230305165946622"></p> <h2 id="配置maven"><a href="#配置maven" class="header-anchor">#</a> 配置maven</h2> <p><img src="/blog/assets/img/image-20230305170322248.e56973f3.png" alt="image-20230305170322248"></p> <p>选择自己安装的maven</p> <p>/usr/local/maven/conf 配置国内镜像地址</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+&quot;License&quot;); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+&quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+--&gt;
+
+&lt;!--
+ | This is the configuration file for Maven. It can be specified at two levels:
+ |
+ |  1. User Level. This settings.xml file provides configuration for a single user,
+ |                 and is normally provided in ${user.home}/.m2/settings.xml.
+ |
+ |                 NOTE: This location can be overridden with the CLI option:
+ |
+ |                 -s /path/to/user/settings.xml
+ |
+ |  2. Global Level. This settings.xml file provides configuration for all Maven
+ |                 users on a machine (assuming they're all using the same Maven
+ |                 installation). It's normally provided in
+ |                 ${maven.conf}/settings.xml.
+ |
+ |                 NOTE: This location can be overridden with the CLI option:
+ |
+ |                 -gs /path/to/global/settings.xml
+ |
+ | The sections in this sample file are intended to give you a running start at
+ | getting the most out of your Maven installation. Where appropriate, the default
+ | values (values used when the setting is not specified) are provided.
+ |
+ |--&gt;
+&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+          xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;&gt;
+  &lt;!-- localRepository
+   | The path to the local repository maven will use to store artifacts.
+   |
+   | Default: ${user.home}/.m2/repository
+  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;
+  --&gt;
+
+  &lt;!-- interactiveMode
+   | This will determine whether maven prompts you when it needs input. If set to false,
+   | maven will use a sensible default value, perhaps based on some other setting, for
+   | the parameter in question.
+   |
+   | Default: true
+  &lt;interactiveMode&gt;true&lt;/interactiveMode&gt;
+  --&gt;
+
+  &lt;!-- offline
+   | Determines whether maven should attempt to connect to the network when executing a build.
+   | This will have an effect on artifact downloads, artifact deployment, and others.
+   |
+   | Default: false
+  &lt;offline&gt;false&lt;/offline&gt;
+  --&gt;
+
+  &lt;!-- pluginGroups
+   | This is a list of additional group identifiers that will be searched when resolving plugins by their prefix, i.e.
+   | when invoking a command line like &quot;mvn prefix:goal&quot;. Maven will automatically add the group identifiers
+   | &quot;org.apache.maven.plugins&quot; and &quot;org.codehaus.mojo&quot; if these are not already contained in the list.
+   |--&gt;
+  &lt;pluginGroups&gt;
+    &lt;!-- pluginGroup
+     | Specifies a further group identifier to use for plugin lookup.
+    &lt;pluginGroup&gt;com.your.plugins&lt;/pluginGroup&gt;
+    --&gt;
+  &lt;/pluginGroups&gt;
+
+  &lt;!-- proxies
+   | This is a list of proxies which can be used on this machine to connect to the network.
+   | Unless otherwise specified (by system property or command-line switch), the first proxy
+   | specification in this list marked as active will be used.
+   |--&gt;
+  &lt;proxies&gt;
+    &lt;!-- proxy
+     | Specification for one proxy, to be used in connecting to the network.
+     |
+    &lt;proxy&gt;
+      &lt;id&gt;optional&lt;/id&gt;
+      &lt;active&gt;true&lt;/active&gt;
+      &lt;protocol&gt;http&lt;/protocol&gt;
+      &lt;username&gt;proxyuser&lt;/username&gt;
+      &lt;password&gt;proxypass&lt;/password&gt;
+      &lt;host&gt;proxy.host.net&lt;/host&gt;
+      &lt;port&gt;80&lt;/port&gt;
+      &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt;
+    &lt;/proxy&gt;
+    --&gt;
+  &lt;/proxies&gt;
+
+  &lt;!-- servers
+   | This is a list of authentication profiles, keyed by the server-id used within the system.
+   | Authentication profiles can be used whenever maven must make a connection to a remote server.
+   |--&gt;
+  &lt;servers&gt;
+    &lt;!-- server
+     | Specifies the authentication information to use when connecting to a particular server, identified by
+     | a unique name within the system (referred to by the 'id' attribute below).
+     |
+     | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
+     |       used together.
+     |
+    &lt;server&gt;
+      &lt;id&gt;deploymentRepo&lt;/id&gt;
+      &lt;username&gt;repouser&lt;/username&gt;
+      &lt;password&gt;repopwd&lt;/password&gt;
+    &lt;/server&gt;
+    --&gt;
+
+    &lt;!-- Another sample, using keys to authenticate.
+    &lt;server&gt;
+      &lt;id&gt;siteServer&lt;/id&gt;
+      &lt;privateKey&gt;/path/to/private/key&lt;/privateKey&gt;
+      &lt;passphrase&gt;optional; leave empty if not used.&lt;/passphrase&gt;
+    &lt;/server&gt;
+    --&gt;
+  &lt;/servers&gt;
+
+  &lt;!-- mirrors
+   | This is a list of mirrors to be used in downloading artifacts from remote repositories.
+   |
+   | It works like this: a POM may declare a repository to use in resolving certain artifacts.
+   | However, this repository may have problems with heavy traffic at times, so people have mirrored
+   | it to several places.
+   |
+   | That repository definition will have a unique id, so we can create a mirror reference for that
+   | repository, to be used as an alternate download site. The mirror site will be the preferred
+   | server for that repository.
+   |--&gt;
+  &lt;mirrors&gt;
+    &lt;!-- mirror
+     | Specifies a repository mirror site to use instead of a given repository. The repository that
+     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
+     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
+     |
+    &lt;mirror&gt;
+      &lt;id&gt;mirrorId&lt;/id&gt;
+      &lt;mirrorOf&gt;repositoryId&lt;/mirrorOf&gt;
+      &lt;name&gt;Human Readable Name for this Mirror.&lt;/name&gt;
+      &lt;url&gt;http://my.repository.com/repo/path&lt;/url&gt;
+    &lt;/mirror&gt;
+     --&gt;
+    
+&lt;mirror&gt;
+   &lt;id&gt;alimaven&lt;/id&gt;
+   &lt;name&gt;aliyun maven&lt;/name&gt;
+   &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+   &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;    
+&lt;/mirror&gt;
+  &lt;/mirrors&gt;
+
+  &lt;!-- profiles
+   | This is a list of profiles which can be activated in a variety of ways, and which can modify
+   | the build process. Profiles provided in the settings.xml are intended to provide local machine-
+   | specific paths and repository locations which allow the build to work in the local environment.
+   |
+   | For example, if you have an integration testing plugin - like cactus - that needs to know where
+   | your Tomcat instance is installed, you can provide a variable here such that the variable is
+   | dereferenced during the build process to configure the cactus plugin.
+   |
+   | As noted above, profiles can be activated in a variety of ways. One way - the activeProfiles
+   | section of this document (settings.xml) - will be discussed later. Another way essentially
+   | relies on the detection of a system property, either matching a particular value for the property,
+   | or merely testing its existence. Profiles can also be activated by JDK version prefix, where a
+   | value of '1.4' might activate a profile when the build is executed on a JDK version of '1.4.2_07'.
+   | Finally, the list of active profiles can be specified directly from the command line.
+   |
+   | NOTE: For profiles defined in the settings.xml, you are restricted to specifying only artifact
+   |       repositories, plugin repositories, and free-form properties to be used as configuration
+   |       variables for plugins in the POM.
+   |
+   |--&gt;
+  &lt;profiles&gt;
+    &lt;!-- profile
+     | Specifies a set of introductions to the build process, to be activated using one or more of the
+     | mechanisms described above. For inheritance purposes, and to activate profiles via &lt;activatedProfiles/&gt;
+     | or the command line, profiles have to have an ID that is unique.
+     |
+     | An encouraged best practice for profile identification is to use a consistent naming convention
+     | for profiles, such as 'env-dev', 'env-test', 'env-production', 'user-jdcasey', 'user-brett', etc.
+     | This will make it more intuitive to understand what the set of introduced profiles is attempting
+     | to accomplish, particularly when you only have a list of profile id's for debug.
+     |
+     | This profile example uses the JDK version to trigger activation, and provides a JDK-specific repo.
+    &lt;profile&gt;
+      &lt;id&gt;jdk-1.4&lt;/id&gt;
+
+      &lt;activation&gt;
+        &lt;jdk&gt;1.4&lt;/jdk&gt;
+      &lt;/activation&gt;
+
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;jdk14&lt;/id&gt;
+          &lt;name&gt;Repository for JDK 1.4 builds&lt;/name&gt;
+          &lt;url&gt;http://www.myhost.com/maven/jdk14&lt;/url&gt;
+          &lt;layout&gt;default&lt;/layout&gt;
+          &lt;snapshotPolicy&gt;always&lt;/snapshotPolicy&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+    &lt;/profile&gt;
+    --&gt;
+
+    &lt;!--
+     | Here is another profile, activated by the system property 'target-env' with a value of 'dev',
+     | which provides a specific path to the Tomcat instance. To use this, your plugin configuration
+     | might hypothetically look like:
+     |
+     | ...
+     | &lt;plugin&gt;
+     |   &lt;groupId&gt;org.myco.myplugins&lt;/groupId&gt;
+     |   &lt;artifactId&gt;myplugin&lt;/artifactId&gt;
+     |
+     |   &lt;configuration&gt;
+     |     &lt;tomcatLocation&gt;${tomcatPath}&lt;/tomcatLocation&gt;
+     |   &lt;/configuration&gt;
+     | &lt;/plugin&gt;
+     | ...
+     |
+     | NOTE: If you just wanted to inject this configuration whenever someone set 'target-env' to
+     |       anything, you could just leave off the &lt;value/&gt; inside the activation-property.
+     |
+    &lt;profile&gt;
+      &lt;id&gt;env-dev&lt;/id&gt;
+
+      &lt;activation&gt;
+        &lt;property&gt;
+          &lt;name&gt;target-env&lt;/name&gt;
+          &lt;value&gt;dev&lt;/value&gt;
+        &lt;/property&gt;
+      &lt;/activation&gt;
+
+      &lt;properties&gt;
+        &lt;tomcatPath&gt;/path/to/tomcat/instance&lt;/tomcatPath&gt;
+      &lt;/properties&gt;
+    &lt;/profile&gt;
+    --&gt;
+  &lt;/profiles&gt;
+
+  &lt;!-- activeProfiles
+   | List of profiles that are active for all builds.
+   |
+  &lt;activeProfiles&gt;
+    &lt;activeProfile&gt;alwaysActiveProfile&lt;/activeProfile&gt;
+    &lt;activeProfile&gt;anotherAlwaysActiveProfile&lt;/activeProfile&gt;
+  &lt;/activeProfiles&gt;
+  --&gt;
+&lt;/settings&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br></div></div><p>指定maven下载地址为:</p> <p>/usr/local/maven/repository</p> <p>找到setting localRepository标签</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  &lt;localRepository&gt;/usr/local/maven/repository&lt;/localRepository&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="构建"><a href="#构建" class="header-anchor">#</a> 构建</h2> <p>直接在主页点击构建即可</p> <p><img src="/blog/assets/img/image-20230305172232932.72470917.png" alt="image-20230305172232932"></p> <p>并可查看任务的输出日志，第一次会下载所有的依赖，然后再进行构建 目标地址为 用户目录下， .jenkins为隐藏目录</p> <p><img src="/blog/assets/img/image-20230305172455560.7fec91f7.png" alt="image-20230305172455560"></p> <p>构建完成</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:56 min
+[INFO] Finished at: 2023-03-05T17:26:17+08:00
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /root/.jenkins/workspace/qianyan-first/pom.xml to com.qianyan/qianyan/2.0.0/qianyan-2.0.0.pom
+[JENKINS] Archiving /root/.jenkins/workspace/qianyan-first/target/XXX-2023-03-05-17-23-09259.war
+channel stopped
+Finished: SUCCESS
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="说明"><a href="#说明" class="header-anchor">#</a> 说明</h2> <p><strong>Pre Steps</strong> 构建前的操作</p> <p><strong>Post Steps</strong> 构建完后的操作</p> <p>pom文件是针对git地址而言，如果在文件夹内的pom 这里添加为 文件夹名/pom.xml</p> <p><img src="/blog/assets/img/image-20230305170529394.99ccbe6c.png" alt="image-20230305170529394"></p> <p>jenkins中的Build，设置打包时先清除之前的</p> <p>在Goals and options中，填入需要执行的mvn命令：<code>clean package</code> 还可以加其他命令如:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-DskipTests=true clean package
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这样每次构建前就会先清理之前的构建文件</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zouyu0310/blog/edit/master/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.md" target="_blank" rel="noopener noreferrer">帮助我改善此页面</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2023/3/13 上午11:02:37</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Deploy/Jenkins/Jenkins实践/02Jenkins启动配置.html" class="prev">
+        02 配置
+      </a></span> <span class="next"><a href="/blog/Deploy/Jenkins/Jenkins实践/04自动发布到目标服务器.html">
+        04自动发布到目标服务器
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#b7daff" loop="loop" order="random" preload="auto" volume="0.55" mutex="true" lrc-type="0" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/blog/assets/js/app.75e80051.js" defer></script><script src="/blog/assets/js/2.79288f4f.js" defer></script><script src="/blog/assets/js/8.aa1c0a86.js" defer></script>
+  </body>
+</html>
