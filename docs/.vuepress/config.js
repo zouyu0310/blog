@@ -9,11 +9,11 @@ module.exports = {
 
   // 主题 https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
   // 标题
-  title: '邹宇的博客',
+  title: 'zouyu-Blog',
    head: [
         [
             'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
-            { rel: 'icon', href: '/images/man.png' }
+            // { rel: 'icon', href: '/images/man.png' }
         ]
     ],
   // 标题下的描述
