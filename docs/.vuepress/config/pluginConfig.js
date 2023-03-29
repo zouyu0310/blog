@@ -5,13 +5,13 @@ module.exports = {
     // "vuepress-plugin-auto-sidebar": { collapse: {
     //     open: false,
     //   }}, // 自动侧边栏
-    'vuepress-plugin-nuggets-style-copy':
-    {
-      copyText: '复制',
-      tip: {
-        content: '复制成功!'
-      }
-    }, // 代码块复制
+    // 'vuepress-plugin-nuggets-style-copy':
+    // {
+    //   copyText: '复制',
+    //   tip: {
+    //     content: '复制成功!'
+    //   }
+    // }, // 代码块复制
 // https://xiyang6.gitee.io/docs/%E5%8D%9A%E5%AE%A2/%E6%8F%92%E4%BB%B6%E5%A4%A7%E5%85%A8/#_4%E3%80%81%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%8F%92%E4%BB%B6
     'meting':
     {
