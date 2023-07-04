@@ -6,16 +6,17 @@ const navConf = require('./config/navConfig.js');
 // const sidebarConf = require('../../config/sidebarConfig.js');
 
 module.exports = {
+  theme: 'reco',
 
   // 主题 https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
   // 标题
   title: 'zouyu-Blog',
-   head: [
-        [
-            'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
-            // { rel: 'icon', href: '/images/man.png' }
-        ]
-    ],
+  head: [
+    [
+      'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
+      { rel: 'icon', href: '/images/learn.png' }
+    ]
+  ],
   // 标题下的描述
   // description: 'https://www.vuepress.cn/',
   description: '求知若渴，虚心若愚。 愿你每天都在成长',
@@ -28,12 +29,12 @@ module.exports = {
     }
   },
   markdown: {
-    lineNumbers: true,  // 代码显示行号
-  }, 
+    lineNumbers: false,  // 代码显示行号
+  },
   plugins: pluginConf,
   // 主题配置
   themeConfig: {
-    logo: '/images/man.png', // 导航栏左侧的logo,不写就不显示
+    logo: '/images/learn.png', // 导航栏左侧的logo,不写就不显示
     //最后更新时间
     lastUpdated: 'Last Updated',
     nav: navConf,
@@ -45,7 +46,7 @@ module.exports = {
     repoLabel: 'GitHub',  // 链接的名称
     repo: 'https://github.com/zouyu0310/blog',  // 链接的地址
 
-    
+
   },
 
 
