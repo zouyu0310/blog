@@ -61,9 +61,7 @@ http://www.gulixueyuan.com/ 谷粒学院
 
 整合maven进来；
 
-![idea设置](http://images/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129151045.png?ynotemdtimestamp=1684370059116)
 
-![images/](http://images/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129151112.png?ynotemdtimestamp=1684370059116)
 
 ## 4、Spring Boot HelloWorld
 
@@ -246,7 +244,7 @@ public @interface EnableAutoConfiguration {
 
  将所有需要导入的组件以全类名的方式返回；这些组件就会被添加到容器中；
 
- 会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件； ![自动配置类](http://images/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129224104.png?ynotemdtimestamp=1684370059116)
+ 会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件； 
 
 有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
 
@@ -258,7 +256,7 @@ J2EE的整体整合解决方案和自动配置都在spring-boot-autoconfigure-1.
 
 
 
-Spring注解版（谷粒学院）
+
 
 ## 6、使用Spring Initializer快速创建Spring Boot项目
 
@@ -443,9 +441,9 @@ public class Person {
 
 #### 1、properties配置文件在idea中默认utf-8可能会乱码
 
-调整
+调整idea配置
 
-![idea配置乱码](http://images/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180130161620.png?ynotemdtimestamp=1684370059116)
+
 
 #### 2、@Value获取值和@ConfigurationProperties获取值比较
 
@@ -577,7 +575,7 @@ public class MyAppConfig {
 }
 ```
 
-\##4、配置文件占位符
+4、配置文件占位符
 
 ### 1、随机数
 
