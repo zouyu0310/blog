@@ -1,3 +1,7 @@
+---
+title: Redis7安装步骤
+date: 2023年7月11日08:56:08
+---
 # Redis7安装步骤
 
 1.下载获取redis-7.0.0.tar.gz后将它放入我们的Linux目录/opt

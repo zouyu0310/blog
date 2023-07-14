@@ -1,3 +1,8 @@
+---
+title: 卸载Redis步骤
+date: 2023年7月11日08:56:08
+---
+
 # 卸载Redis步骤
 
 1.停止redis-server服务

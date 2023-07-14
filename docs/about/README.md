@@ -1,5 +1,9 @@
-[[toc]]
 ---
+title: 关于我
+date: 2023年7月4日17:15:48
+---
+
+
 
 
 
@@ -19,11 +23,6 @@
 
 * 了解 Linux、windows、macOS 的开关机方式
 * 精通 Git 的 pull 和 push，并注册了 GitHub 帐号刷了一些 star
-
-
-
-
-## :email: 联系
 
 
 

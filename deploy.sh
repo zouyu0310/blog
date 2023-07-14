@@ -12,6 +12,7 @@ cd docs/.vuepress/dist
 git init
 git add -A
 git commit -m 'update commit'
+# git commit -m "update commit"
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f https://github.com/zouyu0310/blog.git master:gh-pages
