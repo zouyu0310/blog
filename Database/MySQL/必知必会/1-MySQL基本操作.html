@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL基本操作 | zouyu-Blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/blog/images/learn.png">
+    <meta name="description" content="求知若渴，虚心若愚。 愿你每天都在成长">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bbc000.css" as="style"><link rel="preload" href="/blog/assets/js/app.5c484a50.js" as="script"><link rel="preload" href="/blog/assets/js/3.8dc6c122.js" as="script"><link rel="preload" href="/blog/assets/js/166.e7c96a06.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.febbc81f.js"><link rel="prefetch" href="/blog/assets/js/100.9259ef63.js"><link rel="prefetch" href="/blog/assets/js/101.3da27d21.js"><link rel="prefetch" href="/blog/assets/js/102.6fa069ad.js"><link rel="prefetch" href="/blog/assets/js/103.43e9f62f.js"><link rel="prefetch" href="/blog/assets/js/104.6f86dc9e.js"><link rel="prefetch" href="/blog/assets/js/105.4a19bfc6.js"><link rel="prefetch" href="/blog/assets/js/106.e05fe0f9.js"><link rel="prefetch" href="/blog/assets/js/107.9742ed05.js"><link rel="prefetch" href="/blog/assets/js/108.2c8f6f4e.js"><link rel="prefetch" href="/blog/assets/js/109.3b96b505.js"><link rel="prefetch" href="/blog/assets/js/11.6c44e9c9.js"><link rel="prefetch" href="/blog/assets/js/110.3428e3da.js"><link rel="prefetch" href="/blog/assets/js/111.f1864178.js"><link rel="prefetch" href="/blog/assets/js/112.2ef1a6cc.js"><link rel="prefetch" href="/blog/assets/js/113.663107aa.js"><link rel="prefetch" href="/blog/assets/js/114.27ae3724.js"><link rel="prefetch" href="/blog/assets/js/115.da0b4d3a.js"><link rel="prefetch" href="/blog/assets/js/116.fbe6dcd2.js"><link rel="prefetch" href="/blog/assets/js/117.bf1d0b1a.js"><link rel="prefetch" href="/blog/assets/js/118.ac660281.js"><link rel="prefetch" href="/blog/assets/js/119.f381212e.js"><link rel="prefetch" href="/blog/assets/js/12.f16fe947.js"><link rel="prefetch" href="/blog/assets/js/120.d4e55d8d.js"><link rel="prefetch" href="/blog/assets/js/121.bb88ab51.js"><link rel="prefetch" href="/blog/assets/js/122.651f365e.js"><link rel="prefetch" href="/blog/assets/js/123.13ea0580.js"><link rel="prefetch" href="/blog/assets/js/124.6f849caf.js"><link rel="prefetch" href="/blog/assets/js/125.64fd3346.js"><link rel="prefetch" href="/blog/assets/js/126.dac1aa2e.js"><link rel="prefetch" href="/blog/assets/js/127.f9776ae0.js"><link rel="prefetch" href="/blog/assets/js/128.60667ffd.js"><link rel="prefetch" href="/blog/assets/js/129.4e3188ff.js"><link rel="prefetch" href="/blog/assets/js/13.b299c7b1.js"><link rel="prefetch" href="/blog/assets/js/130.714850ba.js"><link rel="prefetch" href="/blog/assets/js/131.0d15a4db.js"><link rel="prefetch" href="/blog/assets/js/132.7f8418d0.js"><link rel="prefetch" href="/blog/assets/js/133.1c5d88c7.js"><link rel="prefetch" href="/blog/assets/js/134.74ba0012.js"><link rel="prefetch" href="/blog/assets/js/135.11ec9e17.js"><link rel="prefetch" href="/blog/assets/js/136.d5e724ce.js"><link rel="prefetch" href="/blog/assets/js/137.bfadad53.js"><link rel="prefetch" href="/blog/assets/js/138.0d07a873.js"><link rel="prefetch" href="/blog/assets/js/139.6a2b3a93.js"><link rel="prefetch" href="/blog/assets/js/14.67fbf28f.js"><link rel="prefetch" href="/blog/assets/js/140.c34f86ef.js"><link rel="prefetch" href="/blog/assets/js/141.3ff0a6ed.js"><link rel="prefetch" href="/blog/assets/js/142.55be366b.js"><link rel="prefetch" href="/blog/assets/js/143.583f3dc6.js"><link rel="prefetch" href="/blog/assets/js/144.a88b6453.js"><link rel="prefetch" href="/blog/assets/js/145.966eae27.js"><link rel="prefetch" href="/blog/assets/js/146.d5da85c2.js"><link rel="prefetch" href="/blog/assets/js/147.96ff5977.js"><link rel="prefetch" href="/blog/assets/js/148.d9973f2d.js"><link rel="prefetch" href="/blog/assets/js/149.f13607c8.js"><link rel="prefetch" href="/blog/assets/js/15.b3e3f322.js"><link rel="prefetch" href="/blog/assets/js/150.50f22aa4.js"><link rel="prefetch" href="/blog/assets/js/151.6c8353f7.js"><link rel="prefetch" href="/blog/assets/js/152.4c15de81.js"><link rel="prefetch" href="/blog/assets/js/153.67297978.js"><link rel="prefetch" href="/blog/assets/js/154.123b78de.js"><link rel="prefetch" href="/blog/assets/js/155.2102ec2d.js"><link rel="prefetch" href="/blog/assets/js/156.3882f181.js"><link rel="prefetch" href="/blog/assets/js/157.685eca62.js"><link rel="prefetch" href="/blog/assets/js/158.9a955ef1.js"><link rel="prefetch" href="/blog/assets/js/159.dbd351c7.js"><link rel="prefetch" href="/blog/assets/js/16.c97a8088.js"><link rel="prefetch" href="/blog/assets/js/160.45a18a5c.js"><link rel="prefetch" href="/blog/assets/js/161.e2497d2b.js"><link rel="prefetch" href="/blog/assets/js/162.8377780a.js"><link rel="prefetch" href="/blog/assets/js/163.ae45f0a5.js"><link rel="prefetch" href="/blog/assets/js/164.6df8087d.js"><link rel="prefetch" href="/blog/assets/js/165.3f6123e3.js"><link rel="prefetch" href="/blog/assets/js/167.6030d2c9.js"><link rel="prefetch" href="/blog/assets/js/168.4286e6b2.js"><link rel="prefetch" href="/blog/assets/js/169.d4a167a8.js"><link rel="prefetch" href="/blog/assets/js/17.6cc239d7.js"><link rel="prefetch" href="/blog/assets/js/170.3ba6ab29.js"><link rel="prefetch" href="/blog/assets/js/171.188d2f49.js"><link rel="prefetch" href="/blog/assets/js/172.2466b9d8.js"><link rel="prefetch" href="/blog/assets/js/173.c84b34de.js"><link rel="prefetch" href="/blog/assets/js/174.cb219705.js"><link rel="prefetch" href="/blog/assets/js/175.9316fb59.js"><link rel="prefetch" href="/blog/assets/js/176.36d208a2.js"><link rel="prefetch" href="/blog/assets/js/177.c47c9a81.js"><link rel="prefetch" href="/blog/assets/js/178.51aee8c2.js"><link rel="prefetch" href="/blog/assets/js/179.4a4a372e.js"><link rel="prefetch" href="/blog/assets/js/18.dcbf7d0d.js"><link rel="prefetch" href="/blog/assets/js/180.5b7b3672.js"><link rel="prefetch" href="/blog/assets/js/181.d9cf5f99.js"><link rel="prefetch" href="/blog/assets/js/182.c2635527.js"><link rel="prefetch" href="/blog/assets/js/183.a44ae4fe.js"><link rel="prefetch" href="/blog/assets/js/184.194d8640.js"><link rel="prefetch" href="/blog/assets/js/185.bc5d30a9.js"><link rel="prefetch" href="/blog/assets/js/186.eff8552b.js"><link rel="prefetch" href="/blog/assets/js/187.5d951aeb.js"><link rel="prefetch" href="/blog/assets/js/188.5c1223fa.js"><link rel="prefetch" href="/blog/assets/js/189.5808866f.js"><link rel="prefetch" href="/blog/assets/js/19.2140c229.js"><link rel="prefetch" href="/blog/assets/js/190.994c47f6.js"><link rel="prefetch" href="/blog/assets/js/191.959d5f5f.js"><link rel="prefetch" href="/blog/assets/js/192.b5a07fb6.js"><link rel="prefetch" href="/blog/assets/js/193.311be80e.js"><link rel="prefetch" href="/blog/assets/js/194.82453715.js"><link rel="prefetch" href="/blog/assets/js/195.ff6d8d1d.js"><link rel="prefetch" href="/blog/assets/js/196.5c8e3b0a.js"><link rel="prefetch" href="/blog/assets/js/197.ef0327ec.js"><link rel="prefetch" href="/blog/assets/js/198.3cdb7156.js"><link rel="prefetch" href="/blog/assets/js/199.5c27985a.js"><link rel="prefetch" href="/blog/assets/js/2.1e74d1b7.js"><link rel="prefetch" href="/blog/assets/js/20.d0ed9959.js"><link rel="prefetch" href="/blog/assets/js/200.3456f9ed.js"><link rel="prefetch" href="/blog/assets/js/201.9d75fd1b.js"><link rel="prefetch" href="/blog/assets/js/202.857fb3c0.js"><link rel="prefetch" href="/blog/assets/js/203.7e9c5613.js"><link rel="prefetch" href="/blog/assets/js/204.b8b5fecf.js"><link rel="prefetch" href="/blog/assets/js/205.e94357c3.js"><link rel="prefetch" href="/blog/assets/js/206.241ec95d.js"><link rel="prefetch" href="/blog/assets/js/207.396b4219.js"><link rel="prefetch" href="/blog/assets/js/208.af2e1487.js"><link rel="prefetch" href="/blog/assets/js/209.b51b3443.js"><link rel="prefetch" href="/blog/assets/js/21.b25258d9.js"><link rel="prefetch" href="/blog/assets/js/210.7c7e4e9a.js"><link rel="prefetch" href="/blog/assets/js/211.6ce7171d.js"><link rel="prefetch" href="/blog/assets/js/212.5b57621d.js"><link rel="prefetch" href="/blog/assets/js/213.6ff1fe81.js"><link rel="prefetch" href="/blog/assets/js/214.79574d36.js"><link rel="prefetch" href="/blog/assets/js/215.5f478880.js"><link rel="prefetch" href="/blog/assets/js/216.f1990223.js"><link rel="prefetch" href="/blog/assets/js/217.4f0002d6.js"><link rel="prefetch" href="/blog/assets/js/218.1ebb365c.js"><link rel="prefetch" href="/blog/assets/js/219.e895b4b4.js"><link rel="prefetch" href="/blog/assets/js/22.10048574.js"><link rel="prefetch" href="/blog/assets/js/220.0bde54b7.js"><link rel="prefetch" href="/blog/assets/js/221.40d18f8d.js"><link rel="prefetch" href="/blog/assets/js/222.de2d8c15.js"><link rel="prefetch" href="/blog/assets/js/223.98359f1d.js"><link rel="prefetch" href="/blog/assets/js/224.10eb7b02.js"><link rel="prefetch" href="/blog/assets/js/225.bbc28cd7.js"><link rel="prefetch" href="/blog/assets/js/226.d956a74e.js"><link rel="prefetch" href="/blog/assets/js/227.698f6ee6.js"><link rel="prefetch" href="/blog/assets/js/228.63ee50cc.js"><link rel="prefetch" href="/blog/assets/js/229.b9f12d0e.js"><link rel="prefetch" href="/blog/assets/js/23.736c36fb.js"><link rel="prefetch" href="/blog/assets/js/230.160989ee.js"><link rel="prefetch" href="/blog/assets/js/231.e9fc614f.js"><link rel="prefetch" href="/blog/assets/js/232.09680974.js"><link rel="prefetch" href="/blog/assets/js/233.0b65fbee.js"><link rel="prefetch" href="/blog/assets/js/234.812382ac.js"><link rel="prefetch" href="/blog/assets/js/235.96ed847d.js"><link rel="prefetch" href="/blog/assets/js/236.1b7d21d9.js"><link rel="prefetch" href="/blog/assets/js/237.fd37c628.js"><link rel="prefetch" href="/blog/assets/js/238.b0a306e1.js"><link rel="prefetch" href="/blog/assets/js/239.29816201.js"><link rel="prefetch" href="/blog/assets/js/24.328221fb.js"><link rel="prefetch" href="/blog/assets/js/240.27ff7069.js"><link rel="prefetch" href="/blog/assets/js/241.d209581a.js"><link rel="prefetch" href="/blog/assets/js/242.4c9ff8ec.js"><link rel="prefetch" href="/blog/assets/js/243.977d4f2e.js"><link rel="prefetch" href="/blog/assets/js/244.a8efd7cb.js"><link rel="prefetch" href="/blog/assets/js/245.ef45f9be.js"><link rel="prefetch" href="/blog/assets/js/246.7f700f85.js"><link rel="prefetch" href="/blog/assets/js/247.df65ebb7.js"><link rel="prefetch" href="/blog/assets/js/248.197a8ac5.js"><link rel="prefetch" href="/blog/assets/js/249.bfda2705.js"><link rel="prefetch" href="/blog/assets/js/25.0ee891e6.js"><link rel="prefetch" href="/blog/assets/js/250.050376cc.js"><link rel="prefetch" href="/blog/assets/js/251.60cab832.js"><link rel="prefetch" href="/blog/assets/js/252.95d834d4.js"><link rel="prefetch" href="/blog/assets/js/253.42d40bc3.js"><link rel="prefetch" href="/blog/assets/js/254.1bde8cd1.js"><link rel="prefetch" href="/blog/assets/js/255.896d172a.js"><link rel="prefetch" href="/blog/assets/js/256.fe03a501.js"><link rel="prefetch" href="/blog/assets/js/257.5e4bc841.js"><link rel="prefetch" href="/blog/assets/js/258.2b9e8d1e.js"><link rel="prefetch" href="/blog/assets/js/259.d930ddfd.js"><link rel="prefetch" href="/blog/assets/js/26.c848430e.js"><link rel="prefetch" href="/blog/assets/js/260.1a7df354.js"><link rel="prefetch" href="/blog/assets/js/261.5ae465e5.js"><link rel="prefetch" href="/blog/assets/js/262.1301e18f.js"><link rel="prefetch" href="/blog/assets/js/263.e8152983.js"><link rel="prefetch" href="/blog/assets/js/264.54763d42.js"><link rel="prefetch" href="/blog/assets/js/265.197e4ff1.js"><link rel="prefetch" href="/blog/assets/js/266.5bb41ca7.js"><link rel="prefetch" href="/blog/assets/js/267.4ccc2952.js"><link rel="prefetch" href="/blog/assets/js/268.6c55874d.js"><link rel="prefetch" href="/blog/assets/js/269.16d4a1b6.js"><link rel="prefetch" href="/blog/assets/js/27.5ca08dc3.js"><link rel="prefetch" href="/blog/assets/js/270.062302a3.js"><link rel="prefetch" href="/blog/assets/js/271.f468a365.js"><link rel="prefetch" href="/blog/assets/js/272.7475f532.js"><link rel="prefetch" href="/blog/assets/js/273.0d63a7c5.js"><link rel="prefetch" href="/blog/assets/js/274.578eba27.js"><link rel="prefetch" href="/blog/assets/js/275.1f15360b.js"><link rel="prefetch" href="/blog/assets/js/276.f88b5eb0.js"><link rel="prefetch" href="/blog/assets/js/277.fbd7bc5a.js"><link rel="prefetch" href="/blog/assets/js/278.5aa0b66a.js"><link rel="prefetch" href="/blog/assets/js/279.37efe52d.js"><link rel="prefetch" href="/blog/assets/js/28.a492c74d.js"><link rel="prefetch" href="/blog/assets/js/280.08d98529.js"><link rel="prefetch" href="/blog/assets/js/281.10153dc3.js"><link rel="prefetch" href="/blog/assets/js/282.e5f74d64.js"><link rel="prefetch" href="/blog/assets/js/283.5c392061.js"><link rel="prefetch" href="/blog/assets/js/284.66399a0d.js"><link rel="prefetch" href="/blog/assets/js/285.5dc7dced.js"><link rel="prefetch" href="/blog/assets/js/286.7472a08f.js"><link rel="prefetch" href="/blog/assets/js/287.e3cdd175.js"><link rel="prefetch" href="/blog/assets/js/288.21067c33.js"><link rel="prefetch" href="/blog/assets/js/289.9e36a862.js"><link rel="prefetch" href="/blog/assets/js/29.eadbb91b.js"><link rel="prefetch" href="/blog/assets/js/290.21ac81c4.js"><link rel="prefetch" href="/blog/assets/js/291.de3f0b07.js"><link rel="prefetch" href="/blog/assets/js/292.91f191d1.js"><link rel="prefetch" href="/blog/assets/js/293.f48c5e4c.js"><link rel="prefetch" href="/blog/assets/js/294.f56eb1aa.js"><link rel="prefetch" href="/blog/assets/js/295.6ff86e37.js"><link rel="prefetch" href="/blog/assets/js/296.251d0cf1.js"><link rel="prefetch" href="/blog/assets/js/297.72ae5fbc.js"><link rel="prefetch" href="/blog/assets/js/298.912a5770.js"><link rel="prefetch" href="/blog/assets/js/299.c4c3b63b.js"><link rel="prefetch" href="/blog/assets/js/30.146ee850.js"><link rel="prefetch" href="/blog/assets/js/300.648c3383.js"><link rel="prefetch" href="/blog/assets/js/301.f1fd0ccc.js"><link rel="prefetch" href="/blog/assets/js/302.f7ac91ee.js"><link rel="prefetch" href="/blog/assets/js/303.f50c769e.js"><link rel="prefetch" href="/blog/assets/js/304.5a5924f1.js"><link rel="prefetch" href="/blog/assets/js/305.e78109af.js"><link rel="prefetch" href="/blog/assets/js/306.09a00b3d.js"><link rel="prefetch" href="/blog/assets/js/307.9fa922a5.js"><link rel="prefetch" href="/blog/assets/js/308.74419bea.js"><link rel="prefetch" href="/blog/assets/js/309.2c51491a.js"><link rel="prefetch" href="/blog/assets/js/31.80988661.js"><link rel="prefetch" href="/blog/assets/js/310.156ccd31.js"><link rel="prefetch" href="/blog/assets/js/311.069f1117.js"><link rel="prefetch" href="/blog/assets/js/312.6d459ca6.js"><link rel="prefetch" href="/blog/assets/js/313.6ae7fe1a.js"><link rel="prefetch" href="/blog/assets/js/314.3b47135c.js"><link rel="prefetch" href="/blog/assets/js/315.cba18b5b.js"><link rel="prefetch" href="/blog/assets/js/316.8d67ceb3.js"><link rel="prefetch" href="/blog/assets/js/317.31350d67.js"><link rel="prefetch" href="/blog/assets/js/318.29ad7071.js"><link rel="prefetch" href="/blog/assets/js/319.398d5045.js"><link rel="prefetch" href="/blog/assets/js/32.5a199b69.js"><link rel="prefetch" href="/blog/assets/js/320.b662d484.js"><link rel="prefetch" href="/blog/assets/js/321.b8a7b6e7.js"><link rel="prefetch" href="/blog/assets/js/322.8b0b5761.js"><link rel="prefetch" href="/blog/assets/js/323.4e6ceee7.js"><link rel="prefetch" href="/blog/assets/js/324.65d73c42.js"><link rel="prefetch" href="/blog/assets/js/325.dcbdeae1.js"><link rel="prefetch" href="/blog/assets/js/326.b22c3dfa.js"><link rel="prefetch" href="/blog/assets/js/327.f142e908.js"><link rel="prefetch" href="/blog/assets/js/328.253a21bb.js"><link rel="prefetch" href="/blog/assets/js/329.106d8581.js"><link rel="prefetch" href="/blog/assets/js/33.e7686e07.js"><link rel="prefetch" href="/blog/assets/js/330.529ff8ac.js"><link rel="prefetch" href="/blog/assets/js/331.37cc7ff0.js"><link rel="prefetch" href="/blog/assets/js/332.e9317511.js"><link rel="prefetch" href="/blog/assets/js/333.b5c7e46a.js"><link rel="prefetch" href="/blog/assets/js/334.2009974e.js"><link rel="prefetch" href="/blog/assets/js/335.bca289ec.js"><link rel="prefetch" href="/blog/assets/js/336.84f1154d.js"><link rel="prefetch" href="/blog/assets/js/337.8c97064c.js"><link rel="prefetch" href="/blog/assets/js/338.1d5c1357.js"><link rel="prefetch" href="/blog/assets/js/339.404240c7.js"><link rel="prefetch" href="/blog/assets/js/34.289f8b30.js"><link rel="prefetch" href="/blog/assets/js/340.024ff1f2.js"><link rel="prefetch" href="/blog/assets/js/341.1dee3e73.js"><link rel="prefetch" href="/blog/assets/js/342.e3a8d2f6.js"><link rel="prefetch" href="/blog/assets/js/343.de456d93.js"><link rel="prefetch" href="/blog/assets/js/344.5238d738.js"><link rel="prefetch" href="/blog/assets/js/345.74b731be.js"><link rel="prefetch" href="/blog/assets/js/346.4e4f49af.js"><link rel="prefetch" href="/blog/assets/js/347.2a4e7e0f.js"><link rel="prefetch" href="/blog/assets/js/348.3e73ee18.js"><link rel="prefetch" href="/blog/assets/js/349.d5f7a56f.js"><link rel="prefetch" href="/blog/assets/js/35.37abd4f4.js"><link rel="prefetch" href="/blog/assets/js/350.77e69f81.js"><link rel="prefetch" href="/blog/assets/js/351.dba0ef29.js"><link rel="prefetch" href="/blog/assets/js/352.750cf699.js"><link rel="prefetch" href="/blog/assets/js/353.f3be4eb7.js"><link rel="prefetch" href="/blog/assets/js/354.6b2a2669.js"><link rel="prefetch" href="/blog/assets/js/355.70868e6b.js"><link rel="prefetch" href="/blog/assets/js/356.0cc39cff.js"><link rel="prefetch" href="/blog/assets/js/357.2ee9aae8.js"><link rel="prefetch" href="/blog/assets/js/358.5b1c11e7.js"><link rel="prefetch" href="/blog/assets/js/359.a8b6bea3.js"><link rel="prefetch" href="/blog/assets/js/36.26eafdd6.js"><link rel="prefetch" href="/blog/assets/js/360.6ed495e2.js"><link rel="prefetch" href="/blog/assets/js/361.c101b410.js"><link rel="prefetch" href="/blog/assets/js/362.24750cde.js"><link rel="prefetch" href="/blog/assets/js/363.020c769d.js"><link rel="prefetch" href="/blog/assets/js/364.7523327f.js"><link rel="prefetch" href="/blog/assets/js/365.92f2559d.js"><link rel="prefetch" href="/blog/assets/js/366.ba082027.js"><link rel="prefetch" href="/blog/assets/js/367.4bdbca64.js"><link rel="prefetch" href="/blog/assets/js/368.79daafc9.js"><link rel="prefetch" href="/blog/assets/js/369.bb30cda0.js"><link rel="prefetch" href="/blog/assets/js/37.8c46f75a.js"><link rel="prefetch" href="/blog/assets/js/370.1cd1987a.js"><link rel="prefetch" href="/blog/assets/js/371.081732d4.js"><link rel="prefetch" href="/blog/assets/js/372.67807a93.js"><link rel="prefetch" href="/blog/assets/js/373.133b4c91.js"><link rel="prefetch" href="/blog/assets/js/374.a96fbb80.js"><link rel="prefetch" href="/blog/assets/js/375.ce2e2a09.js"><link rel="prefetch" href="/blog/assets/js/376.1acbe8f3.js"><link rel="prefetch" href="/blog/assets/js/377.6011b78c.js"><link rel="prefetch" href="/blog/assets/js/378.9411f001.js"><link rel="prefetch" href="/blog/assets/js/379.fc197684.js"><link rel="prefetch" href="/blog/assets/js/38.8036c832.js"><link rel="prefetch" href="/blog/assets/js/380.e682b0f7.js"><link rel="prefetch" href="/blog/assets/js/381.0150670b.js"><link rel="prefetch" href="/blog/assets/js/382.a2a73140.js"><link rel="prefetch" href="/blog/assets/js/383.67492a6d.js"><link rel="prefetch" href="/blog/assets/js/384.0c156684.js"><link rel="prefetch" href="/blog/assets/js/385.7a674006.js"><link rel="prefetch" href="/blog/assets/js/386.7db443e2.js"><link rel="prefetch" href="/blog/assets/js/387.861fc2ad.js"><link rel="prefetch" href="/blog/assets/js/388.53293f8b.js"><link rel="prefetch" href="/blog/assets/js/389.83de2a5a.js"><link rel="prefetch" href="/blog/assets/js/39.1fcc887a.js"><link rel="prefetch" href="/blog/assets/js/390.1b032dee.js"><link rel="prefetch" href="/blog/assets/js/391.5409d13c.js"><link rel="prefetch" href="/blog/assets/js/392.95ee1817.js"><link rel="prefetch" href="/blog/assets/js/393.bfbb4e02.js"><link rel="prefetch" href="/blog/assets/js/394.45f5f3ac.js"><link rel="prefetch" href="/blog/assets/js/395.d2bc26cb.js"><link rel="prefetch" href="/blog/assets/js/396.9b919efe.js"><link rel="prefetch" href="/blog/assets/js/397.63ae1728.js"><link rel="prefetch" href="/blog/assets/js/398.2e8cd381.js"><link rel="prefetch" href="/blog/assets/js/399.cce2bc74.js"><link rel="prefetch" href="/blog/assets/js/4.0a112c8e.js"><link rel="prefetch" href="/blog/assets/js/40.f03ea582.js"><link rel="prefetch" href="/blog/assets/js/400.bb8c8f36.js"><link rel="prefetch" href="/blog/assets/js/401.f6c8e368.js"><link rel="prefetch" href="/blog/assets/js/402.a707dd0b.js"><link rel="prefetch" href="/blog/assets/js/403.0246ef9d.js"><link rel="prefetch" href="/blog/assets/js/404.4e8fab18.js"><link rel="prefetch" href="/blog/assets/js/405.aac86c74.js"><link rel="prefetch" href="/blog/assets/js/406.ec295aee.js"><link rel="prefetch" href="/blog/assets/js/407.0c9bfe75.js"><link rel="prefetch" href="/blog/assets/js/408.90280ec4.js"><link rel="prefetch" href="/blog/assets/js/409.17f43c16.js"><link rel="prefetch" href="/blog/assets/js/41.14a66d79.js"><link rel="prefetch" href="/blog/assets/js/410.a8bcf7af.js"><link rel="prefetch" href="/blog/assets/js/411.1c299cf8.js"><link rel="prefetch" href="/blog/assets/js/412.993fde1e.js"><link rel="prefetch" href="/blog/assets/js/413.24086a2e.js"><link rel="prefetch" href="/blog/assets/js/414.669b21b7.js"><link rel="prefetch" href="/blog/assets/js/415.c6e0b851.js"><link rel="prefetch" href="/blog/assets/js/416.2c0b5a27.js"><link rel="prefetch" href="/blog/assets/js/417.035fbe19.js"><link rel="prefetch" href="/blog/assets/js/418.e9ba8e2d.js"><link rel="prefetch" href="/blog/assets/js/419.40436cbb.js"><link rel="prefetch" href="/blog/assets/js/42.7ca1a3b9.js"><link rel="prefetch" href="/blog/assets/js/420.a44f38b1.js"><link rel="prefetch" href="/blog/assets/js/421.d483449e.js"><link rel="prefetch" href="/blog/assets/js/422.85f0223d.js"><link rel="prefetch" href="/blog/assets/js/423.73b2df81.js"><link rel="prefetch" href="/blog/assets/js/424.c171262a.js"><link rel="prefetch" href="/blog/assets/js/425.84861e5f.js"><link rel="prefetch" href="/blog/assets/js/426.50769ad5.js"><link rel="prefetch" href="/blog/assets/js/427.4f055173.js"><link rel="prefetch" href="/blog/assets/js/428.f1a79a71.js"><link rel="prefetch" href="/blog/assets/js/429.0b1e1ae8.js"><link rel="prefetch" href="/blog/assets/js/43.7f730e4f.js"><link rel="prefetch" href="/blog/assets/js/430.98b90971.js"><link rel="prefetch" href="/blog/assets/js/431.ccab63f7.js"><link rel="prefetch" href="/blog/assets/js/432.b36287bb.js"><link rel="prefetch" href="/blog/assets/js/433.b629a88d.js"><link rel="prefetch" href="/blog/assets/js/434.94c5b829.js"><link rel="prefetch" href="/blog/assets/js/435.2f5ebc90.js"><link rel="prefetch" href="/blog/assets/js/436.af40a468.js"><link rel="prefetch" href="/blog/assets/js/437.1ac4edac.js"><link rel="prefetch" href="/blog/assets/js/438.4b5c3858.js"><link rel="prefetch" href="/blog/assets/js/439.b201f9e1.js"><link rel="prefetch" href="/blog/assets/js/44.6a0d0a24.js"><link rel="prefetch" href="/blog/assets/js/440.90bbfc9c.js"><link rel="prefetch" href="/blog/assets/js/441.edaf49dd.js"><link rel="prefetch" href="/blog/assets/js/442.46358509.js"><link rel="prefetch" href="/blog/assets/js/443.ac894823.js"><link rel="prefetch" href="/blog/assets/js/444.388b0fb5.js"><link rel="prefetch" href="/blog/assets/js/445.5d6dcd5a.js"><link rel="prefetch" href="/blog/assets/js/446.cd463a00.js"><link rel="prefetch" href="/blog/assets/js/447.fa3cf170.js"><link rel="prefetch" href="/blog/assets/js/448.d166f1a6.js"><link rel="prefetch" href="/blog/assets/js/449.9007f738.js"><link rel="prefetch" href="/blog/assets/js/45.ce2504cf.js"><link rel="prefetch" href="/blog/assets/js/450.0e3c2b8d.js"><link rel="prefetch" href="/blog/assets/js/451.77ec44a8.js"><link rel="prefetch" href="/blog/assets/js/452.65334147.js"><link rel="prefetch" href="/blog/assets/js/453.bd40db54.js"><link rel="prefetch" href="/blog/assets/js/454.c680bf9b.js"><link rel="prefetch" href="/blog/assets/js/455.d3ba9987.js"><link rel="prefetch" href="/blog/assets/js/456.ba670ab8.js"><link rel="prefetch" href="/blog/assets/js/457.a56c9694.js"><link rel="prefetch" href="/blog/assets/js/458.8c7575e6.js"><link rel="prefetch" href="/blog/assets/js/459.4f64a00d.js"><link rel="prefetch" href="/blog/assets/js/46.df740708.js"><link rel="prefetch" href="/blog/assets/js/460.12329cff.js"><link rel="prefetch" href="/blog/assets/js/461.eaac64b6.js"><link rel="prefetch" href="/blog/assets/js/462.e8791604.js"><link rel="prefetch" href="/blog/assets/js/463.b7a30366.js"><link rel="prefetch" href="/blog/assets/js/464.9405a358.js"><link rel="prefetch" href="/blog/assets/js/465.a2dc9a55.js"><link rel="prefetch" href="/blog/assets/js/466.069ca07c.js"><link rel="prefetch" href="/blog/assets/js/467.60978d4b.js"><link rel="prefetch" href="/blog/assets/js/468.3ff4f7cd.js"><link rel="prefetch" href="/blog/assets/js/469.35f3e9f1.js"><link rel="prefetch" href="/blog/assets/js/47.63e54aab.js"><link rel="prefetch" href="/blog/assets/js/470.2ae1c32a.js"><link rel="prefetch" href="/blog/assets/js/471.5b85826b.js"><link rel="prefetch" href="/blog/assets/js/472.0542f8ee.js"><link rel="prefetch" href="/blog/assets/js/473.817388b7.js"><link rel="prefetch" href="/blog/assets/js/474.24200d13.js"><link rel="prefetch" href="/blog/assets/js/475.c8782c45.js"><link rel="prefetch" href="/blog/assets/js/476.6db72d54.js"><link rel="prefetch" href="/blog/assets/js/477.95a3d492.js"><link rel="prefetch" href="/blog/assets/js/478.9c8e6497.js"><link rel="prefetch" href="/blog/assets/js/479.35f9bf3b.js"><link rel="prefetch" href="/blog/assets/js/48.83140357.js"><link rel="prefetch" href="/blog/assets/js/480.b51a5165.js"><link rel="prefetch" href="/blog/assets/js/481.4d8e51e2.js"><link rel="prefetch" href="/blog/assets/js/482.65cedab1.js"><link rel="prefetch" href="/blog/assets/js/483.ca1776b9.js"><link rel="prefetch" href="/blog/assets/js/484.33a33eff.js"><link rel="prefetch" href="/blog/assets/js/485.e465197e.js"><link rel="prefetch" href="/blog/assets/js/486.70acef33.js"><link rel="prefetch" href="/blog/assets/js/487.ee3fc769.js"><link rel="prefetch" href="/blog/assets/js/488.a63e51e5.js"><link rel="prefetch" href="/blog/assets/js/489.0f3c49d5.js"><link rel="prefetch" href="/blog/assets/js/49.d8832e95.js"><link rel="prefetch" href="/blog/assets/js/490.5712118b.js"><link rel="prefetch" href="/blog/assets/js/491.5375baa1.js"><link rel="prefetch" href="/blog/assets/js/492.37c94ed4.js"><link rel="prefetch" href="/blog/assets/js/493.9b961f5e.js"><link rel="prefetch" href="/blog/assets/js/494.feea28ac.js"><link rel="prefetch" href="/blog/assets/js/495.98ea50ff.js"><link rel="prefetch" href="/blog/assets/js/496.33d53d3c.js"><link rel="prefetch" href="/blog/assets/js/497.9de40aa3.js"><link rel="prefetch" href="/blog/assets/js/498.4cd030db.js"><link rel="prefetch" href="/blog/assets/js/499.05109d7f.js"><link rel="prefetch" href="/blog/assets/js/5.c0f04726.js"><link rel="prefetch" href="/blog/assets/js/50.2c216e5d.js"><link rel="prefetch" href="/blog/assets/js/500.7b8f1773.js"><link rel="prefetch" href="/blog/assets/js/501.dfbba9a8.js"><link rel="prefetch" href="/blog/assets/js/502.90f5bd1b.js"><link rel="prefetch" href="/blog/assets/js/503.9cefed56.js"><link rel="prefetch" href="/blog/assets/js/504.789de515.js"><link rel="prefetch" href="/blog/assets/js/505.e3eb2619.js"><link rel="prefetch" href="/blog/assets/js/506.26a895a8.js"><link rel="prefetch" href="/blog/assets/js/507.aece8a26.js"><link rel="prefetch" href="/blog/assets/js/508.82ef6fd3.js"><link rel="prefetch" href="/blog/assets/js/509.6617c24f.js"><link rel="prefetch" href="/blog/assets/js/51.9924df0f.js"><link rel="prefetch" href="/blog/assets/js/510.5251c4fc.js"><link rel="prefetch" href="/blog/assets/js/511.15d303a7.js"><link rel="prefetch" href="/blog/assets/js/512.ec4dbe26.js"><link rel="prefetch" href="/blog/assets/js/513.fee5a2b7.js"><link rel="prefetch" href="/blog/assets/js/514.3f48b9d4.js"><link rel="prefetch" href="/blog/assets/js/515.8e750dd4.js"><link rel="prefetch" href="/blog/assets/js/516.bc7ce9ec.js"><link rel="prefetch" href="/blog/assets/js/517.5c273689.js"><link rel="prefetch" href="/blog/assets/js/518.8204db0b.js"><link rel="prefetch" href="/blog/assets/js/519.4069fac5.js"><link rel="prefetch" href="/blog/assets/js/52.c6b270fd.js"><link rel="prefetch" href="/blog/assets/js/520.6052378c.js"><link rel="prefetch" href="/blog/assets/js/521.a84e2f70.js"><link rel="prefetch" href="/blog/assets/js/522.07f1fd3a.js"><link rel="prefetch" href="/blog/assets/js/523.81cd7c5a.js"><link rel="prefetch" href="/blog/assets/js/524.0c27a30c.js"><link rel="prefetch" href="/blog/assets/js/525.3d388127.js"><link rel="prefetch" href="/blog/assets/js/526.da896981.js"><link rel="prefetch" href="/blog/assets/js/53.37b57eac.js"><link rel="prefetch" href="/blog/assets/js/54.07db747b.js"><link rel="prefetch" href="/blog/assets/js/55.74ef4683.js"><link rel="prefetch" href="/blog/assets/js/56.2fef63ab.js"><link rel="prefetch" href="/blog/assets/js/57.ed0c5fb3.js"><link rel="prefetch" href="/blog/assets/js/58.ca7cbf9a.js"><link rel="prefetch" href="/blog/assets/js/59.3c22bc5a.js"><link rel="prefetch" href="/blog/assets/js/6.2297b244.js"><link rel="prefetch" href="/blog/assets/js/60.262e5867.js"><link rel="prefetch" href="/blog/assets/js/61.5636e75a.js"><link rel="prefetch" href="/blog/assets/js/62.7dd1d109.js"><link rel="prefetch" href="/blog/assets/js/63.d0773cdd.js"><link rel="prefetch" href="/blog/assets/js/64.997275ff.js"><link rel="prefetch" href="/blog/assets/js/65.07901344.js"><link rel="prefetch" href="/blog/assets/js/66.c464da45.js"><link rel="prefetch" href="/blog/assets/js/67.feffb1d6.js"><link rel="prefetch" href="/blog/assets/js/68.fcfe1349.js"><link rel="prefetch" href="/blog/assets/js/69.e895924e.js"><link rel="prefetch" href="/blog/assets/js/7.e4af8b84.js"><link rel="prefetch" href="/blog/assets/js/70.078c407f.js"><link rel="prefetch" href="/blog/assets/js/71.557206d7.js"><link rel="prefetch" href="/blog/assets/js/72.e1584320.js"><link rel="prefetch" href="/blog/assets/js/73.48a20011.js"><link rel="prefetch" href="/blog/assets/js/74.20421f04.js"><link rel="prefetch" href="/blog/assets/js/75.3b0e05dc.js"><link rel="prefetch" href="/blog/assets/js/76.2bf10aca.js"><link rel="prefetch" href="/blog/assets/js/77.02348743.js"><link rel="prefetch" href="/blog/assets/js/78.cfbc295c.js"><link rel="prefetch" href="/blog/assets/js/79.453eacb3.js"><link rel="prefetch" href="/blog/assets/js/8.d80735f1.js"><link rel="prefetch" href="/blog/assets/js/80.2b500eb9.js"><link rel="prefetch" href="/blog/assets/js/81.387b7278.js"><link rel="prefetch" href="/blog/assets/js/82.1aa40d78.js"><link rel="prefetch" href="/blog/assets/js/83.17f6510a.js"><link rel="prefetch" href="/blog/assets/js/84.db4405bb.js"><link rel="prefetch" href="/blog/assets/js/85.145ce263.js"><link rel="prefetch" href="/blog/assets/js/86.139ef9a8.js"><link rel="prefetch" href="/blog/assets/js/87.824e85b1.js"><link rel="prefetch" href="/blog/assets/js/88.bd8c36c2.js"><link rel="prefetch" href="/blog/assets/js/89.ff5dab67.js"><link rel="prefetch" href="/blog/assets/js/9.c2a5941b.js"><link rel="prefetch" href="/blog/assets/js/90.750d7f60.js"><link rel="prefetch" href="/blog/assets/js/91.f93ed10a.js"><link rel="prefetch" href="/blog/assets/js/92.a9ecf2e9.js"><link rel="prefetch" href="/blog/assets/js/93.ac344da4.js"><link rel="prefetch" href="/blog/assets/js/94.57871314.js"><link rel="prefetch" href="/blog/assets/js/95.32361ad9.js"><link rel="prefetch" href="/blog/assets/js/96.fa531423.js"><link rel="prefetch" href="/blog/assets/js/97.f3eaaba1.js"><link rel="prefetch" href="/blog/assets/js/98.a6622376.js"><link rel="prefetch" href="/blog/assets/js/99.d04a5a4b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bbc000.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/learn.png" alt="zouyu-Blog" class="logo"> <span class="site-name can-hide">zouyu-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Business</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Database</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Elastic Search</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Mongo DB</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Mybatis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>My SQL</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/mysql/" class="sidebar-link">MySQL - 知识体系</a></li><li><a href="/blog/mysql/logic/" class="sidebar-link">MySQL - 逻辑架构简介</a></li><li><a href="/blog/mysql/index/" class="sidebar-link">MySQL - 索引介绍</a></li><li><a href="/blog/mysql/optimize-sql-check/" class="sidebar-link">MySQL - 优化SQL检测步骤</a></li><li><a href="/blog/mysql/index-use/" class="sidebar-link">MySQL - 索引的使用</a></li><li><a href="/blog/mysql/sql-optimize/" class="sidebar-link">MySQL - SQL语句优化</a></li><li><a href="/blog/mysql/cache-query/" class="sidebar-link">MySQL - 缓存查询</a></li><li><a href="/blog/mysql/memory-management/" class="sidebar-link">MySQL - 内存管理</a></li><li><a href="/blog/mysql/concurrent-parameter/" class="sidebar-link">MySQL - 并发参数</a></li><li><a href="/blog/mysql/lock-question/" class="sidebar-link">MySQL - 锁问题</a></li><li><a href="/blog/mysql/common-use-sql-skill/" class="sidebar-link">MySQL - 常用sql技巧</a></li><li><a href="/blog/mysql/common-tools/" class="sidebar-link">MySQL - 常用工具</a></li><li><a href="/blog/mysql/log/" class="sidebar-link">MySQL - 日志</a></li><li><a href="/blog/mysql/copy/" class="sidebar-link">MySQL - 主从复制</a></li><li><a href="/blog/Database/MySQL/Basic/chapter1.html" class="sidebar-link">MySQL数据库基础</a></li><li><a href="/blog/Database/MySQL/Basic/chapter2.html" class="sidebar-link">MySQL数据库对象与应用</a></li><li><a href="/blog/Database/MySQL/Basic/chapter3.html" class="sidebar-link">MySQL事务与存储引擎</a></li><li><a href="/blog/Database/MySQL/Basic/chapter4.html" class="sidebar-link">MySQL应用优化</a></li><li><a href="/blog/Database/MySQL/Basic/chapter5.html" class="sidebar-link">MySQL运维实践</a></li><li><a href="/blog/Database/MySQL/common/日常记录.html" class="sidebar-link">日常的记录</a></li><li><a href="/blog/Database/MySQL/%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" aria-current="page" class="sidebar-link">MySQL-notes</a></li><li><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html" class="active sidebar-link">MySQL基本操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#使用mysql" class="sidebar-link">使用MySQL</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#了解数据库和表" class="sidebar-link">了解数据库和表</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#检索数据" class="sidebar-link">检索数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#select语句" class="sidebar-link">SELECT语句</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#排序检索数据" class="sidebar-link">排序检索数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#找出一列中最高或最低的值" class="sidebar-link">找出一列中最高或最低的值</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#过滤数据" class="sidebar-link">过滤数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#使用where子句" class="sidebar-link">使用WHERE子句</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#where子句操作符" class="sidebar-link">WHERE子句操作符</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#创建和操纵表" class="sidebar-link">创建和操纵表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#创建表" class="sidebar-link">创建表</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#更新表" class="sidebar-link">更新表</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#删除表" class="sidebar-link">删除表</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#重命名表" class="sidebar-link">重命名表</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#插入数据" class="sidebar-link">插入数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#插入完整的行" class="sidebar-link">插入完整的行</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#插入多个行" class="sidebar-link">插入多个行</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#插入检索出的数据" class="sidebar-link">插入检索出的数据</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#更新和删除数据" class="sidebar-link">更新和删除数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#更新数据" class="sidebar-link">更新数据</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#删除数据" class="sidebar-link">删除数据</a></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#更新和删除的指导原则" class="sidebar-link">更新和删除的指导原则</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Database/MySQL/必知必会/1-MySQL基本操作.html#补充" class="sidebar-link">补充</a></li></ul></li><li><a href="/blog/Database/MySQL/必知必会/2-数据过滤.html" class="sidebar-link">数据过滤</a></li><li><a href="/blog/Database/MySQL/必知必会/3-数据处理、汇总和分组.html" class="sidebar-link">创建计算字段</a></li><li><a href="/blog/Database/MySQL/必知必会/4-联结.html" class="sidebar-link">联结表</a></li><li><a href="/blog/Database/MySQL/必知必会/5-组合查询、全文本搜索.html" class="sidebar-link">组合查询</a></li><li><a href="/blog/Database/MySQL/必知必会/6-其他操作.html" class="sidebar-link">使用视图（适用于MySQL 5及之后的版本）</a></li><li><a href="/blog/Database/MySQL/必知必会/7-管理.html" class="sidebar-link">管理事务处理</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Redis</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Deploy</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Other</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Server</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Boot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Cloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Work Doc</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>尚硅谷 Redis</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql基本操作"><a href="#mysql基本操作" class="header-anchor">#</a> MySQL基本操作</h1> <div class="language- extra-class"><pre class="language-text"><code>$ mysql -u root -p
+</code></pre></div><p><code>-u</code> 用户名，<code>-p</code> 输入密码， <code>-h</code> 主机名， <code>-P</code> 端口，
+<code>mysql --help</code> 命令行选项和参数列表</p> <p>连接到数据库需要：主机名（本地为localhost）、端口（如果使用默认端口3306之外的端口）、合法的用户名、用户口令（如果需要）</p> <p>可能需要root权限</p> <h2 id="使用mysql"><a href="#使用mysql" class="header-anchor">#</a> 使用MySQL</h2> <p>下载create.sql和populate.sql两个sql脚本文件，其中，create.sql包含创建6个数据库表的MySQL语句，populate.sql包含用来填充这些表的INSERT语句。执行下列操作：</p> <div class="language- extra-class"><pre class="language-text"><code>--创建数据库
+CREATE DATABASE crashcourse；
+--使用数据库
+--必须先使用USE打开数据库，才能读取其中的数据。
+USE crashcourse;
+--执行sql脚本
+--需要指定文件的完整路径
+--先执行create.sql，再执行populate.sql
+SOURCE ~/create.sql;
+SOURCE ~/populate.sql
+</code></pre></div><p>以上为准备工作。</p> <h3 id="了解数据库和表"><a href="#了解数据库和表" class="header-anchor">#</a> 了解数据库和表</h3> <div class="language- extra-class"><pre class="language-text"><code>-- 显示可用的数据库列表
+SHOW DATABASES;
+
+-- 获得一个数据库内的表的列表
+SHOW TABLES;
+
+-- 用来显示表列
+SHOW COLUMNS FROM customers;
+DESCRIBE customers;
+
+-- 其他SHOW语句
+SHOW STATUS -- 用于显示广泛的服务器状态信息
+SHOW CREATE DATABASE -- 显示创建特定数据库的MySQL语句
+SHOW CREATE TABLE -- 显示创建特定表的语句
+SHOW GRANTS -- 显示授予用户（所有用户或特定用户）的安全权限
+SHOW ERRORS -- 显示服务器错误
+SHOW WARNINGS -- 警告信息
+</code></pre></div><h2 id="检索数据"><a href="#检索数据" class="header-anchor">#</a> 检索数据</h2> <h3 id="select语句"><a href="#select语句" class="header-anchor">#</a> SELECT语句</h3> <div class="language- extra-class"><pre class="language-text"><code>-- 检索单个列
+-- 检索products表中的prod_name列
+SELECT prod_name FROM products;
+
+-- 检索多个列
+-- 检索products表中的prod_id，prod_name和prod_price列
+SELECT prod_id, prod_name, prod_price FROM products;
+
+-- 检索所有列
+--检索products表中的所有列
+SELECT * FROM products;
+
+-- 检索不同的行
+-- DISTINCT关键字必须直接放在列名的前面，不能部分使用DISTINCT，DISTINCT关键字应用于所有列而不仅是前置它的列。
+SELECT DISTINCT vend_id FROM products;
+
+-- 限制结果，指定返回前几行
+-- 返回不多于5行
+SELECT prod_name FROM products LIMIT 5;
+-- 返回从第5行开始的5行
+SELECT prod_name FROM products LIMIT 5,5;
+</code></pre></div><p><strong>检索出来的第一行为行0</strong>，因此<code>LIMIT 1,1</code>检索出来的是第二行而不是第一行
+MySQL 5 支持LIMIT的另一种替代语法
+<code>LIMIT 4 OFFSET 3</code>为从行3开始取4行，同<code>LIMIT 3,4</code></p> <div class="language- extra-class"><pre class="language-text"><code>-- 使用完全限定的表名
+SELECT products.prod_name FROM products;
+SELECT products.prod_name FROM crashcoures.products;
+</code></pre></div><h2 id="排序检索数据"><a href="#排序检索数据" class="header-anchor">#</a> 排序检索数据</h2> <div class="language- extra-class"><pre class="language-text"><code>-- 排序数据
+SELECT prod_name
+FROM products
+ORDER BY prod_name;
+-- 按多个列排序
+SELECT prod_id, prod_price, prod_name
+FROM products
+ORDER BY prod_price, prod_name;
+</code></pre></div><p>对于上述例子中的输出，仅在多个行具有相同的prod_price 值时才对产品按prod_name进行排序。如果prod_price列中所有的值都是唯一的，则不会按prod_name排序。</p> <div class="language- extra-class"><pre class="language-text"><code>-- 指定排序方向
+-- 默认升序排序，降序使用DESC关键字
+SELECT prod_id, prod_price, prod_name
+FROM products
+ORDER BY prod_price DESC;
+
+SELECT prod_id, prod_price, prod_name
+FROM products
+ORDER BY prod_price DESC, prod_name;
+</code></pre></div><p>DESC关键字只应用到直接位于其前面的列名。上例中，只对prod_price列指定DESC，对prod_name列不指定。
+升序关键字ASC，可省略</p> <h3 id="找出一列中最高或最低的值"><a href="#找出一列中最高或最低的值" class="header-anchor">#</a> 找出一列中最高或最低的值</h3> <div class="language- extra-class"><pre class="language-text"><code>SELECT prod_proce FROM products
+ORDER BY prod_price DESC LIMIT 1;
+</code></pre></div><p>给出ORDER BY句子时，应保证位于FROM句子之后，如果使用LIMIT，应位于ORDER BY之后。</p> <h2 id="过滤数据"><a href="#过滤数据" class="header-anchor">#</a> 过滤数据</h2> <h3 id="使用where子句"><a href="#使用where子句" class="header-anchor">#</a> 使用WHERE子句</h3> <div class="language- extra-class"><pre class="language-text"><code>-- 返回prod_price为2.50的行
+SELECT prod_name, prod_price FROM products WHERE prod_price = 2.50
+</code></pre></div><h3 id="where子句操作符"><a href="#where子句操作符" class="header-anchor">#</a> WHERE子句操作符</h3> <table><thead><tr><th>符号</th> <th>说明</th></tr></thead> <tbody><tr><td>=</td> <td>等于</td></tr> <tr><td>&lt;&gt;</td> <td>不等于</td></tr> <tr><td>！=</td> <td>不等于</td></tr> <tr><td>&lt;</td> <td>小于</td></tr> <tr><td>&lt;=</td> <td>小于等于</td></tr> <tr><td>&gt;</td> <td>大于</td></tr> <tr><td>&gt;=</td> <td>大于等于</td></tr> <tr><td>BETWEEN</td> <td>在指定的两个值之间</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>-- 检查单个值
+-- 返回prod_name为Fuses的一行（匹配时默认不区分大小写）
+SELECT prod_name, prod_price FROM products WHERE prod_name = 'fuses';
+-- 列出小于10美元的所有产品
+SELECT prod_name, prod_price FROM products WHERE prod_price &lt; 10;
+-- 列出小于等于10美元的所有产品
+SELECT prod_name, prod_price FROM products WHERE prod_price &lt;= 10;
+
+-- 不匹配检查
+-- 列出不是1003的所有产品
+SELECT vend_id, prod_name FROM products WHERE vend_id &lt;&gt; 1003;
+SELECT vend_id, prod_name FROM products WHERE vend_id ！= 1003;
+
+-- 范围值检查
+-- 检索价格在5-10美元之间的所有产品
+SELECT prod_name, prod_price FROM products
+WHERE prod_price BETWEEN 5 AND 10;
+
+-- 空值检查
+-- 返回价格为空的所有产品
+SELECT prod_name FROM products WHERE prod_price IS NULL;
+</code></pre></div><h2 id="创建和操纵表"><a href="#创建和操纵表" class="header-anchor">#</a> 创建和操纵表</h2> <h3 id="创建表"><a href="#创建表" class="header-anchor">#</a> 创建表</h3> <h4 id="创建表基础"><a href="#创建表基础" class="header-anchor">#</a> 创建表基础</h4> <p>CREATE TABLE</p> <ul><li>新表的名字，在关键字CREATE TABLE之后给出</li> <li>表列的名字和定义，用逗号分隔。
+例：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE customers
+(
+    cust_id int NOT NULL AUTO_INCREMENT,
+    cust_name char(50) NOT NULL,
+    cust_address char(50) NULL,
+    cust_city char(50) NULL,
+    cust_state char(5) NULL,
+    cust_zip char(10) NULL,
+    cust_country char(50) NULL,
+    cust_contact char(50) NULL,
+    cust_email char(255) NULL,
+    PRIMARY KEY (cust_id)
+) ENGINE=InnoDB;
+</code></pre></div><p>在创建新表时，指定的表名必须不存在，否则将出错。如果要防止意外覆盖已有的表，SQL要求首先手工删除该表，然后再重建它，而不是简单地用创建表语句覆盖它。</p> <p>如果你仅想在一个表不存在时创建它，应该在表名后给出IF NOT EXISTS。这样做不检查已有表的模式是否与你打算创建的表模式相匹配。它只是查看表名是否存在，并且仅在表名不存在时创建它。</p> <h4 id="使用null值"><a href="#使用null值" class="header-anchor">#</a> 使用NULL值</h4> <p>每个表列或者是NULL列或者是NOT NULL列，这种状态在创建时由表的定义规定
+例：</p> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE orders
+(
+    order_num int NOT NULL AUTO_INCREMENT,
+    order_date datetime NOT NULL,
+    cust_id int NOT NULL,
+    PRIMARY KEY (order_num)
+) ENGINE-InnoDB;
+</code></pre></div><p>例：混合了NULL和NOT NULL列的表</p> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE vendors
+(
+    vend_id int NOT NULL AUTO_INCREMENT,
+    vend_name char(50) NOT NULL,
+    vend_address char(50) NULL,
+    vend_city char(50) NULL,
+    vend_state char(5) NULL,
+    vend_zip char(10) NULL,
+    vend_country char(50) NULL,
+    PRIMARY KEY(vend_id)
+) ENGINE = InnoDB;
+</code></pre></div><h4 id="主键"><a href="#主键" class="header-anchor">#</a> 主键</h4> <p>主键值必须唯一。如果主键使用单个列，则它的值必须唯一。如果使用多个列，则这些列的组合值必须唯一。</p> <p>例：创建多个列组成的主键</p> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE orderitems
+(
+    order_num int NOT NULL,
+    order_item int NOT NULL,
+    prod_id char(10) NOT NULL,
+    quantity int NOT NULL,
+    item_price decimal(8,2) NOT NULL,
+    PRIMARY KEY (order_num, order_item)
+)ENGiNE = InnoDB;
+</code></pre></div><h4 id="使用auto-increment"><a href="#使用auto-increment" class="header-anchor">#</a> 使用AUTO_INCREMENT</h4> <p>AUTO_INCREMENT告诉MySQL，本列每当增加一行时自动增量。每次 执行一个INSERT操作时，MySQL自动对该列增量（从而才有这个关键字AUTO_INCREMENT），给该列赋予下一个可用的值。这样给每个行分配一个唯一的cust_id，从而可以用作主键值。</p> <p>覆盖AUTO_INCREMENT:如果一个列被指定为AUTO_INCREMENT，则它需要使用特殊的值吗？你可以简单地INSERT语句中指定一个值，只要它是唯一的（至今尚未使用过）即可，该值将被用来替代自动生成的值。后续的增量将开始使用该手工插入的值。</p> <h4 id="指定默认值"><a href="#指定默认值" class="header-anchor">#</a> 指定默认值</h4> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE orderitems
+(
+    order_num int NOT NUL,
+    order_item int NOT NULL,
+    prod_id char(10) NOT NULL,
+    quantity int NOT NULL DEFAULT 1,
+    item_price decimal(8,2) NOT NULL,
+    PRIMARY KEY (order_num,order_item)
+) ENGINE = InnoDB;
+</code></pre></div><p>MySQL不允许使用函数作为默认值，只支持常量</p> <h4 id="引擎类型"><a href="#引擎类型" class="header-anchor">#</a> 引擎类型</h4> <ul><li>InnoDB是一个可靠的事务处理引擎，它不支持全文本搜索；</li> <li>MEMORY在功能等同于MyISAM，但由于数据存储在内存（不是磁盘） 中，速度很快（特别适合于临时表）；</li> <li>MyISAM是一个性能极高的引擎，它支持全文本搜索，但不支持事务处理。
+引擎类型可以混用。
+外键不能跨引擎 混用引擎类型有一个大缺陷。外键（用于强制实施引用完整性）不能跨引擎，即使用一个引擎的表不能引用具有使用不同引擎的表的外键。</li></ul> <h3 id="更新表"><a href="#更新表" class="header-anchor">#</a> 更新表</h3> <p>使用ALTER TABLE更改表的结构，必须给出以下信息：</p> <ul><li>在ALTER TABLE之后给出要更改的表名（该表必须存在，否则将出错）；</li> <li>所做更改的列表。</li></ul> <p>例：</p> <div class="language- extra-class"><pre class="language-text"><code>ALTER TABLE vendors
+ADD vend_phone CHAR(20);
+</code></pre></div><p>例：删除刚增加的列</p> <div class="language- extra-class"><pre class="language-text"><code>ALTER TABLE vendors
+DROP COLUMN vend_phone;
+</code></pre></div><p>为了对单个表进行多个更改，可以使用单条ALTER TABLE语句，每个更改用逗号分隔</p> <p>复杂的表结构更改一般需要手动删除过程，它涉及以下步骤：</p> <ul><li>用新的列布局创建一个新表；</li> <li>使用INSERT SELECT语句从旧表复制数据到新表。如果有必要，可使用转换函数和计算字段；</li> <li>检验包含所需数据的新表；</li> <li>重命名旧表（如果确定，可以删除它）；</li> <li>用旧表原来的名字重命名新表；</li> <li>根据需要，重新创建触发器、存储过程、索引和外键。</li></ul> <p>使用ALTER TABLE要极为小心，应该在进行改动前做一个完整的备份（模式和数据的备份）。数据库表的更改不能撤销，如果增加了不需要的列，可能不能删除它们。类似地，如果删除了不应该删除的列，可能会丢失该列中的所有数据。</p> <h3 id="删除表"><a href="#删除表" class="header-anchor">#</a> 删除表</h3> <div class="language- extra-class"><pre class="language-text"><code>DROP TABLE customers2;
+</code></pre></div><h3 id="重命名表"><a href="#重命名表" class="header-anchor">#</a> 重命名表</h3> <div class="language- extra-class"><pre class="language-text"><code>RENAME TABLE customers2 TO customers;
+
+#对多个表重命名
+RENAME TABLE backup_customers TO customers,
+	         backup_vendors TO vendors,
+             backup_products TO products;
+</code></pre></div><h2 id="插入数据"><a href="#插入数据" class="header-anchor">#</a> 插入数据</h2> <p>INSERT</p> <ul><li>插入完整的行</li> <li>插入行的一部分</li> <li>插入多行</li> <li>插入某些查询的结果</li></ul> <h3 id="插入完整的行"><a href="#插入完整的行" class="header-anchor">#</a> 插入完整的行</h3> <div class="language- extra-class"><pre class="language-text"><code>INSERT INTO Customers
+VALUES(NULL,
+    'Pep E. LaPew',
+    '100 Main Street',
+    'Los Angles',
+    'CA',
+    '90046',
+    'USA',
+    NULL,
+    NULL);
+</code></pre></div><p>语法简单但不安全。更安全的方法为：</p> <div class="language- extra-class"><pre class="language-text"><code>INSERT INTO customers(cust_name,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country,
+    cust_contact,
+    cust_email)
+VALUES('Pep E. LaPew',
+    '100 Main Street',
+    'Los Angeles',
+    'CA',
+    '90046'
+    'USA'
+    NULL,
+    NULL);
+#下面的INSERT语句填充所有列（与前面的一样），但以一种不同的次序填充。
+#因为给出了列名，所以插入结果仍然正确：
+INSERT INTO customers(cust_name,
+    cust_contact,
+    cust_email,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country)
+VALUES('Pep E. LaPew',
+    NULL,
+    NULL,
+    '100 Main Street',
+    'Los Angles',
+    'CA',
+    '90046',
+    'USA');
+</code></pre></div><p>不管哪种INSSERT语法，都必须给出VALUES的正确数目，如果不提供列名，则必须给每个表提供一个值。如果提供列名，则必须对每个列出的列值给出一个值。</p> <p>列名被明确列出时，可以省略列,如果表的定义允许则可以省略列</p> <ul><li>该列定义为允许NULL值（无值或空值）</li> <li>在表定义中给出默认值。</li></ul> <h3 id="插入多个行"><a href="#插入多个行" class="header-anchor">#</a> 插入多个行</h3> <div class="language- extra-class"><pre class="language-text"><code>INSERT INTO customers(cust_name,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country)
+VALUES('Pep E. LaPew',
+    '100 Main Street'
+    'Los Angeles',
+    'CA',
+    '90046',
+    'USA');
+INSERT INTO customers(cust_name,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country)
+VALUES('M. Martian',
+    '42 Galaxy Way'
+    'New York',
+    'NY',
+    '11213',
+    'USA');
+
+#使用组合句
+INSERT INTO customers(cust_name,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country)
+VALUES('Pep E. LaPew',
+    '100 Main Street'
+    'Los Angeles',
+    'CA',
+    '90046',
+    'USA')，
+
+    ('M. Martian',
+    '42 Galaxy Way'
+    'New York',
+    'NY',
+    '11213',
+    'USA');
+
+#单条INSERT语句有多组值，每组值用一对圆括号括起来，用逗号分隔。
+</code></pre></div><h3 id="插入检索出的数据"><a href="#插入检索出的数据" class="header-anchor">#</a> 插入检索出的数据</h3> <div class="language- extra-class"><pre class="language-text"><code>INSERT INTO customers(cust_id,
+    cust_contact,
+    cust_email,
+    cust_name,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country)
+SELECT cust_id,
+    cust_contact,
+    cust_email,
+    cust_name,
+    cust_address,
+    cust_city,
+    cust_state,
+    cust_zip,
+    cust_country
+FROM custnew;
+</code></pre></div><h2 id="更新和删除数据"><a href="#更新和删除数据" class="header-anchor">#</a> 更新和删除数据</h2> <h3 id="更新数据"><a href="#更新数据" class="header-anchor">#</a> 更新数据</h3> <p>UPDATE</p> <ul><li>更新表中特定行</li> <li>更新表中所有行
+例：客户10005更新电子邮件</li></ul> <div class="language- extra-class"><pre class="language-text"><code>UPDATE customers
+SET cust_email = 'elmer@fudd.com'
+WHERE cust_id = 10005;
+</code></pre></div><p>例：更新多个列</p> <div class="language- extra-class"><pre class="language-text"><code>UPDARTE customers
+SET cust_name = 'The Fudds',
+cust_email = 'elmer@fudd.com'
+WHERE cust_id = 10005;
+</code></pre></div><p>在更新多个列时，只需要使用单个SET命令，每个“列=值”对之间 用逗号分隔（最后一列之后不用逗号）。在此例子中，更新客户10005的cust_name和cust_email列。</p> <p>IGNORE关键字:如果用UPDATE语句更新多行，并且在更新这些 行中的一行或多行时出一个现错误，则整个UPDATE操作被取消 （错误发生前更新的所有行被恢复到它们原来的值）。为即使是发生错误，也继续进行更新，可使用IGNORE关键字，如下所示：<code>UPDATE IGNORE customers…</code></p> <p>为了删除某列的值，可以设置为NULL</p> <div class="language- extra-class"><pre class="language-text"><code>UPDATE customers
+SET cust_email = NULL
+WHERE cust_id = 10005;
+</code></pre></div><h3 id="删除数据"><a href="#删除数据" class="header-anchor">#</a> 删除数据</h3> <p>使用DELETE语句</p> <ul><li>从表中删除特定的行</li> <li>从表中删除所有的行</li></ul> <div class="language- extra-class"><pre class="language-text"><code>DELETE FROM customers
+WHERE cust_id = 10006;
+</code></pre></div><h3 id="更新和删除的指导原则"><a href="#更新和删除的指导原则" class="header-anchor">#</a> 更新和删除的指导原则</h3> <p>下面是许多SQL程序员使用UPDATE或DELETE时所遵循的习惯。</p> <ul><li>除非确实打算更新和删除每一行，否则绝对不要使用不带WHERE子句的UPDATE或DELETE语句。</li> <li>保证每个表都有主键，尽可能像WHERE子句那样使用它（可以指定各主键、多个值或值的范围）。</li> <li>在对UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li> <li>使用强制实施引用完整性的数据库，这样MySQL将不允许删除具有与其他表相关联的数据的行。</li></ul> <h2 id="补充"><a href="#补充" class="header-anchor">#</a> 补充</h2> <p>MySQL的注释方法
+一共有三种，分别为</p> <div class="language- extra-class"><pre class="language-text"><code>#单行注释可以使用&quot;#&quot;
+-- 单行注释也可以使用&quot;--&quot;，注意与注释之间有空格
+/*
+用于多行注释
+*/
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2023/3/26 19:49:57</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Database/MySQL/%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" class="prev router-link-active">
+        MySQL-notes
+      </a></span> <span class="next"><a href="/blog/Database/MySQL/必知必会/2-数据过滤.html">
+        数据过滤
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.5c484a50.js" defer></script><script src="/blog/assets/js/3.8dc6c122.js" defer></script><script src="/blog/assets/js/166.e7c96a06.js" defer></script>
+  </body>
+</html>

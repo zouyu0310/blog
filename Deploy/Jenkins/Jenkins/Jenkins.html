@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins | zouyu-Blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/blog/images/learn.png">
+    <meta name="description" content="求知若渴，虚心若愚。 愿你每天都在成长">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bbc000.css" as="style"><link rel="preload" href="/blog/assets/js/app.5c484a50.js" as="script"><link rel="preload" href="/blog/assets/js/3.8dc6c122.js" as="script"><link rel="preload" href="/blog/assets/js/14.67fbf28f.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.febbc81f.js"><link rel="prefetch" href="/blog/assets/js/100.9259ef63.js"><link rel="prefetch" href="/blog/assets/js/101.3da27d21.js"><link rel="prefetch" href="/blog/assets/js/102.6fa069ad.js"><link rel="prefetch" href="/blog/assets/js/103.43e9f62f.js"><link rel="prefetch" href="/blog/assets/js/104.6f86dc9e.js"><link rel="prefetch" href="/blog/assets/js/105.4a19bfc6.js"><link rel="prefetch" href="/blog/assets/js/106.e05fe0f9.js"><link rel="prefetch" href="/blog/assets/js/107.9742ed05.js"><link rel="prefetch" href="/blog/assets/js/108.2c8f6f4e.js"><link rel="prefetch" href="/blog/assets/js/109.3b96b505.js"><link rel="prefetch" href="/blog/assets/js/11.6c44e9c9.js"><link rel="prefetch" href="/blog/assets/js/110.3428e3da.js"><link rel="prefetch" href="/blog/assets/js/111.f1864178.js"><link rel="prefetch" href="/blog/assets/js/112.2ef1a6cc.js"><link rel="prefetch" href="/blog/assets/js/113.663107aa.js"><link rel="prefetch" href="/blog/assets/js/114.27ae3724.js"><link rel="prefetch" href="/blog/assets/js/115.da0b4d3a.js"><link rel="prefetch" href="/blog/assets/js/116.fbe6dcd2.js"><link rel="prefetch" href="/blog/assets/js/117.bf1d0b1a.js"><link rel="prefetch" href="/blog/assets/js/118.ac660281.js"><link rel="prefetch" href="/blog/assets/js/119.f381212e.js"><link rel="prefetch" href="/blog/assets/js/12.f16fe947.js"><link rel="prefetch" href="/blog/assets/js/120.d4e55d8d.js"><link rel="prefetch" href="/blog/assets/js/121.bb88ab51.js"><link rel="prefetch" href="/blog/assets/js/122.651f365e.js"><link rel="prefetch" href="/blog/assets/js/123.13ea0580.js"><link rel="prefetch" href="/blog/assets/js/124.6f849caf.js"><link rel="prefetch" href="/blog/assets/js/125.64fd3346.js"><link rel="prefetch" href="/blog/assets/js/126.dac1aa2e.js"><link rel="prefetch" href="/blog/assets/js/127.f9776ae0.js"><link rel="prefetch" href="/blog/assets/js/128.60667ffd.js"><link rel="prefetch" href="/blog/assets/js/129.4e3188ff.js"><link rel="prefetch" href="/blog/assets/js/13.b299c7b1.js"><link rel="prefetch" href="/blog/assets/js/130.714850ba.js"><link rel="prefetch" href="/blog/assets/js/131.0d15a4db.js"><link rel="prefetch" href="/blog/assets/js/132.7f8418d0.js"><link rel="prefetch" href="/blog/assets/js/133.1c5d88c7.js"><link rel="prefetch" href="/blog/assets/js/134.74ba0012.js"><link rel="prefetch" href="/blog/assets/js/135.11ec9e17.js"><link rel="prefetch" href="/blog/assets/js/136.d5e724ce.js"><link rel="prefetch" href="/blog/assets/js/137.bfadad53.js"><link rel="prefetch" href="/blog/assets/js/138.0d07a873.js"><link rel="prefetch" href="/blog/assets/js/139.6a2b3a93.js"><link rel="prefetch" href="/blog/assets/js/140.c34f86ef.js"><link rel="prefetch" href="/blog/assets/js/141.3ff0a6ed.js"><link rel="prefetch" href="/blog/assets/js/142.55be366b.js"><link rel="prefetch" href="/blog/assets/js/143.583f3dc6.js"><link rel="prefetch" href="/blog/assets/js/144.a88b6453.js"><link rel="prefetch" href="/blog/assets/js/145.966eae27.js"><link rel="prefetch" href="/blog/assets/js/146.d5da85c2.js"><link rel="prefetch" href="/blog/assets/js/147.96ff5977.js"><link rel="prefetch" href="/blog/assets/js/148.d9973f2d.js"><link rel="prefetch" href="/blog/assets/js/149.f13607c8.js"><link rel="prefetch" href="/blog/assets/js/15.b3e3f322.js"><link rel="prefetch" href="/blog/assets/js/150.50f22aa4.js"><link rel="prefetch" href="/blog/assets/js/151.6c8353f7.js"><link rel="prefetch" href="/blog/assets/js/152.4c15de81.js"><link rel="prefetch" href="/blog/assets/js/153.67297978.js"><link rel="prefetch" href="/blog/assets/js/154.123b78de.js"><link rel="prefetch" href="/blog/assets/js/155.2102ec2d.js"><link rel="prefetch" href="/blog/assets/js/156.3882f181.js"><link rel="prefetch" href="/blog/assets/js/157.685eca62.js"><link rel="prefetch" href="/blog/assets/js/158.9a955ef1.js"><link rel="prefetch" href="/blog/assets/js/159.dbd351c7.js"><link rel="prefetch" href="/blog/assets/js/16.c97a8088.js"><link rel="prefetch" href="/blog/assets/js/160.45a18a5c.js"><link rel="prefetch" href="/blog/assets/js/161.e2497d2b.js"><link rel="prefetch" href="/blog/assets/js/162.8377780a.js"><link rel="prefetch" href="/blog/assets/js/163.ae45f0a5.js"><link rel="prefetch" href="/blog/assets/js/164.6df8087d.js"><link rel="prefetch" href="/blog/assets/js/165.3f6123e3.js"><link rel="prefetch" href="/blog/assets/js/166.e7c96a06.js"><link rel="prefetch" href="/blog/assets/js/167.6030d2c9.js"><link rel="prefetch" href="/blog/assets/js/168.4286e6b2.js"><link rel="prefetch" href="/blog/assets/js/169.d4a167a8.js"><link rel="prefetch" href="/blog/assets/js/17.6cc239d7.js"><link rel="prefetch" href="/blog/assets/js/170.3ba6ab29.js"><link rel="prefetch" href="/blog/assets/js/171.188d2f49.js"><link rel="prefetch" href="/blog/assets/js/172.2466b9d8.js"><link rel="prefetch" href="/blog/assets/js/173.c84b34de.js"><link rel="prefetch" href="/blog/assets/js/174.cb219705.js"><link rel="prefetch" href="/blog/assets/js/175.9316fb59.js"><link rel="prefetch" href="/blog/assets/js/176.36d208a2.js"><link rel="prefetch" href="/blog/assets/js/177.c47c9a81.js"><link rel="prefetch" href="/blog/assets/js/178.51aee8c2.js"><link rel="prefetch" href="/blog/assets/js/179.4a4a372e.js"><link rel="prefetch" href="/blog/assets/js/18.dcbf7d0d.js"><link rel="prefetch" href="/blog/assets/js/180.5b7b3672.js"><link rel="prefetch" href="/blog/assets/js/181.d9cf5f99.js"><link rel="prefetch" href="/blog/assets/js/182.c2635527.js"><link rel="prefetch" href="/blog/assets/js/183.a44ae4fe.js"><link rel="prefetch" href="/blog/assets/js/184.194d8640.js"><link rel="prefetch" href="/blog/assets/js/185.bc5d30a9.js"><link rel="prefetch" href="/blog/assets/js/186.eff8552b.js"><link rel="prefetch" href="/blog/assets/js/187.5d951aeb.js"><link rel="prefetch" href="/blog/assets/js/188.5c1223fa.js"><link rel="prefetch" href="/blog/assets/js/189.5808866f.js"><link rel="prefetch" href="/blog/assets/js/19.2140c229.js"><link rel="prefetch" href="/blog/assets/js/190.994c47f6.js"><link rel="prefetch" href="/blog/assets/js/191.959d5f5f.js"><link rel="prefetch" href="/blog/assets/js/192.b5a07fb6.js"><link rel="prefetch" href="/blog/assets/js/193.311be80e.js"><link rel="prefetch" href="/blog/assets/js/194.82453715.js"><link rel="prefetch" href="/blog/assets/js/195.ff6d8d1d.js"><link rel="prefetch" href="/blog/assets/js/196.5c8e3b0a.js"><link rel="prefetch" href="/blog/assets/js/197.ef0327ec.js"><link rel="prefetch" href="/blog/assets/js/198.3cdb7156.js"><link rel="prefetch" href="/blog/assets/js/199.5c27985a.js"><link rel="prefetch" href="/blog/assets/js/2.1e74d1b7.js"><link rel="prefetch" href="/blog/assets/js/20.d0ed9959.js"><link rel="prefetch" href="/blog/assets/js/200.3456f9ed.js"><link rel="prefetch" href="/blog/assets/js/201.9d75fd1b.js"><link rel="prefetch" href="/blog/assets/js/202.857fb3c0.js"><link rel="prefetch" href="/blog/assets/js/203.7e9c5613.js"><link rel="prefetch" href="/blog/assets/js/204.b8b5fecf.js"><link rel="prefetch" href="/blog/assets/js/205.e94357c3.js"><link rel="prefetch" href="/blog/assets/js/206.241ec95d.js"><link rel="prefetch" href="/blog/assets/js/207.396b4219.js"><link rel="prefetch" href="/blog/assets/js/208.af2e1487.js"><link rel="prefetch" href="/blog/assets/js/209.b51b3443.js"><link rel="prefetch" href="/blog/assets/js/21.b25258d9.js"><link rel="prefetch" href="/blog/assets/js/210.7c7e4e9a.js"><link rel="prefetch" href="/blog/assets/js/211.6ce7171d.js"><link rel="prefetch" href="/blog/assets/js/212.5b57621d.js"><link rel="prefetch" href="/blog/assets/js/213.6ff1fe81.js"><link rel="prefetch" href="/blog/assets/js/214.79574d36.js"><link rel="prefetch" href="/blog/assets/js/215.5f478880.js"><link rel="prefetch" href="/blog/assets/js/216.f1990223.js"><link rel="prefetch" href="/blog/assets/js/217.4f0002d6.js"><link rel="prefetch" href="/blog/assets/js/218.1ebb365c.js"><link rel="prefetch" href="/blog/assets/js/219.e895b4b4.js"><link rel="prefetch" href="/blog/assets/js/22.10048574.js"><link rel="prefetch" href="/blog/assets/js/220.0bde54b7.js"><link rel="prefetch" href="/blog/assets/js/221.40d18f8d.js"><link rel="prefetch" href="/blog/assets/js/222.de2d8c15.js"><link rel="prefetch" href="/blog/assets/js/223.98359f1d.js"><link rel="prefetch" href="/blog/assets/js/224.10eb7b02.js"><link rel="prefetch" href="/blog/assets/js/225.bbc28cd7.js"><link rel="prefetch" href="/blog/assets/js/226.d956a74e.js"><link rel="prefetch" href="/blog/assets/js/227.698f6ee6.js"><link rel="prefetch" href="/blog/assets/js/228.63ee50cc.js"><link rel="prefetch" href="/blog/assets/js/229.b9f12d0e.js"><link rel="prefetch" href="/blog/assets/js/23.736c36fb.js"><link rel="prefetch" href="/blog/assets/js/230.160989ee.js"><link rel="prefetch" href="/blog/assets/js/231.e9fc614f.js"><link rel="prefetch" href="/blog/assets/js/232.09680974.js"><link rel="prefetch" href="/blog/assets/js/233.0b65fbee.js"><link rel="prefetch" href="/blog/assets/js/234.812382ac.js"><link rel="prefetch" href="/blog/assets/js/235.96ed847d.js"><link rel="prefetch" href="/blog/assets/js/236.1b7d21d9.js"><link rel="prefetch" href="/blog/assets/js/237.fd37c628.js"><link rel="prefetch" href="/blog/assets/js/238.b0a306e1.js"><link rel="prefetch" href="/blog/assets/js/239.29816201.js"><link rel="prefetch" href="/blog/assets/js/24.328221fb.js"><link rel="prefetch" href="/blog/assets/js/240.27ff7069.js"><link rel="prefetch" href="/blog/assets/js/241.d209581a.js"><link rel="prefetch" href="/blog/assets/js/242.4c9ff8ec.js"><link rel="prefetch" href="/blog/assets/js/243.977d4f2e.js"><link rel="prefetch" href="/blog/assets/js/244.a8efd7cb.js"><link rel="prefetch" href="/blog/assets/js/245.ef45f9be.js"><link rel="prefetch" href="/blog/assets/js/246.7f700f85.js"><link rel="prefetch" href="/blog/assets/js/247.df65ebb7.js"><link rel="prefetch" href="/blog/assets/js/248.197a8ac5.js"><link rel="prefetch" href="/blog/assets/js/249.bfda2705.js"><link rel="prefetch" href="/blog/assets/js/25.0ee891e6.js"><link rel="prefetch" href="/blog/assets/js/250.050376cc.js"><link rel="prefetch" href="/blog/assets/js/251.60cab832.js"><link rel="prefetch" href="/blog/assets/js/252.95d834d4.js"><link rel="prefetch" href="/blog/assets/js/253.42d40bc3.js"><link rel="prefetch" href="/blog/assets/js/254.1bde8cd1.js"><link rel="prefetch" href="/blog/assets/js/255.896d172a.js"><link rel="prefetch" href="/blog/assets/js/256.fe03a501.js"><link rel="prefetch" href="/blog/assets/js/257.5e4bc841.js"><link rel="prefetch" href="/blog/assets/js/258.2b9e8d1e.js"><link rel="prefetch" href="/blog/assets/js/259.d930ddfd.js"><link rel="prefetch" href="/blog/assets/js/26.c848430e.js"><link rel="prefetch" href="/blog/assets/js/260.1a7df354.js"><link rel="prefetch" href="/blog/assets/js/261.5ae465e5.js"><link rel="prefetch" href="/blog/assets/js/262.1301e18f.js"><link rel="prefetch" href="/blog/assets/js/263.e8152983.js"><link rel="prefetch" href="/blog/assets/js/264.54763d42.js"><link rel="prefetch" href="/blog/assets/js/265.197e4ff1.js"><link rel="prefetch" href="/blog/assets/js/266.5bb41ca7.js"><link rel="prefetch" href="/blog/assets/js/267.4ccc2952.js"><link rel="prefetch" href="/blog/assets/js/268.6c55874d.js"><link rel="prefetch" href="/blog/assets/js/269.16d4a1b6.js"><link rel="prefetch" href="/blog/assets/js/27.5ca08dc3.js"><link rel="prefetch" href="/blog/assets/js/270.062302a3.js"><link rel="prefetch" href="/blog/assets/js/271.f468a365.js"><link rel="prefetch" href="/blog/assets/js/272.7475f532.js"><link rel="prefetch" href="/blog/assets/js/273.0d63a7c5.js"><link rel="prefetch" href="/blog/assets/js/274.578eba27.js"><link rel="prefetch" href="/blog/assets/js/275.1f15360b.js"><link rel="prefetch" href="/blog/assets/js/276.f88b5eb0.js"><link rel="prefetch" href="/blog/assets/js/277.fbd7bc5a.js"><link rel="prefetch" href="/blog/assets/js/278.5aa0b66a.js"><link rel="prefetch" href="/blog/assets/js/279.37efe52d.js"><link rel="prefetch" href="/blog/assets/js/28.a492c74d.js"><link rel="prefetch" href="/blog/assets/js/280.08d98529.js"><link rel="prefetch" href="/blog/assets/js/281.10153dc3.js"><link rel="prefetch" href="/blog/assets/js/282.e5f74d64.js"><link rel="prefetch" href="/blog/assets/js/283.5c392061.js"><link rel="prefetch" href="/blog/assets/js/284.66399a0d.js"><link rel="prefetch" href="/blog/assets/js/285.5dc7dced.js"><link rel="prefetch" href="/blog/assets/js/286.7472a08f.js"><link rel="prefetch" href="/blog/assets/js/287.e3cdd175.js"><link rel="prefetch" href="/blog/assets/js/288.21067c33.js"><link rel="prefetch" href="/blog/assets/js/289.9e36a862.js"><link rel="prefetch" href="/blog/assets/js/29.eadbb91b.js"><link rel="prefetch" href="/blog/assets/js/290.21ac81c4.js"><link rel="prefetch" href="/blog/assets/js/291.de3f0b07.js"><link rel="prefetch" href="/blog/assets/js/292.91f191d1.js"><link rel="prefetch" href="/blog/assets/js/293.f48c5e4c.js"><link rel="prefetch" href="/blog/assets/js/294.f56eb1aa.js"><link rel="prefetch" href="/blog/assets/js/295.6ff86e37.js"><link rel="prefetch" href="/blog/assets/js/296.251d0cf1.js"><link rel="prefetch" href="/blog/assets/js/297.72ae5fbc.js"><link rel="prefetch" href="/blog/assets/js/298.912a5770.js"><link rel="prefetch" href="/blog/assets/js/299.c4c3b63b.js"><link rel="prefetch" href="/blog/assets/js/30.146ee850.js"><link rel="prefetch" href="/blog/assets/js/300.648c3383.js"><link rel="prefetch" href="/blog/assets/js/301.f1fd0ccc.js"><link rel="prefetch" href="/blog/assets/js/302.f7ac91ee.js"><link rel="prefetch" href="/blog/assets/js/303.f50c769e.js"><link rel="prefetch" href="/blog/assets/js/304.5a5924f1.js"><link rel="prefetch" href="/blog/assets/js/305.e78109af.js"><link rel="prefetch" href="/blog/assets/js/306.09a00b3d.js"><link rel="prefetch" href="/blog/assets/js/307.9fa922a5.js"><link rel="prefetch" href="/blog/assets/js/308.74419bea.js"><link rel="prefetch" href="/blog/assets/js/309.2c51491a.js"><link rel="prefetch" href="/blog/assets/js/31.80988661.js"><link rel="prefetch" href="/blog/assets/js/310.156ccd31.js"><link rel="prefetch" href="/blog/assets/js/311.069f1117.js"><link rel="prefetch" href="/blog/assets/js/312.6d459ca6.js"><link rel="prefetch" href="/blog/assets/js/313.6ae7fe1a.js"><link rel="prefetch" href="/blog/assets/js/314.3b47135c.js"><link rel="prefetch" href="/blog/assets/js/315.cba18b5b.js"><link rel="prefetch" href="/blog/assets/js/316.8d67ceb3.js"><link rel="prefetch" href="/blog/assets/js/317.31350d67.js"><link rel="prefetch" href="/blog/assets/js/318.29ad7071.js"><link rel="prefetch" href="/blog/assets/js/319.398d5045.js"><link rel="prefetch" href="/blog/assets/js/32.5a199b69.js"><link rel="prefetch" href="/blog/assets/js/320.b662d484.js"><link rel="prefetch" href="/blog/assets/js/321.b8a7b6e7.js"><link rel="prefetch" href="/blog/assets/js/322.8b0b5761.js"><link rel="prefetch" href="/blog/assets/js/323.4e6ceee7.js"><link rel="prefetch" href="/blog/assets/js/324.65d73c42.js"><link rel="prefetch" href="/blog/assets/js/325.dcbdeae1.js"><link rel="prefetch" href="/blog/assets/js/326.b22c3dfa.js"><link rel="prefetch" href="/blog/assets/js/327.f142e908.js"><link rel="prefetch" href="/blog/assets/js/328.253a21bb.js"><link rel="prefetch" href="/blog/assets/js/329.106d8581.js"><link rel="prefetch" href="/blog/assets/js/33.e7686e07.js"><link rel="prefetch" href="/blog/assets/js/330.529ff8ac.js"><link rel="prefetch" href="/blog/assets/js/331.37cc7ff0.js"><link rel="prefetch" href="/blog/assets/js/332.e9317511.js"><link rel="prefetch" href="/blog/assets/js/333.b5c7e46a.js"><link rel="prefetch" href="/blog/assets/js/334.2009974e.js"><link rel="prefetch" href="/blog/assets/js/335.bca289ec.js"><link rel="prefetch" href="/blog/assets/js/336.84f1154d.js"><link rel="prefetch" href="/blog/assets/js/337.8c97064c.js"><link rel="prefetch" href="/blog/assets/js/338.1d5c1357.js"><link rel="prefetch" href="/blog/assets/js/339.404240c7.js"><link rel="prefetch" href="/blog/assets/js/34.289f8b30.js"><link rel="prefetch" href="/blog/assets/js/340.024ff1f2.js"><link rel="prefetch" href="/blog/assets/js/341.1dee3e73.js"><link rel="prefetch" href="/blog/assets/js/342.e3a8d2f6.js"><link rel="prefetch" href="/blog/assets/js/343.de456d93.js"><link rel="prefetch" href="/blog/assets/js/344.5238d738.js"><link rel="prefetch" href="/blog/assets/js/345.74b731be.js"><link rel="prefetch" href="/blog/assets/js/346.4e4f49af.js"><link rel="prefetch" href="/blog/assets/js/347.2a4e7e0f.js"><link rel="prefetch" href="/blog/assets/js/348.3e73ee18.js"><link rel="prefetch" href="/blog/assets/js/349.d5f7a56f.js"><link rel="prefetch" href="/blog/assets/js/35.37abd4f4.js"><link rel="prefetch" href="/blog/assets/js/350.77e69f81.js"><link rel="prefetch" href="/blog/assets/js/351.dba0ef29.js"><link rel="prefetch" href="/blog/assets/js/352.750cf699.js"><link rel="prefetch" href="/blog/assets/js/353.f3be4eb7.js"><link rel="prefetch" href="/blog/assets/js/354.6b2a2669.js"><link rel="prefetch" href="/blog/assets/js/355.70868e6b.js"><link rel="prefetch" href="/blog/assets/js/356.0cc39cff.js"><link rel="prefetch" href="/blog/assets/js/357.2ee9aae8.js"><link rel="prefetch" href="/blog/assets/js/358.5b1c11e7.js"><link rel="prefetch" href="/blog/assets/js/359.a8b6bea3.js"><link rel="prefetch" href="/blog/assets/js/36.26eafdd6.js"><link rel="prefetch" href="/blog/assets/js/360.6ed495e2.js"><link rel="prefetch" href="/blog/assets/js/361.c101b410.js"><link rel="prefetch" href="/blog/assets/js/362.24750cde.js"><link rel="prefetch" href="/blog/assets/js/363.020c769d.js"><link rel="prefetch" href="/blog/assets/js/364.7523327f.js"><link rel="prefetch" href="/blog/assets/js/365.92f2559d.js"><link rel="prefetch" href="/blog/assets/js/366.ba082027.js"><link rel="prefetch" href="/blog/assets/js/367.4bdbca64.js"><link rel="prefetch" href="/blog/assets/js/368.79daafc9.js"><link rel="prefetch" href="/blog/assets/js/369.bb30cda0.js"><link rel="prefetch" href="/blog/assets/js/37.8c46f75a.js"><link rel="prefetch" href="/blog/assets/js/370.1cd1987a.js"><link rel="prefetch" href="/blog/assets/js/371.081732d4.js"><link rel="prefetch" href="/blog/assets/js/372.67807a93.js"><link rel="prefetch" href="/blog/assets/js/373.133b4c91.js"><link rel="prefetch" href="/blog/assets/js/374.a96fbb80.js"><link rel="prefetch" href="/blog/assets/js/375.ce2e2a09.js"><link rel="prefetch" href="/blog/assets/js/376.1acbe8f3.js"><link rel="prefetch" href="/blog/assets/js/377.6011b78c.js"><link rel="prefetch" href="/blog/assets/js/378.9411f001.js"><link rel="prefetch" href="/blog/assets/js/379.fc197684.js"><link rel="prefetch" href="/blog/assets/js/38.8036c832.js"><link rel="prefetch" href="/blog/assets/js/380.e682b0f7.js"><link rel="prefetch" href="/blog/assets/js/381.0150670b.js"><link rel="prefetch" href="/blog/assets/js/382.a2a73140.js"><link rel="prefetch" href="/blog/assets/js/383.67492a6d.js"><link rel="prefetch" href="/blog/assets/js/384.0c156684.js"><link rel="prefetch" href="/blog/assets/js/385.7a674006.js"><link rel="prefetch" href="/blog/assets/js/386.7db443e2.js"><link rel="prefetch" href="/blog/assets/js/387.861fc2ad.js"><link rel="prefetch" href="/blog/assets/js/388.53293f8b.js"><link rel="prefetch" href="/blog/assets/js/389.83de2a5a.js"><link rel="prefetch" href="/blog/assets/js/39.1fcc887a.js"><link rel="prefetch" href="/blog/assets/js/390.1b032dee.js"><link rel="prefetch" href="/blog/assets/js/391.5409d13c.js"><link rel="prefetch" href="/blog/assets/js/392.95ee1817.js"><link rel="prefetch" href="/blog/assets/js/393.bfbb4e02.js"><link rel="prefetch" href="/blog/assets/js/394.45f5f3ac.js"><link rel="prefetch" href="/blog/assets/js/395.d2bc26cb.js"><link rel="prefetch" href="/blog/assets/js/396.9b919efe.js"><link rel="prefetch" href="/blog/assets/js/397.63ae1728.js"><link rel="prefetch" href="/blog/assets/js/398.2e8cd381.js"><link rel="prefetch" href="/blog/assets/js/399.cce2bc74.js"><link rel="prefetch" href="/blog/assets/js/4.0a112c8e.js"><link rel="prefetch" href="/blog/assets/js/40.f03ea582.js"><link rel="prefetch" href="/blog/assets/js/400.bb8c8f36.js"><link rel="prefetch" href="/blog/assets/js/401.f6c8e368.js"><link rel="prefetch" href="/blog/assets/js/402.a707dd0b.js"><link rel="prefetch" href="/blog/assets/js/403.0246ef9d.js"><link rel="prefetch" href="/blog/assets/js/404.4e8fab18.js"><link rel="prefetch" href="/blog/assets/js/405.aac86c74.js"><link rel="prefetch" href="/blog/assets/js/406.ec295aee.js"><link rel="prefetch" href="/blog/assets/js/407.0c9bfe75.js"><link rel="prefetch" href="/blog/assets/js/408.90280ec4.js"><link rel="prefetch" href="/blog/assets/js/409.17f43c16.js"><link rel="prefetch" href="/blog/assets/js/41.14a66d79.js"><link rel="prefetch" href="/blog/assets/js/410.a8bcf7af.js"><link rel="prefetch" href="/blog/assets/js/411.1c299cf8.js"><link rel="prefetch" href="/blog/assets/js/412.993fde1e.js"><link rel="prefetch" href="/blog/assets/js/413.24086a2e.js"><link rel="prefetch" href="/blog/assets/js/414.669b21b7.js"><link rel="prefetch" href="/blog/assets/js/415.c6e0b851.js"><link rel="prefetch" href="/blog/assets/js/416.2c0b5a27.js"><link rel="prefetch" href="/blog/assets/js/417.035fbe19.js"><link rel="prefetch" href="/blog/assets/js/418.e9ba8e2d.js"><link rel="prefetch" href="/blog/assets/js/419.40436cbb.js"><link rel="prefetch" href="/blog/assets/js/42.7ca1a3b9.js"><link rel="prefetch" href="/blog/assets/js/420.a44f38b1.js"><link rel="prefetch" href="/blog/assets/js/421.d483449e.js"><link rel="prefetch" href="/blog/assets/js/422.85f0223d.js"><link rel="prefetch" href="/blog/assets/js/423.73b2df81.js"><link rel="prefetch" href="/blog/assets/js/424.c171262a.js"><link rel="prefetch" href="/blog/assets/js/425.84861e5f.js"><link rel="prefetch" href="/blog/assets/js/426.50769ad5.js"><link rel="prefetch" href="/blog/assets/js/427.4f055173.js"><link rel="prefetch" href="/blog/assets/js/428.f1a79a71.js"><link rel="prefetch" href="/blog/assets/js/429.0b1e1ae8.js"><link rel="prefetch" href="/blog/assets/js/43.7f730e4f.js"><link rel="prefetch" href="/blog/assets/js/430.98b90971.js"><link rel="prefetch" href="/blog/assets/js/431.ccab63f7.js"><link rel="prefetch" href="/blog/assets/js/432.b36287bb.js"><link rel="prefetch" href="/blog/assets/js/433.b629a88d.js"><link rel="prefetch" href="/blog/assets/js/434.94c5b829.js"><link rel="prefetch" href="/blog/assets/js/435.2f5ebc90.js"><link rel="prefetch" href="/blog/assets/js/436.af40a468.js"><link rel="prefetch" href="/blog/assets/js/437.1ac4edac.js"><link rel="prefetch" href="/blog/assets/js/438.4b5c3858.js"><link rel="prefetch" href="/blog/assets/js/439.b201f9e1.js"><link rel="prefetch" href="/blog/assets/js/44.6a0d0a24.js"><link rel="prefetch" href="/blog/assets/js/440.90bbfc9c.js"><link rel="prefetch" href="/blog/assets/js/441.edaf49dd.js"><link rel="prefetch" href="/blog/assets/js/442.46358509.js"><link rel="prefetch" href="/blog/assets/js/443.ac894823.js"><link rel="prefetch" href="/blog/assets/js/444.388b0fb5.js"><link rel="prefetch" href="/blog/assets/js/445.5d6dcd5a.js"><link rel="prefetch" href="/blog/assets/js/446.cd463a00.js"><link rel="prefetch" href="/blog/assets/js/447.fa3cf170.js"><link rel="prefetch" href="/blog/assets/js/448.d166f1a6.js"><link rel="prefetch" href="/blog/assets/js/449.9007f738.js"><link rel="prefetch" href="/blog/assets/js/45.ce2504cf.js"><link rel="prefetch" href="/blog/assets/js/450.0e3c2b8d.js"><link rel="prefetch" href="/blog/assets/js/451.77ec44a8.js"><link rel="prefetch" href="/blog/assets/js/452.65334147.js"><link rel="prefetch" href="/blog/assets/js/453.bd40db54.js"><link rel="prefetch" href="/blog/assets/js/454.c680bf9b.js"><link rel="prefetch" href="/blog/assets/js/455.d3ba9987.js"><link rel="prefetch" href="/blog/assets/js/456.ba670ab8.js"><link rel="prefetch" href="/blog/assets/js/457.a56c9694.js"><link rel="prefetch" href="/blog/assets/js/458.8c7575e6.js"><link rel="prefetch" href="/blog/assets/js/459.4f64a00d.js"><link rel="prefetch" href="/blog/assets/js/46.df740708.js"><link rel="prefetch" href="/blog/assets/js/460.12329cff.js"><link rel="prefetch" href="/blog/assets/js/461.eaac64b6.js"><link rel="prefetch" href="/blog/assets/js/462.e8791604.js"><link rel="prefetch" href="/blog/assets/js/463.b7a30366.js"><link rel="prefetch" href="/blog/assets/js/464.9405a358.js"><link rel="prefetch" href="/blog/assets/js/465.a2dc9a55.js"><link rel="prefetch" href="/blog/assets/js/466.069ca07c.js"><link rel="prefetch" href="/blog/assets/js/467.60978d4b.js"><link rel="prefetch" href="/blog/assets/js/468.3ff4f7cd.js"><link rel="prefetch" href="/blog/assets/js/469.35f3e9f1.js"><link rel="prefetch" href="/blog/assets/js/47.63e54aab.js"><link rel="prefetch" href="/blog/assets/js/470.2ae1c32a.js"><link rel="prefetch" href="/blog/assets/js/471.5b85826b.js"><link rel="prefetch" href="/blog/assets/js/472.0542f8ee.js"><link rel="prefetch" href="/blog/assets/js/473.817388b7.js"><link rel="prefetch" href="/blog/assets/js/474.24200d13.js"><link rel="prefetch" href="/blog/assets/js/475.c8782c45.js"><link rel="prefetch" href="/blog/assets/js/476.6db72d54.js"><link rel="prefetch" href="/blog/assets/js/477.95a3d492.js"><link rel="prefetch" href="/blog/assets/js/478.9c8e6497.js"><link rel="prefetch" href="/blog/assets/js/479.35f9bf3b.js"><link rel="prefetch" href="/blog/assets/js/48.83140357.js"><link rel="prefetch" href="/blog/assets/js/480.b51a5165.js"><link rel="prefetch" href="/blog/assets/js/481.4d8e51e2.js"><link rel="prefetch" href="/blog/assets/js/482.65cedab1.js"><link rel="prefetch" href="/blog/assets/js/483.ca1776b9.js"><link rel="prefetch" href="/blog/assets/js/484.33a33eff.js"><link rel="prefetch" href="/blog/assets/js/485.e465197e.js"><link rel="prefetch" href="/blog/assets/js/486.70acef33.js"><link rel="prefetch" href="/blog/assets/js/487.ee3fc769.js"><link rel="prefetch" href="/blog/assets/js/488.a63e51e5.js"><link rel="prefetch" href="/blog/assets/js/489.0f3c49d5.js"><link rel="prefetch" href="/blog/assets/js/49.d8832e95.js"><link rel="prefetch" href="/blog/assets/js/490.5712118b.js"><link rel="prefetch" href="/blog/assets/js/491.5375baa1.js"><link rel="prefetch" href="/blog/assets/js/492.37c94ed4.js"><link rel="prefetch" href="/blog/assets/js/493.9b961f5e.js"><link rel="prefetch" href="/blog/assets/js/494.feea28ac.js"><link rel="prefetch" href="/blog/assets/js/495.98ea50ff.js"><link rel="prefetch" href="/blog/assets/js/496.33d53d3c.js"><link rel="prefetch" href="/blog/assets/js/497.9de40aa3.js"><link rel="prefetch" href="/blog/assets/js/498.4cd030db.js"><link rel="prefetch" href="/blog/assets/js/499.05109d7f.js"><link rel="prefetch" href="/blog/assets/js/5.c0f04726.js"><link rel="prefetch" href="/blog/assets/js/50.2c216e5d.js"><link rel="prefetch" href="/blog/assets/js/500.7b8f1773.js"><link rel="prefetch" href="/blog/assets/js/501.dfbba9a8.js"><link rel="prefetch" href="/blog/assets/js/502.90f5bd1b.js"><link rel="prefetch" href="/blog/assets/js/503.9cefed56.js"><link rel="prefetch" href="/blog/assets/js/504.789de515.js"><link rel="prefetch" href="/blog/assets/js/505.e3eb2619.js"><link rel="prefetch" href="/blog/assets/js/506.26a895a8.js"><link rel="prefetch" href="/blog/assets/js/507.aece8a26.js"><link rel="prefetch" href="/blog/assets/js/508.82ef6fd3.js"><link rel="prefetch" href="/blog/assets/js/509.6617c24f.js"><link rel="prefetch" href="/blog/assets/js/51.9924df0f.js"><link rel="prefetch" href="/blog/assets/js/510.5251c4fc.js"><link rel="prefetch" href="/blog/assets/js/511.15d303a7.js"><link rel="prefetch" href="/blog/assets/js/512.ec4dbe26.js"><link rel="prefetch" href="/blog/assets/js/513.fee5a2b7.js"><link rel="prefetch" href="/blog/assets/js/514.3f48b9d4.js"><link rel="prefetch" href="/blog/assets/js/515.8e750dd4.js"><link rel="prefetch" href="/blog/assets/js/516.bc7ce9ec.js"><link rel="prefetch" href="/blog/assets/js/517.5c273689.js"><link rel="prefetch" href="/blog/assets/js/518.8204db0b.js"><link rel="prefetch" href="/blog/assets/js/519.4069fac5.js"><link rel="prefetch" href="/blog/assets/js/52.c6b270fd.js"><link rel="prefetch" href="/blog/assets/js/520.6052378c.js"><link rel="prefetch" href="/blog/assets/js/521.a84e2f70.js"><link rel="prefetch" href="/blog/assets/js/522.07f1fd3a.js"><link rel="prefetch" href="/blog/assets/js/523.81cd7c5a.js"><link rel="prefetch" href="/blog/assets/js/524.0c27a30c.js"><link rel="prefetch" href="/blog/assets/js/525.3d388127.js"><link rel="prefetch" href="/blog/assets/js/526.da896981.js"><link rel="prefetch" href="/blog/assets/js/53.37b57eac.js"><link rel="prefetch" href="/blog/assets/js/54.07db747b.js"><link rel="prefetch" href="/blog/assets/js/55.74ef4683.js"><link rel="prefetch" href="/blog/assets/js/56.2fef63ab.js"><link rel="prefetch" href="/blog/assets/js/57.ed0c5fb3.js"><link rel="prefetch" href="/blog/assets/js/58.ca7cbf9a.js"><link rel="prefetch" href="/blog/assets/js/59.3c22bc5a.js"><link rel="prefetch" href="/blog/assets/js/6.2297b244.js"><link rel="prefetch" href="/blog/assets/js/60.262e5867.js"><link rel="prefetch" href="/blog/assets/js/61.5636e75a.js"><link rel="prefetch" href="/blog/assets/js/62.7dd1d109.js"><link rel="prefetch" href="/blog/assets/js/63.d0773cdd.js"><link rel="prefetch" href="/blog/assets/js/64.997275ff.js"><link rel="prefetch" href="/blog/assets/js/65.07901344.js"><link rel="prefetch" href="/blog/assets/js/66.c464da45.js"><link rel="prefetch" href="/blog/assets/js/67.feffb1d6.js"><link rel="prefetch" href="/blog/assets/js/68.fcfe1349.js"><link rel="prefetch" href="/blog/assets/js/69.e895924e.js"><link rel="prefetch" href="/blog/assets/js/7.e4af8b84.js"><link rel="prefetch" href="/blog/assets/js/70.078c407f.js"><link rel="prefetch" href="/blog/assets/js/71.557206d7.js"><link rel="prefetch" href="/blog/assets/js/72.e1584320.js"><link rel="prefetch" href="/blog/assets/js/73.48a20011.js"><link rel="prefetch" href="/blog/assets/js/74.20421f04.js"><link rel="prefetch" href="/blog/assets/js/75.3b0e05dc.js"><link rel="prefetch" href="/blog/assets/js/76.2bf10aca.js"><link rel="prefetch" href="/blog/assets/js/77.02348743.js"><link rel="prefetch" href="/blog/assets/js/78.cfbc295c.js"><link rel="prefetch" href="/blog/assets/js/79.453eacb3.js"><link rel="prefetch" href="/blog/assets/js/8.d80735f1.js"><link rel="prefetch" href="/blog/assets/js/80.2b500eb9.js"><link rel="prefetch" href="/blog/assets/js/81.387b7278.js"><link rel="prefetch" href="/blog/assets/js/82.1aa40d78.js"><link rel="prefetch" href="/blog/assets/js/83.17f6510a.js"><link rel="prefetch" href="/blog/assets/js/84.db4405bb.js"><link rel="prefetch" href="/blog/assets/js/85.145ce263.js"><link rel="prefetch" href="/blog/assets/js/86.139ef9a8.js"><link rel="prefetch" href="/blog/assets/js/87.824e85b1.js"><link rel="prefetch" href="/blog/assets/js/88.bd8c36c2.js"><link rel="prefetch" href="/blog/assets/js/89.ff5dab67.js"><link rel="prefetch" href="/blog/assets/js/9.c2a5941b.js"><link rel="prefetch" href="/blog/assets/js/90.750d7f60.js"><link rel="prefetch" href="/blog/assets/js/91.f93ed10a.js"><link rel="prefetch" href="/blog/assets/js/92.a9ecf2e9.js"><link rel="prefetch" href="/blog/assets/js/93.ac344da4.js"><link rel="prefetch" href="/blog/assets/js/94.57871314.js"><link rel="prefetch" href="/blog/assets/js/95.32361ad9.js"><link rel="prefetch" href="/blog/assets/js/96.fa531423.js"><link rel="prefetch" href="/blog/assets/js/97.f3eaaba1.js"><link rel="prefetch" href="/blog/assets/js/98.a6622376.js"><link rel="prefetch" href="/blog/assets/js/99.d04a5a4b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bbc000.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/learn.png" alt="zouyu-Blog" class="logo"> <span class="site-name can-hide">zouyu-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link router-link-active">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link router-link-active">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Business</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Database</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Deploy</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/" aria-current="page" class="sidebar-link">Deploy笔记</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Jenkins</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/Jenkins/Jenkins/" aria-current="page" class="sidebar-link">Jenkins笔记</a></li><li><a href="/blog/jenkins/" class="sidebar-link">Jenkins - 知识体系</a></li><li><a href="/blog/pages/3dedc8/" class="sidebar-link">Jenkins - 介绍</a></li><li><a href="/blog/pages/ec9790/" class="sidebar-link">从零开始用Jenkins自动构建部署SpringBoot项目</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html" aria-current="page" class="active sidebar-link">Jenkins</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#gitlab安装使用" class="sidebar-link">GitLab安装使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#在ssh下安装" class="sidebar-link">在ssh下安装</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#在docker下安装" class="sidebar-link">在docker下安装</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#jenkins安装" class="sidebar-link">Jenkins安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#安装jdk" class="sidebar-link">安装JDK</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#maven安装" class="sidebar-link">Maven安装</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#jenkins-git-maven-自动化部署配置" class="sidebar-link">Jenkins + Git + Maven 自动化部署配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#git安装" class="sidebar-link">git安装</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#publish-over-ssh-配置" class="sidebar-link">publish over ssh 配置</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#运行前清理" class="sidebar-link">运行前清理</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#几种构建方式" class="sidebar-link">几种构建方式</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#测试报告邮件通知" class="sidebar-link">测试报告邮件通知</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#" class="sidebar-link"></a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#自动化部署到docker容器中" class="sidebar-link">自动化部署到docker容器中</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#jenkins集群-并发构建" class="sidebar-link">Jenkins集群/并发构建</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#流水线-pipeline" class="sidebar-link">流水线 pipeline</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#完整语法" class="sidebar-link">完整语法</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#测试脚本" class="sidebar-link">测试脚本</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Jenkins/Jenkins/Jenkins.html#pipeline中执行自动化构建" class="sidebar-link">pipeline中执行自动化构建</a></li></ul></li></ul></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/01环境准备.html" class="sidebar-link">01环境准备</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/02Jenkins启动配置.html" class="sidebar-link">02 配置</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/03Jenkins配置maven和git自动构建 - 副本.html" class="sidebar-link">03Jenkins配置maven和git自动构建Jar</a></li><li><a href="/blog/Deploy/Jenkins/Jenkins实践/04自动发布到目标服务器.html" class="sidebar-link">04自动发布到目标服务器</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Other</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Server</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Boot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Cloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Work Doc</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>尚硅谷 Redis</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jenkins"><a href="#jenkins" class="header-anchor">#</a> Jenkins</h1> <p>Jenkins，原名 Hudson，2011 年改为现在的名字。它是一个开源的实现持续集成的软件工具。</p> <p>官方网站</p> <p>https://www.jenkins.io/</p> <h2 id="gitlab安装使用"><a href="#gitlab安装使用" class="header-anchor">#</a> GitLab安装使用</h2> <p>官方网站：https://about.gitlab.com/</p> <p>安装所需最小配置</p> <p>内存至少4G</p> <p>https://docs.gitlab.cn/jh/install/requirements.html</p> <h3 id="在ssh下安装"><a href="#在ssh下安装" class="header-anchor">#</a> 在ssh下安装</h3> <p>官方安装文档：https://gitlab.cn/install/?version=ce</p> <h4 id="_1-安装依赖"><a href="#_1-安装依赖" class="header-anchor">#</a> 1 安装依赖</h4> <div class="language- extra-class"><pre class="language-text"><code>sudo yum install -y curl policycoreutils-python openssh-server perl
+sudo systemctl enable sshd
+sudo systemctl start sshd
+</code></pre></div><h4 id="_2-配置镜像"><a href="#_2-配置镜像" class="header-anchor">#</a> 2 配置镜像</h4> <div class="language- extra-class"><pre class="language-text"><code>curl -fsSL https://packages.gitlab.cn/repository/raw/scripts/setup.sh | /bin/bash
+</code></pre></div><h4 id="_3-开始安装"><a href="#_3-开始安装" class="header-anchor">#</a> 3 开始安装</h4> <div class="language- extra-class"><pre class="language-text"><code>sudo EXTERNAL_URL=&quot;http://192.168.44.103&quot; yum install -y gitlab-jh
+</code></pre></div><p>除非您在安装过程中指定了自定义密码，否则将随机生成一个密码并存储在 <code>/etc/gitlab/initial_root_password</code> 文件中(出于安全原因，24 小时后，此文件会被第一次 <code>gitlab-ctl reconfigure</code> 自动删除，因此若使用随机密码登录，建议安装成功初始登录成功之后，立即修改初始密码）。使用此密码和用户名 <code>root</code> 登录。</p> <h4 id="gitlab常用命令"><a href="#gitlab常用命令" class="header-anchor">#</a> gitlab常用命令</h4> <div class="language- extra-class"><pre class="language-text"><code>gitlab-ctl start                  # 启动所有 gitlab 组件；
+gitlab-ctl stop                   # 停止所有 gitlab 组件；
+gitlab-ctl restart                # 重启所有 gitlab 组件；
+gitlab-ctl status                 # 查看服务状态；
+gitlab-ctl reconfigure            # 启动服务；
+vi /etc/gitlab/gitlab.rb         # 修改默认的配置文件；
+gitlab-ctl tail                   # 查看日志；
+
+</code></pre></div><h3 id="在docker下安装"><a href="#在docker下安装" class="header-anchor">#</a> 在docker下安装</h3> <p>https://docs.gitlab.cn/jh/install/docker.html</p> <p>安装所需最小配置</p> <ul><li>内存至少4G</li> <li>系统内核至少在3.10以上 <code>uname -r</code> 命令可查看系统内核版本</li></ul> <h4 id="安装docker"><a href="#安装docker" class="header-anchor">#</a> 安装docker</h4> <ol><li>更新yum源</li></ol> <p>​	<code>yum update</code></p> <ol start="2"><li>安装依赖</li></ol> <p>​	<code>yum install -y yum-utils device-mapper-persistent-data lvm2</code></p> <ol start="3"><li>添加镜像</li></ol> <div class="language- extra-class"><pre class="language-text"><code>//国外镜像
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+//阿里镜像
+https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+</code></pre></div><ol start="4"><li>查看源中可使用版本</li></ol> <div class="language- extra-class"><pre class="language-text"><code> yum list docker-ce --showduplicates | sort -r
+</code></pre></div><ol start="5"><li>安装指定版本</li></ol> <div class="language- extra-class"><pre class="language-text"><code>yum install docker
+</code></pre></div><ol start="6"><li>配置开机启动项</li></ol> <div class="language- extra-class"><pre class="language-text"><code>systemctl start docker
+systemctl enable docker
+docker version
+</code></pre></div><h4 id="使用容器安装gitlab"><a href="#使用容器安装gitlab" class="header-anchor">#</a> 使用容器安装gitlab</h4> <p>1.添加容器</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> run <span class="token parameter variable">--detach</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--hostname</span> <span class="token number">192.168</span>.44.103 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--publish</span> <span class="token number">443</span>:443 <span class="token parameter variable">--publish</span> <span class="token number">80</span>:80 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--name</span> gitlab <span class="token punctuation">\</span>
+  <span class="token parameter variable">--restart</span> always <span class="token punctuation">\</span>
+  <span class="token parameter variable">--volume</span> <span class="token variable">$GITLAB_HOME</span>/config:/etc/gitlab:Z <span class="token punctuation">\</span>
+  <span class="token parameter variable">--volume</span> <span class="token variable">$GITLAB_HOME</span>/logs:/var/log/gitlab:Z <span class="token punctuation">\</span>
+  <span class="token parameter variable">--volume</span> <span class="token variable">$GITLAB_HOME</span>/data:/var/opt/gitlab:Z <span class="token punctuation">\</span>
+  --shm-size 256m <span class="token punctuation">\</span>
+  registry.gitlab.cn/omnibus/gitlab-jh:latest
+</code></pre></div><p>2.启动容器</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> start gitlab
+</code></pre></div><p>3.查看已存在的容器</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span>
+</code></pre></div><p>4.进入容器</p> <div class="language- extra-class"><pre class="language-text"><code>docker exec -it  gitlab /bin/bash
+</code></pre></div><h4 id="访问"><a href="#访问" class="header-anchor">#</a> 访问</h4> <p>http://192.168.44.101</p> <p>当首次运行出现502错误的时候排查两个原因</p> <ol><li>虚拟机内存至少需要4g</li> <li>稍微再等等刷新一下可能就好了</li></ol> <h4 id="管理员账号登录"><a href="#管理员账号登录" class="header-anchor">#</a> 管理员账号登录</h4> <p>用户名：root</p> <p>密码存在下面文件中，登录后需要改密码不然24小时之后会失效</p> <div class="language- extra-class"><pre class="language-text"><code>cat /etc/gitlab/initial_root_password
+</code></pre></div><h2 id="jenkins安装"><a href="#jenkins安装" class="header-anchor">#</a> Jenkins安装</h2> <p>官方文档介绍非常详细</p> <p>https://www.jenkins.io</p> <p>安装需求</p> <div class="language- extra-class"><pre class="language-text"><code>机器要求：
+
+256 MB 内存，建议大于 512 MB
+
+10 GB 的硬盘空间（用于 Jenkins 和 Docker 镜像）
+
+需要安装以下软件：
+
+Java 8 ( JRE 或者 JDK 都可以)
+
+Docker （导航到网站顶部的Get Docker链接以访问适合您平台的Docker下载）
+
+
+</code></pre></div><h3 id="安装jdk"><a href="#安装jdk" class="header-anchor">#</a> 安装JDK</h3> <p>1 检索可用包</p> <div class="language- extra-class"><pre class="language-text"><code>yum search java|grep jdk
+</code></pre></div><p>2 安装</p> <div class="language- extra-class"><pre class="language-text"><code>yum install java-1.8.0-openjdk
+</code></pre></div><p>将Jenkins安装包上传服务器,安装好后如果没法访问,就关闭防火墙</p> <div class="language- extra-class"><pre class="language-text"><code>systemctl stop firewalld.service
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>http://192.168.152.139:8080/
+</code></pre></div><p>首次启动war包会在<code>/root/.jenkins</code>生成配置文件</p> <p>待完全启动成功后 访问服务器8080端口完成配置</p> <p>初始化后的密码：</p> <div class="language- extra-class"><pre class="language-text"><code>Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+1a8334954f324a7eab9a7bc8f0ca8b57
+
+This may also be found at: /root/.jenkins/secrets/initialAdminPassword
+
+
+</code></pre></div><p>密码文件使用后会自动删除</p> <h3 id="maven安装"><a href="#maven安装" class="header-anchor">#</a> Maven安装</h3> <p>官网</p> <p>https://maven.apache.org/</p> <p>下载后复制到Jenkins所在服务器解压缩即可</p> <p>/usr/local/maven 路径下</p> <p>Jenkins 安装maven插件</p> <p><img src="/blog/assets/img/20230107224936.cc0829a1.png" alt="image-20230107224929580"></p> <p>新建任务时就会有maven任务</p> <h2 id="jenkins-git-maven-自动化部署配置"><a href="#jenkins-git-maven-自动化部署配置" class="header-anchor">#</a> Jenkins + Git + Maven 自动化部署配置</h2> <h4 id="_1-git配置"><a href="#_1-git配置" class="header-anchor">#</a> 1 Git配置</h4> <p><img src="/blog/assets/img/image-20220726213303821.12a28158-1677832595013-10.12a28158.png" alt="image-20220726213303821"></p> <p><img src="/blog/assets/img/image-20220726213505879.6f05facb-1677832577516-7-1677832603878-13.6f05facb.png" alt="image-20220726213505879"></p> <h4 id="_2-maven配置"><a href="#_2-maven配置" class="header-anchor">#</a> 2 Maven配置</h4> <p><img src="/blog/assets/img/image-20220726214239888-1677832616258-15.1e364462.png" alt="image-20220726214239888"></p> <h4 id="_3-pom-xml配置"><a href="#_3-pom-xml配置" class="header-anchor">#</a> 3 Pom.xml配置</h4> <p><img src="/blog/assets/img/image-20220726214200732-1677832622635-17.70956d59.png" alt="image-20220726214200732"></p> <h3 id="git安装"><a href="#git安装" class="header-anchor">#</a> git安装</h3> <div class="language- extra-class"><pre class="language-text"><code>yum install -y git
+</code></pre></div><h4 id="javahome配置-可选"><a href="#javahome配置-可选" class="header-anchor">#</a> javahome配置(可选)</h4> <div class="language- extra-class"><pre class="language-text"><code>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.322.b06-1.el7_9.x86_64
+
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.322.b06-1.el7_9.x86_64
+export JRE_HOME=$JAVA_HOME/jre
+PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+export JAVA_HOME JRE_HOME CLASS_PATH PATH
+
+jdk
+/etc/alternatives/jre_openjdk
+source /etc/profile 立即生效
+</code></pre></div><h4 id="报错找不到jdk"><a href="#报错找不到jdk" class="header-anchor">#</a> 报错找不到jdk？</h4> <div class="language- extra-class"><pre class="language-text"><code>默认yum安装java的时候会显示安装的是openjdk1.8 实则实际上只安装了jre
+yum install -y java-devel
+</code></pre></div><h4 id="maven阿里云镜像"><a href="#maven阿里云镜像" class="header-anchor">#</a> Maven阿里云镜像</h4> <p>修改<code>/usr/local/maven/conf/settings.xml</code></p> <p>参考文章:</p> <p>https://blog.csdn.net/czc9309/article/details/108049009</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="token comment">&lt;!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+&quot;License&quot;); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+&quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+--&gt;</span>
+
+<span class="token comment">&lt;!--
+ | This is the configuration file for Maven. It can be specified at two levels:
+ |
+ |  1. User Level. This settings.xml file provides configuration for a single user,
+ |                 and is normally provided in ${user.home}/.m2/settings.xml.
+ |
+ |                 NOTE: This location can be overridden with the CLI option:
+ |
+ |                 -s /path/to/user/settings.xml
+ |
+ |  2. Global Level. This settings.xml file provides configuration for all Maven
+ |                 users on a machine (assuming they're all using the same Maven
+ |                 installation). It's normally provided in
+ |                 ${maven.conf}/settings.xml.
+ |
+ |                 NOTE: This location can be overridden with the CLI option:
+ |
+ |                 -gs /path/to/global/settings.xml
+ |
+ | The sections in this sample file are intended to give you a running start at
+ | getting the most out of your Maven installation. Where appropriate, the default
+ | values (values used when the setting is not specified) are provided.
+ |
+ |--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/SETTINGS/1.0.0<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- localRepository
+   | The path to the local repository maven will use to store artifacts.
+   |
+   | Default: ${user.home}/.m2/repository
+  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;
+  --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localRepository</span><span class="token punctuation">&gt;</span></span>${user.home}/.m2/repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localRepository</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- interactiveMode
+   | This will determine whether maven prompts you when it needs input. If set to false,
+   | maven will use a sensible default value, perhaps based on some other setting, for
+   | the parameter in question.
+   |
+   | Default: true
+  &lt;interactiveMode&gt;true&lt;/interactiveMode&gt;
+  --&gt;</span>
+
+  <span class="token comment">&lt;!-- offline
+   | Determines whether maven should attempt to connect to the network when executing a build.
+   | This will have an effect on artifact downloads, artifact deployment, and others.
+   |
+   | Default: false
+  &lt;offline&gt;false&lt;/offline&gt;
+  --&gt;</span>
+
+  <span class="token comment">&lt;!-- pluginGroups
+   | This is a list of additional group identifiers that will be searched when resolving plugins by their prefix, i.e.
+   | when invoking a command line like &quot;mvn prefix:goal&quot;. Maven will automatically add the group identifiers
+   | &quot;org.apache.maven.plugins&quot; and &quot;org.codehaus.mojo&quot; if these are not already contained in the list.
+   |--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginGroups</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- pluginGroup
+     | Specifies a further group identifier to use for plugin lookup.
+    &lt;pluginGroup&gt;com.your.plugins&lt;/pluginGroup&gt;
+    --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginGroup</span><span class="token punctuation">&gt;</span></span>org.mortbay.jetty<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginGroup</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginGroups</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- proxies
+   | This is a list of proxies which can be used on this machine to connect to the network.
+   | Unless otherwise specified (by system property or command-line switch), the first proxy
+   | specification in this list marked as active will be used.
+   |--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>proxies</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- proxy
+     | Specification for one proxy, to be used in connecting to the network.
+     |
+    &lt;proxy&gt;
+      &lt;id&gt;optional&lt;/id&gt;
+      &lt;active&gt;true&lt;/active&gt;
+      &lt;protocol&gt;http&lt;/protocol&gt;
+      &lt;username&gt;proxyuser&lt;/username&gt;
+      &lt;password&gt;proxypass&lt;/password&gt;
+      &lt;host&gt;proxy.host.net&lt;/host&gt;
+      &lt;port&gt;80&lt;/port&gt;
+      &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt;
+    &lt;/proxy&gt;
+    --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>proxies</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- servers
+   | This is a list of authentication profiles, keyed by the server-id used within the system.
+   | Authentication profiles can be used whenever maven must make a connection to a remote server.
+   |--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servers</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- server
+     | Specifies the authentication information to use when connecting to a particular server, identified by
+     | a unique name within the system (referred to by the 'id' attribute below).
+     | 
+     | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are 
+     |       used together.
+     |
+    &lt;server&gt;
+      &lt;id&gt;deploymentRepo&lt;/id&gt;
+      &lt;username&gt;repouser&lt;/username&gt;
+      &lt;password&gt;repopwd&lt;/password&gt;
+    &lt;/server&gt;
+    --&gt;</span>
+    
+    <span class="token comment">&lt;!-- Another sample, using keys to authenticate.
+    &lt;server&gt;
+      &lt;id&gt;siteServer&lt;/id&gt;
+      &lt;privateKey&gt;/path/to/private/key&lt;/privateKey&gt;
+      &lt;passphrase&gt;optional; leave empty if not used.&lt;/passphrase&gt;
+    &lt;/server&gt;
+    --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>username</span><span class="token punctuation">&gt;</span></span>ali<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>username</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>password</span><span class="token punctuation">&gt;</span></span>ali<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>password</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>Snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>username</span><span class="token punctuation">&gt;</span></span>ali<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>username</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>password</span><span class="token punctuation">&gt;</span></span>ali<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>password</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servers</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- mirrors
+   | This is a list of mirrors to be used in downloading artifacts from remote repositories.
+   |
+   | It works like this: a POM may declare a repository to use in resolving certain artifacts.
+   | However, this repository may have problems with heavy traffic at times, so people have mirrored
+   | it to several places.
+   |
+   | That repository definition will have a unique id, so we can create a mirror reference for that
+   | repository, to be used as an alternate download site. The mirror site will be the preferred
+   | server for that repository.
+   |--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrors</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- mirror
+     | Specifies a repository mirror site to use instead of a given repository. The repository that
+     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
+     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
+     |
+    &lt;mirror&gt;
+      &lt;id&gt;mirrorId&lt;/id&gt;
+      &lt;mirrorOf&gt;repositoryId&lt;/mirrorOf&gt;
+      &lt;name&gt;Human Readable Name for this Mirror.&lt;/name&gt;
+      &lt;url&gt;http://my.repository.com/repo/path&lt;/url&gt;
+    &lt;/mirror&gt;
+     --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">&gt;</span></span>
+      <span class="token comment">&lt;!--This sends everything else to /public --&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">&gt;</span></span> 
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://maven.aliyun.com/nexus/content/groups/public/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">&gt;</span></span>
+      <span class="token comment">&lt;!--This is used to direct the public snapshots repo in the 
+          profile below over to a different nexus group --&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">&gt;</span></span>public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">&gt;</span></span> 
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://maven.aliyun.com/nexus/content/repositories/snapshots/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">&gt;</span></span>
+      <span class="token comment">&lt;!--This is used to direct the public snapshots repo in the 
+          profile below over to a different nexus group --&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-public-snapshots1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">&gt;</span></span>public-snapshots1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">&gt;</span></span> 
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>https://artifacts.alfresco.com/nexus/content/repositories/public/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrors</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- profiles
+   | This is a list of profiles which can be activated in a variety of ways, and which can modify
+   | the build process. Profiles provided in the settings.xml are intended to provide local machine-
+   | specific paths and repository locations which allow the build to work in the local environment.
+   |
+   | For example, if you have an integration testing plugin - like cactus - that needs to know where
+   | your Tomcat instance is installed, you can provide a variable here such that the variable is
+   | dereferenced during the build process to configure the cactus plugin.
+   |
+   | As noted above, profiles can be activated in a variety of ways. One way - the activeProfiles
+   | section of this document (settings.xml) - will be discussed later. Another way essentially
+   | relies on the detection of a system property, either matching a particular value for the property,
+   | or merely testing its existence. Profiles can also be activated by JDK version prefix, where a
+   | value of '1.4' might activate a profile when the build is executed on a JDK version of '1.4.2_07'.
+   | Finally, the list of active profiles can be specified directly from the command line.
+   |
+   | NOTE: For profiles defined in the settings.xml, you are restricted to specifying only artifact
+   |       repositories, plugin repositories, and free-form properties to be used as configuration
+   |       variables for plugins in the POM.
+   |
+   |--&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profiles</span><span class="token punctuation">&gt;</span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profile</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>development<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span><span class="token punctuation">&gt;</span></span>always<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>updatePolicy</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span><span class="token punctuation">&gt;</span></span>always<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>updatePolicy</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span><span class="token punctuation">&gt;</span></span>always<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>updatePolicy</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span><span class="token punctuation">&gt;</span></span>always<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>updatePolicy</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profile</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profile</span><span class="token punctuation">&gt;</span></span>
+      <span class="token comment">&lt;!--this profile will allow snapshots to be searched when activated--&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span><span class="token punctuation">&gt;</span></span>always<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>updatePolicy</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span><span class="token punctuation">&gt;</span></span>always<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>updatePolicy</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profile</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profiles</span><span class="token punctuation">&gt;</span></span>
+ 
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activeProfiles</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activeProfile</span><span class="token punctuation">&gt;</span></span>development<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activeProfile</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activeProfile</span><span class="token punctuation">&gt;</span></span>public-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activeProfile</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activeProfiles</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- activeProfiles
+   | List of profiles that are active for all builds.
+   |
+  &lt;activeProfiles&gt;
+    &lt;activeProfile&gt;alwaysActiveProfile&lt;/activeProfile&gt;
+    &lt;activeProfile&gt;anotherAlwaysActiveProfile&lt;/activeProfile&gt;
+  &lt;/activeProfiles&gt;
+  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>settings</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h3 id="publish-over-ssh-配置"><a href="#publish-over-ssh-配置" class="header-anchor">#</a> publish over ssh 配置</h3> <p>1 安装插件</p> <p>在Configure System菜单里 往下来</p> <p>2 添加一台目标服务器</p> <p><img src="/blog/assets/img/image-20220726223917263.24403dea.png" alt="image-20220726223917263"></p> <p><img src="/blog/assets/img/image-20220726223937722.cb02d526.png" alt="image-20220726223937722"></p> <p>3 修改配置</p> <p><img src="/blog/assets/img/image-20220727165700419.e7b152d8.png" alt="image-20220727165700419"></p> <h4 id="超时机制"><a href="#超时机制" class="header-anchor">#</a> 超时机制</h4> <p>输出命令时一定要注意不要让窗口卡主，不然Jenkins会认为认为一直没完成</p> <h4 id="shell的日志输出"><a href="#shell的日志输出" class="header-anchor">#</a> shell的日志输出</h4> <div class="language- extra-class"><pre class="language-text"><code>nohup java -jar /root/xxoo/demo*.jar &gt;mylog.log 2&gt;&amp;1 &amp;
+</code></pre></div><h4 id="数据流重定向"><a href="#数据流重定向" class="header-anchor">#</a> 数据流重定向</h4> <p>数据流重定向就是将某个命令执行后应该要出现在屏幕上的数据传输到其他地方</p> <p>标准输入（stdin）：代码为0，使用&lt;或&lt;&lt;;
+标准输出（stdout）：代码为1，使用&gt;或&gt;&gt;;
+标准错误输出（stderr）：代码为2，使用2&gt;或2&gt;&gt;</p> <p>&gt; 覆盖写
+&gt;&gt; 追加写</p> <h3 id="运行前清理"><a href="#运行前清理" class="header-anchor">#</a> 运行前清理</h3> <p>配置杀死之前运行的进程</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment">#删除历史数据</span>
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> xxoo
+
+<span class="token assign-left variable">appname</span><span class="token operator">=</span><span class="token variable">$1</span>
+<span class="token comment">#获取传入的参数</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;arg:<span class="token variable">$1</span>&quot;</span>
+
+
+<span class="token comment">#获取正在运行的jar包pid</span>
+<span class="token assign-left variable">pid</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> $1 <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'java -jar'</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{printf $2}'</span><span class="token variable">`</span></span>
+
+<span class="token builtin class-name">echo</span> <span class="token variable">$pid</span>
+
+<span class="token comment">#如果pid为空，提示一下，否则，执行kill命令</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-z</span> <span class="token variable">$pid</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">#使用-z 做空值判断</span>
+        <span class="token keyword">then</span>
+                <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$appname</span> not started&quot;</span>
+
+        <span class="token keyword">else</span>
+               <span class="token function">kill</span> <span class="token parameter variable">-9</span> <span class="token variable">$pid</span>
+                <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$appname</span> stoping....&quot;</span>
+
+<span class="token assign-left variable">check</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-w</span> $pid <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">java</span><span class="token variable">`</span></span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-z</span> <span class="token variable">$check</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">then</span>
+                <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$appname</span> pid:<span class="token variable">$pid</span> is stop&quot;</span>
+        <span class="token keyword">else</span>
+                <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$appname</span> stop failed&quot;</span>
+
+<span class="token keyword">fi</span>
+
+
+<span class="token keyword">fi</span>
+
+</code></pre></div><h3 id="几种构建方式"><a href="#几种构建方式" class="header-anchor">#</a> 几种构建方式</h3> <ul><li>快照依赖构建/Build whenever a SNAPSHOT dependency is built
+<ul><li>当依赖的快照被构建时执行本job</li></ul></li> <li>触发远程构建 (例如,使用脚本)
+<ul><li>远程调用本job的restapi时执行本job</li></ul></li> <li>job依赖构建/Build after other projects are built
+<ul><li>当依赖的job被构建时执行本job</li></ul></li> <li>定时构建/Build periodically
+<ul><li>使用cron表达式定时构建本job</li></ul></li> <li>向GitHub提交代码时触发Jenkins自动构建/GitHub hook trigger for GITScm polling
+<ul><li>Github-WebHook出发时构建本job</li></ul></li> <li>定期检查代码变更/Poll SCM
+<ul><li>使用cron表达式定时检查代码变更，变更后构建本job</li></ul></li></ul> <h4 id="触发远程构建-gitlab上改动自动构建"><a href="#触发远程构建-gitlab上改动自动构建" class="header-anchor">#</a> 触发远程构建/gitlab上改动自动构建</h4> <p>代码改动自动可以使用gitlab的webhook回调钩子调起Jenkins的启动任务接口</p> <p>在构建触发器中配置接口和token</p> <p><img src="/blog/assets/img/image-20220728170250273.be1f7903.png" alt="image-20220728170250273"></p> <h4 id="定时构建"><a href="#定时构建" class="header-anchor">#</a> 定时构建</h4> <h5 id="jenkins-cron表达式"><a href="#jenkins-cron表达式" class="header-anchor">#</a> Jenkins cron表达式</h5> <p>标准cron</p> <p>https://crontab.guru</p> <p>Jenkins cron不是标准的cron表达式</p> <div class="language- extra-class"><pre class="language-text"><code>第一个 * 表示每个小时的第几分钟，取值0~59
+
+H * * * *
+H：每小时执行一次
+
+第二颗 * 表示小时，取值0~23
+
+* 15 * * * 表示每天下午3点
+* 1 * * *  表示每天凌晨1点
+
+第三颗 * 表示一个月的第几天，取值1~31
+* 1 5 * *  表示每月5日凌晨1点
+
+第四颗 * 表示第几月，取值1~12
+* 15 5 1 *  表示每年几月执行
+
+第五颗 * 表示一周中的第几天，取值0~7，其中0和7代表的都是周日
+
+</code></pre></div><p><strong>“/”</strong></p> <p>表示每隔多长时间，比如 */10 * * * * 表示 每隔10分钟</p> <p><strong>“H”</strong></p> <p>hash散列值，以job名取值，获取到以job名为入参的唯一值，相同名称值也相同，这个偏移量会和实际时间相加，获得一个真实的运行时间</p> <p>意义在于：不同的项目在不同的时间运行，即使配置的值是一样的，比如 都是<code>15 * * * *</code> ，表示每个小时的第15分钟开始执行任务，那么会造成同一时间内在Jenkins中启动很多job，换成<code>H/15 * * * *</code>,那么在首次启动任务时，会有随机值参与进来，有的会在17分钟启动 有的会在19分钟启动，随后的启动时间也是这个值。这样就能错开相同cron值的任务执行了。</p> <p>H的值也可以设置范围</p> <p><code>H * * * *</code>表示一小时内的任意时间</p> <p><code>*/10 * * * *</code>每10分钟</p> <p><code>H/10 * * * *</code>每10分钟,可能是7,17,27，起始时间hash，步长不变</p> <p><code>45 3 * * 1-6</code> 每个周一至周六，凌晨3点45 执行1次</p> <p><code>45 3-5 * * 1-6</code> 每个周一至周六，凌晨3点45 ，凌晨4点45，凌晨5点45 各执行1次</p> <p><code>H(40-48) 3-5 * * 1-6</code> 在40~48之间取值 其他同上</p> <p><code>45 3-5/2 * * 1-6</code> 每个周一至周六，凌晨3点45 ，凌晨5点45 各执行1次</p> <p><code>45 0-6/2 * * 1-6 * * 1-6</code> 0点开始，每间隔2小时执行一次 0:45、2:45、4:45</p> <h4 id="源码变更构建"><a href="#源码变更构建" class="header-anchor">#</a> 源码变更构建</h4> <p>使用Poll SCM 方式与Build periodically一样</p> <p>会主动定期检查代码托管服务器上是否有变化，一旦发生变化执行job构建</p> <h3 id="测试报告邮件通知"><a href="#测试报告邮件通知" class="header-anchor">#</a> 测试报告邮件通知</h3> <p>使用163免费邮箱发送邮件时注意密码填认证码，也就是发送手机短信后给的那个，不要用登录邮箱的密码</p> <p>类似下面。。</p> <div class="language- extra-class"><pre class="language-text"><code>KDWJUWDQBWMOYGDC
+</code></pre></div><h3 id=""><a href="#" class="header-anchor">#</a></h3> <h3 id="自动化部署到docker容器中"><a href="#自动化部署到docker容器中" class="header-anchor">#</a> 自动化部署到docker容器中</h3> <h4 id="docker外挂目录"><a href="#docker外挂目录" class="header-anchor">#</a> docker外挂目录</h4> <div class="language- extra-class"><pre class="language-text"><code>docker run -d -p 8080:8080 --name demo-out -v /root/jarfile/demo-1-0.0.1-SNAPSHOT.jar:/app.jar openjdk:11 java -jar app.jar
+</code></pre></div><h4 id="打包到容器内"><a href="#打包到容器内" class="header-anchor">#</a> 打包到容器内</h4> <ol><li>准备一台测试服务器 docker环境</li> <li>准备支持jdk的镜像</li></ol> <div class="language- extra-class"><pre class="language-text"><code>FROM openjdk:11
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+RUN javac Main.java
+CMD [&quot;java&quot;, &quot;Main&quot;]
+</code></pre></div><ol><li>把jar包打包到容器内</li></ol> <p>dockerfile</p> <div class="language-dockerfile extra-class"><pre class="language-dockerfile"><code><span class="token instruction"><span class="token keyword">FROM</span> openjdk:11</span>
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 8080</span>
+
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /root</span>
+
+<span class="token instruction"><span class="token keyword">ADD</span> jarfile/demo*.jar /root/app.jar</span>
+<span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">&quot;java&quot;</span>,<span class="token string">&quot;-jar&quot;</span>,<span class="token string">&quot;/root/app.jar&quot;</span>]</span>
+</code></pre></div><p>打包镜像</p> <div class="language- extra-class"><pre class="language-text"><code>docker build -t demo .
+</code></pre></div><p>配置国内镜像</p> <p>修改<code>/etc/docker/daemon.json</code>文件，没有的话创建一个</p> <p>写入</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;registry-mirrors&quot;: [
+        &quot;https://ustc-edu-cn.mirror.aliyuncs.com&quot;,
+        &quot;http://hub-mirror.c.163.com&quot;,
+        &quot;https://registry.aliyuncs.com&quot;
+    ]
+}
+</code></pre></div><p>重启服务</p> <div class="language- extra-class"><pre class="language-text"><code>systemctl daemon-reload
+systemctl restart docker
+</code></pre></div><h2 id="jenkins集群-并发构建"><a href="#jenkins集群-并发构建" class="header-anchor">#</a> Jenkins集群/并发构建</h2> <p>集群化构建可以有效提升构建效率，尤其是团队项目比较多或是子项目比较多的时候，可以并发在多台机器上执行构建。</p> <h2 id="流水线-pipeline"><a href="#流水线-pipeline" class="header-anchor">#</a> 流水线 pipeline</h2> <p>流水线既能作为任务的本身，也能作为Jenkinsfile</p> <p>使用流水线可以让我们的任务从ui手动操作，转换为代码化，像docker的dockerfile一样，从shell命令到配置文件，更适合大型项目，可以让团队其他开发者同时参与进来，同时也可以编辑开发Jenkinswebui不能完成的更复杂的构建逻辑，作为开发者可读性也更好。</p> <h3 id="完整语法"><a href="#完整语法" class="header-anchor">#</a> 完整语法</h3> <p>5个必备的组成部分</p> <div class="language- extra-class"><pre class="language-text"><code>pipeline：整条流水线
+agent：指定执行器
+stages：所有阶段
+stage：某一阶段，可有多个
+steps：阶段内的每一步，可执行命令
+</code></pre></div><h3 id="测试脚本"><a href="#测试脚本" class="header-anchor">#</a> 测试脚本</h3> <h4 id="基础框架"><a href="#基础框架" class="header-anchor">#</a> 基础框架</h4> <div class="language- extra-class"><pre class="language-text"><code>pipeline {
+    agent any
+
+    stages {
+        stage('拉取代码') {
+            steps {
+            
+                echo '拉取代码完成'
+               
+            }
+
+        }
+        stage('执行构建') {
+            steps {
+                echo '执行构建完成'
+
+
+            }
+
+        }
+    }
+    
+    post {
+        
+        always {
+            
+            echo &quot;完成&quot;
+            
+        }
+        
+        failure {
+            
+            echo &quot;失败&quot;
+        }
+    }
+}
+</code></pre></div><h4 id="阶段视图-stage-view"><a href="#阶段视图-stage-view" class="header-anchor">#</a> 阶段视图 Stage View</h4> <h4 id="blue-ocean可视化界面"><a href="#blue-ocean可视化界面" class="header-anchor">#</a> blue ocean可视化界面</h4> <p>全新的流水线控制ui，可重复执行某阶段代码</p> <p>插件中心搜索blue ocean安装即可</p> <h4 id="post"><a href="#post" class="header-anchor">#</a> post</h4> <p>流水线完成后可执行的任务</p> <ul><li>always 无论流水线或者阶段的完成状态。</li> <li>changed 只有当流水线或者阶段完成状态与之前不同时。</li> <li>failure 只有当流水线或者阶段状态为&quot;failure&quot;运行。</li> <li>success 只有当流水线或者阶段状态为&quot;success&quot;运行。</li> <li>unstable 只有当流水线或者阶段状态为&quot;unstable&quot;运行。例如：测试失败。</li> <li>aborted 只有当流水线或者阶段状态为&quot;aborted &quot;运行。例如：手动取消。</li></ul> <h4 id="agent"><a href="#agent" class="header-anchor">#</a> agent</h4> <p>可以指定执行节点</p> <p>label 指定运行job的节点标签</p> <p>any 不指定，由Jenkins分配</p> <div class="language- extra-class"><pre class="language-text"><code>pipeline {
+    agent {
+        node {
+            label &quot;jenkins-02&quot;
+        }
+        
+    }
+
+    stages {
+        stage('拉取代码') {
+            steps {
+          
+                sh &quot;&quot;&quot;
+                    sleep 10
+                            
+                   &quot;&quot;&quot;
+
+                echo '拉取代码完成'
+               
+            }
+
+        }
+        stage('执行构建') {
+            steps {
+                echo '执行构建完成'
+
+
+            }
+
+        }
+    }
+    
+    post {
+        
+        always {
+            
+            echo &quot;完成&quot;
+            
+        }
+        
+        failure {
+            
+            echo &quot;失败&quot;
+        }
+    }
+}
+
+</code></pre></div><h3 id="pipeline中执行自动化构建"><a href="#pipeline中执行自动化构建" class="header-anchor">#</a> pipeline中执行自动化构建</h3> <div class="language- extra-class"><pre class="language-text"><code>
+pipeline {
+    agent any
+
+    tools {
+        
+        maven &quot;maven3&quot;
+        
+    }
+    stages {
+        stage(&quot;拉取代码&quot;) {
+            steps {
+                
+                
+                git branch: 'main', credentialsId: 'gitlab', url: 'http://192.168.44.103/root/java-project.git'
+                echo '拉取成功'
+            }
+        }
+
+        stage(&quot;执行构建&quot;) {
+            steps {
+                
+            //    sh &quot;mvn --version&quot;
+                sh &quot;&quot;&quot; 
+                cd demo-1
+                
+                mvn clean package
+                &quot;&quot;&quot;
+                
+                echo '构建完成'
+            }
+
+        }
+        
+        
+        stage(&quot;clean test server&quot;){
+            
+            steps{
+                
+sshPublisher(publishers: [sshPublisherDesc(configName: 'testserver', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''rm -rf *
+
+docker stop demo
+docker rm demo
+docker rmi demo
+''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '/root')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+            }
+        }
+        
+        
+        
+        
+        
+        stage(&quot;发送jar包到测试服务器&quot;) {
+            steps {
+                
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'testserver', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/jarfile', remoteDirectorySDF: false, removePrefix: 'demo-1/target', sourceFiles: '**/demo*.jar'), sshTransfer(cleanRemote: false, excludes: '', execCommand: '''docker build -t demo .
+docker run -d -p 8080:8080 --name demo demo''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/', remoteDirectorySDF: false, removePrefix: 'demo-1/docker', sourceFiles: 'demo-1/docker/dockerfile')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                
+                
+                echo 'jar send over!'
+            }
+
+        }
+
+    }
+}
+
+</code></pre></div><h4 id="声明式流水线"><a href="#声明式流水线" class="header-anchor">#</a> 声明式流水线</h4> <p>好处</p> <ul><li>更像是在Jenkins web ui中的操作</li> <li>可读性比较高</li> <li>可以使用blue ocean自动生成</li> <li>支持语法检查</li></ul> <p>坏处</p> <ul><li>代码逻辑能力比脚本式弱，不能完成特别复杂的任务</li></ul> <h4 id="脚本式流水线"><a href="#脚本式流水线" class="header-anchor">#</a> 脚本式流水线</h4> <p>好处</p> <ul><li>更少的代码和弱规范要求</li> <li>更灵活的自定义代码操作</li> <li>不受约束，可以构建特别复杂的工作流和流水线</li></ul> <p>坏处</p> <ul><li>读写对编程要求比较高</li> <li>比声明式流水线代码更复杂</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2023/3/5 23:29:35</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/pages/ec9790/" class="prev">
+        从零开始用Jenkins自动构建部署SpringBoot项目
+      </a></span> <span class="next"><a href="/blog/Deploy/Jenkins/Jenkins实践/01环境准备.html">
+        01环境准备
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.5c484a50.js" defer></script><script src="/blog/assets/js/3.8dc6c122.js" defer></script><script src="/blog/assets/js/14.67fbf28f.js" defer></script>
+  </body>
+</html>
