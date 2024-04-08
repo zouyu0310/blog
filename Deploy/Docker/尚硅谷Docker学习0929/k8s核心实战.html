@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kubernetes核心实战 | zouyu-Blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/blog/images/learn.png">
+    <meta name="description" content="求知若渴，虚心若愚。 愿你每天都在成长">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.cd12c23a.css" as="style"><link rel="preload" href="/blog/assets/js/app.240fe854.js" as="script"><link rel="preload" href="/blog/assets/js/3.ae24385a.js" as="script"><link rel="preload" href="/blog/assets/js/204.ce4afd24.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.c8aa137e.js"><link rel="prefetch" href="/blog/assets/js/100.270782a2.js"><link rel="prefetch" href="/blog/assets/js/101.493d5eb4.js"><link rel="prefetch" href="/blog/assets/js/102.f4d2b665.js"><link rel="prefetch" href="/blog/assets/js/103.f6820da5.js"><link rel="prefetch" href="/blog/assets/js/104.335025f6.js"><link rel="prefetch" href="/blog/assets/js/105.64ec1288.js"><link rel="prefetch" href="/blog/assets/js/106.76269974.js"><link rel="prefetch" href="/blog/assets/js/107.7b3aaee5.js"><link rel="prefetch" href="/blog/assets/js/108.312eef06.js"><link rel="prefetch" href="/blog/assets/js/109.01851b03.js"><link rel="prefetch" href="/blog/assets/js/11.8cc9f3e2.js"><link rel="prefetch" href="/blog/assets/js/110.d6b3c161.js"><link rel="prefetch" href="/blog/assets/js/111.231ed1b7.js"><link rel="prefetch" href="/blog/assets/js/112.54c9047e.js"><link rel="prefetch" href="/blog/assets/js/113.fd88393e.js"><link rel="prefetch" href="/blog/assets/js/114.c69e2d56.js"><link rel="prefetch" href="/blog/assets/js/115.2572716d.js"><link rel="prefetch" href="/blog/assets/js/116.189a6636.js"><link rel="prefetch" href="/blog/assets/js/117.8d989008.js"><link rel="prefetch" href="/blog/assets/js/118.aaeb8e90.js"><link rel="prefetch" href="/blog/assets/js/119.2606fb02.js"><link rel="prefetch" href="/blog/assets/js/12.af114223.js"><link rel="prefetch" href="/blog/assets/js/120.c14a928c.js"><link rel="prefetch" href="/blog/assets/js/121.c6e62fd8.js"><link rel="prefetch" href="/blog/assets/js/122.311bf078.js"><link rel="prefetch" href="/blog/assets/js/123.751fda12.js"><link rel="prefetch" href="/blog/assets/js/124.34d44472.js"><link rel="prefetch" href="/blog/assets/js/125.23f54255.js"><link rel="prefetch" href="/blog/assets/js/126.55ff03bd.js"><link rel="prefetch" href="/blog/assets/js/127.6fe293d9.js"><link rel="prefetch" href="/blog/assets/js/128.aabf99a3.js"><link rel="prefetch" href="/blog/assets/js/129.cf92fb63.js"><link rel="prefetch" href="/blog/assets/js/13.c7f5915c.js"><link rel="prefetch" href="/blog/assets/js/130.3b951bb4.js"><link rel="prefetch" href="/blog/assets/js/131.6625f8db.js"><link rel="prefetch" href="/blog/assets/js/132.d5c8c008.js"><link rel="prefetch" href="/blog/assets/js/133.9d4ce3ac.js"><link rel="prefetch" href="/blog/assets/js/134.e2bd85f3.js"><link rel="prefetch" href="/blog/assets/js/135.62242add.js"><link rel="prefetch" href="/blog/assets/js/136.b0b59ec3.js"><link rel="prefetch" href="/blog/assets/js/137.a67f8c25.js"><link rel="prefetch" href="/blog/assets/js/138.d5eb5ab3.js"><link rel="prefetch" href="/blog/assets/js/139.4ac04d47.js"><link rel="prefetch" href="/blog/assets/js/14.bc31c02e.js"><link rel="prefetch" href="/blog/assets/js/140.d0a01472.js"><link rel="prefetch" href="/blog/assets/js/141.05aea2bc.js"><link rel="prefetch" href="/blog/assets/js/142.69d20be0.js"><link rel="prefetch" href="/blog/assets/js/143.3d7c0b6d.js"><link rel="prefetch" href="/blog/assets/js/144.062351b1.js"><link rel="prefetch" href="/blog/assets/js/145.a68dd8a9.js"><link rel="prefetch" href="/blog/assets/js/146.73bfc9cb.js"><link rel="prefetch" href="/blog/assets/js/147.a2b62153.js"><link rel="prefetch" href="/blog/assets/js/148.42936083.js"><link rel="prefetch" href="/blog/assets/js/149.79350bd2.js"><link rel="prefetch" href="/blog/assets/js/15.287be67a.js"><link rel="prefetch" href="/blog/assets/js/150.a89a5c46.js"><link rel="prefetch" href="/blog/assets/js/151.7681eaa3.js"><link rel="prefetch" href="/blog/assets/js/152.b297623f.js"><link rel="prefetch" href="/blog/assets/js/153.41f33b66.js"><link rel="prefetch" href="/blog/assets/js/154.b552e41e.js"><link rel="prefetch" href="/blog/assets/js/155.c1780c4a.js"><link rel="prefetch" href="/blog/assets/js/156.d540891e.js"><link rel="prefetch" href="/blog/assets/js/157.90063e48.js"><link rel="prefetch" href="/blog/assets/js/158.9d279d50.js"><link rel="prefetch" href="/blog/assets/js/159.5698a318.js"><link rel="prefetch" href="/blog/assets/js/16.583e55e8.js"><link rel="prefetch" href="/blog/assets/js/160.169f579d.js"><link rel="prefetch" href="/blog/assets/js/161.1513e70a.js"><link rel="prefetch" href="/blog/assets/js/162.977253b8.js"><link rel="prefetch" href="/blog/assets/js/163.fcb2d19a.js"><link rel="prefetch" href="/blog/assets/js/164.f58050b6.js"><link rel="prefetch" href="/blog/assets/js/165.549d9d88.js"><link rel="prefetch" href="/blog/assets/js/166.fa8b0c13.js"><link rel="prefetch" href="/blog/assets/js/167.54127a7d.js"><link rel="prefetch" href="/blog/assets/js/168.c386b069.js"><link rel="prefetch" href="/blog/assets/js/169.86ccc045.js"><link rel="prefetch" href="/blog/assets/js/17.d5b55ec0.js"><link rel="prefetch" href="/blog/assets/js/170.f3128553.js"><link rel="prefetch" href="/blog/assets/js/171.5e1de0de.js"><link rel="prefetch" href="/blog/assets/js/172.648d45ab.js"><link rel="prefetch" href="/blog/assets/js/173.07acf940.js"><link rel="prefetch" href="/blog/assets/js/174.e6f7b802.js"><link rel="prefetch" href="/blog/assets/js/175.cd188d94.js"><link rel="prefetch" href="/blog/assets/js/176.f483c35a.js"><link rel="prefetch" href="/blog/assets/js/177.b41f375b.js"><link rel="prefetch" href="/blog/assets/js/178.b9209612.js"><link rel="prefetch" href="/blog/assets/js/179.5c1f33e3.js"><link rel="prefetch" href="/blog/assets/js/18.a7a7247c.js"><link rel="prefetch" href="/blog/assets/js/180.e127d877.js"><link rel="prefetch" href="/blog/assets/js/181.5e5cea9d.js"><link rel="prefetch" href="/blog/assets/js/182.274ce929.js"><link rel="prefetch" href="/blog/assets/js/183.107655d8.js"><link rel="prefetch" href="/blog/assets/js/184.2324abb5.js"><link rel="prefetch" href="/blog/assets/js/185.31f67006.js"><link rel="prefetch" href="/blog/assets/js/186.46fc1fa6.js"><link rel="prefetch" href="/blog/assets/js/187.c2319eae.js"><link rel="prefetch" href="/blog/assets/js/188.a54369a1.js"><link rel="prefetch" href="/blog/assets/js/189.4c39d6fd.js"><link rel="prefetch" href="/blog/assets/js/19.926806e9.js"><link rel="prefetch" href="/blog/assets/js/190.ded7a7a3.js"><link rel="prefetch" href="/blog/assets/js/191.78e47ec7.js"><link rel="prefetch" href="/blog/assets/js/192.dd6f4b06.js"><link rel="prefetch" href="/blog/assets/js/193.6ccb8b3e.js"><link rel="prefetch" href="/blog/assets/js/194.7f45ac5c.js"><link rel="prefetch" href="/blog/assets/js/195.548c8e52.js"><link rel="prefetch" href="/blog/assets/js/196.a8a7f4a9.js"><link rel="prefetch" href="/blog/assets/js/197.d6f98046.js"><link rel="prefetch" href="/blog/assets/js/198.d49aebef.js"><link rel="prefetch" href="/blog/assets/js/199.e6d26edb.js"><link rel="prefetch" href="/blog/assets/js/2.d23f741a.js"><link rel="prefetch" href="/blog/assets/js/20.a23b68f4.js"><link rel="prefetch" href="/blog/assets/js/200.24626fe3.js"><link rel="prefetch" href="/blog/assets/js/201.6141363f.js"><link rel="prefetch" href="/blog/assets/js/202.a532dd9e.js"><link rel="prefetch" href="/blog/assets/js/203.093fd7f3.js"><link rel="prefetch" href="/blog/assets/js/205.b57df238.js"><link rel="prefetch" href="/blog/assets/js/206.55765cc7.js"><link rel="prefetch" href="/blog/assets/js/207.839ddc4b.js"><link rel="prefetch" href="/blog/assets/js/208.2f4c887b.js"><link rel="prefetch" href="/blog/assets/js/209.1374e5ab.js"><link rel="prefetch" href="/blog/assets/js/21.85d3a2b1.js"><link rel="prefetch" href="/blog/assets/js/210.09694973.js"><link rel="prefetch" href="/blog/assets/js/211.bc1bbd21.js"><link rel="prefetch" href="/blog/assets/js/212.72e05506.js"><link rel="prefetch" href="/blog/assets/js/213.b9145807.js"><link rel="prefetch" href="/blog/assets/js/214.cd9e23aa.js"><link rel="prefetch" href="/blog/assets/js/215.b2b67600.js"><link rel="prefetch" href="/blog/assets/js/216.dc2a02ee.js"><link rel="prefetch" href="/blog/assets/js/217.d19dcb1e.js"><link rel="prefetch" href="/blog/assets/js/218.9c81e734.js"><link rel="prefetch" href="/blog/assets/js/219.b1ac0e00.js"><link rel="prefetch" href="/blog/assets/js/22.6e23e584.js"><link rel="prefetch" href="/blog/assets/js/220.93f53cfc.js"><link rel="prefetch" href="/blog/assets/js/221.074e9447.js"><link rel="prefetch" href="/blog/assets/js/222.6e03ca0d.js"><link rel="prefetch" href="/blog/assets/js/223.b7e6fe7c.js"><link rel="prefetch" href="/blog/assets/js/224.4f52c16c.js"><link rel="prefetch" href="/blog/assets/js/225.4bcc73fc.js"><link rel="prefetch" href="/blog/assets/js/226.1374e026.js"><link rel="prefetch" href="/blog/assets/js/227.fe5a14e4.js"><link rel="prefetch" href="/blog/assets/js/228.aabeafb8.js"><link rel="prefetch" href="/blog/assets/js/229.8687cc25.js"><link rel="prefetch" href="/blog/assets/js/23.32dde742.js"><link rel="prefetch" href="/blog/assets/js/230.2fe412a5.js"><link rel="prefetch" href="/blog/assets/js/231.e182f7eb.js"><link rel="prefetch" href="/blog/assets/js/232.edf8f7cc.js"><link rel="prefetch" href="/blog/assets/js/233.ba47ef76.js"><link rel="prefetch" href="/blog/assets/js/234.880256a5.js"><link rel="prefetch" href="/blog/assets/js/235.0dbc5bda.js"><link rel="prefetch" href="/blog/assets/js/236.8dafeba3.js"><link rel="prefetch" href="/blog/assets/js/237.968a9a73.js"><link rel="prefetch" href="/blog/assets/js/238.eb7c71a8.js"><link rel="prefetch" href="/blog/assets/js/239.e95eea8e.js"><link rel="prefetch" href="/blog/assets/js/24.a61a4cae.js"><link rel="prefetch" href="/blog/assets/js/240.c37ecc02.js"><link rel="prefetch" href="/blog/assets/js/241.ec51435d.js"><link rel="prefetch" href="/blog/assets/js/242.6ae497b5.js"><link rel="prefetch" href="/blog/assets/js/243.55451e89.js"><link rel="prefetch" href="/blog/assets/js/244.0c270160.js"><link rel="prefetch" href="/blog/assets/js/245.886bff86.js"><link rel="prefetch" href="/blog/assets/js/246.27a72098.js"><link rel="prefetch" href="/blog/assets/js/247.62f1c507.js"><link rel="prefetch" href="/blog/assets/js/248.ae75b928.js"><link rel="prefetch" href="/blog/assets/js/249.57768d69.js"><link rel="prefetch" href="/blog/assets/js/25.3470b5ee.js"><link rel="prefetch" href="/blog/assets/js/250.5571a31b.js"><link rel="prefetch" href="/blog/assets/js/251.8d55e285.js"><link rel="prefetch" href="/blog/assets/js/252.009ef4ee.js"><link rel="prefetch" href="/blog/assets/js/253.88bc4b47.js"><link rel="prefetch" href="/blog/assets/js/254.f8afbd66.js"><link rel="prefetch" href="/blog/assets/js/255.236cf0b5.js"><link rel="prefetch" href="/blog/assets/js/256.35fb5433.js"><link rel="prefetch" href="/blog/assets/js/257.7703cce4.js"><link rel="prefetch" href="/blog/assets/js/258.4ae50a79.js"><link rel="prefetch" href="/blog/assets/js/259.c776e8b3.js"><link rel="prefetch" href="/blog/assets/js/26.edbac6a6.js"><link rel="prefetch" href="/blog/assets/js/260.1f9afb9e.js"><link rel="prefetch" href="/blog/assets/js/261.ea003769.js"><link rel="prefetch" href="/blog/assets/js/262.caa70ff9.js"><link rel="prefetch" href="/blog/assets/js/263.879b10fc.js"><link rel="prefetch" href="/blog/assets/js/264.75cfb0a1.js"><link rel="prefetch" href="/blog/assets/js/265.665fa6d7.js"><link rel="prefetch" href="/blog/assets/js/266.a8a06bdf.js"><link rel="prefetch" href="/blog/assets/js/267.99d5d3e8.js"><link rel="prefetch" href="/blog/assets/js/268.14c0f1fb.js"><link rel="prefetch" href="/blog/assets/js/269.244cb9c8.js"><link rel="prefetch" href="/blog/assets/js/27.c2eea375.js"><link rel="prefetch" href="/blog/assets/js/270.25e8ac77.js"><link rel="prefetch" href="/blog/assets/js/271.4403b7ab.js"><link rel="prefetch" href="/blog/assets/js/272.01761491.js"><link rel="prefetch" href="/blog/assets/js/273.d2bff916.js"><link rel="prefetch" href="/blog/assets/js/274.61bad449.js"><link rel="prefetch" href="/blog/assets/js/275.8ac7e7d8.js"><link rel="prefetch" href="/blog/assets/js/276.e7bc4cfc.js"><link rel="prefetch" href="/blog/assets/js/277.b9527c01.js"><link rel="prefetch" href="/blog/assets/js/278.590697fe.js"><link rel="prefetch" href="/blog/assets/js/279.f101ac11.js"><link rel="prefetch" href="/blog/assets/js/28.0cdfd145.js"><link rel="prefetch" href="/blog/assets/js/280.21c8bee0.js"><link rel="prefetch" href="/blog/assets/js/281.e7c958b8.js"><link rel="prefetch" href="/blog/assets/js/282.582d642f.js"><link rel="prefetch" href="/blog/assets/js/283.bf8d15f7.js"><link rel="prefetch" href="/blog/assets/js/284.270a605f.js"><link rel="prefetch" href="/blog/assets/js/285.d5cae855.js"><link rel="prefetch" href="/blog/assets/js/286.682c8ec8.js"><link rel="prefetch" href="/blog/assets/js/287.f58d2f4f.js"><link rel="prefetch" href="/blog/assets/js/288.f7d70ca5.js"><link rel="prefetch" href="/blog/assets/js/289.fd6b4709.js"><link rel="prefetch" href="/blog/assets/js/29.a643cda4.js"><link rel="prefetch" href="/blog/assets/js/290.081f5f8a.js"><link rel="prefetch" href="/blog/assets/js/291.cf15ac79.js"><link rel="prefetch" href="/blog/assets/js/292.7d35dc55.js"><link rel="prefetch" href="/blog/assets/js/293.95f5ddb9.js"><link rel="prefetch" href="/blog/assets/js/294.10f642bc.js"><link rel="prefetch" href="/blog/assets/js/295.99d451ff.js"><link rel="prefetch" href="/blog/assets/js/296.2de8e371.js"><link rel="prefetch" href="/blog/assets/js/297.8380dbb2.js"><link rel="prefetch" href="/blog/assets/js/298.dbe85090.js"><link rel="prefetch" href="/blog/assets/js/299.fac8c236.js"><link rel="prefetch" href="/blog/assets/js/30.d5eca20b.js"><link rel="prefetch" href="/blog/assets/js/300.bb89c720.js"><link rel="prefetch" href="/blog/assets/js/301.7c2eb7d2.js"><link rel="prefetch" href="/blog/assets/js/302.fe668698.js"><link rel="prefetch" href="/blog/assets/js/303.16ee5b13.js"><link rel="prefetch" href="/blog/assets/js/304.346b7c98.js"><link rel="prefetch" href="/blog/assets/js/305.f094cb22.js"><link rel="prefetch" href="/blog/assets/js/306.933a33ce.js"><link rel="prefetch" href="/blog/assets/js/307.8fe7522d.js"><link rel="prefetch" href="/blog/assets/js/308.c6d53ac1.js"><link rel="prefetch" href="/blog/assets/js/309.092bd7e1.js"><link rel="prefetch" href="/blog/assets/js/31.801bc54e.js"><link rel="prefetch" href="/blog/assets/js/310.7645cb2e.js"><link rel="prefetch" href="/blog/assets/js/311.7652d5ac.js"><link rel="prefetch" href="/blog/assets/js/312.cf32efa8.js"><link rel="prefetch" href="/blog/assets/js/313.f5519b6c.js"><link rel="prefetch" href="/blog/assets/js/314.e47b6364.js"><link rel="prefetch" href="/blog/assets/js/315.982e7bcd.js"><link rel="prefetch" href="/blog/assets/js/316.01417b69.js"><link rel="prefetch" href="/blog/assets/js/317.153a06af.js"><link rel="prefetch" href="/blog/assets/js/318.03df427b.js"><link rel="prefetch" href="/blog/assets/js/319.dd0b64cf.js"><link rel="prefetch" href="/blog/assets/js/32.efc62012.js"><link rel="prefetch" href="/blog/assets/js/320.bf51f663.js"><link rel="prefetch" href="/blog/assets/js/321.e79d63f4.js"><link rel="prefetch" href="/blog/assets/js/322.c366fda4.js"><link rel="prefetch" href="/blog/assets/js/323.ffa3a9ff.js"><link rel="prefetch" href="/blog/assets/js/324.16c04cb0.js"><link rel="prefetch" href="/blog/assets/js/325.5bf117df.js"><link rel="prefetch" href="/blog/assets/js/326.6488d46d.js"><link rel="prefetch" href="/blog/assets/js/327.0cb839e6.js"><link rel="prefetch" href="/blog/assets/js/328.8649d18f.js"><link rel="prefetch" href="/blog/assets/js/329.1ec78b09.js"><link rel="prefetch" href="/blog/assets/js/33.cf917892.js"><link rel="prefetch" href="/blog/assets/js/330.cb995b25.js"><link rel="prefetch" href="/blog/assets/js/331.64ff6868.js"><link rel="prefetch" href="/blog/assets/js/332.90db52e5.js"><link rel="prefetch" href="/blog/assets/js/333.2d261b4f.js"><link rel="prefetch" href="/blog/assets/js/334.960ab532.js"><link rel="prefetch" href="/blog/assets/js/335.6e7176c7.js"><link rel="prefetch" href="/blog/assets/js/336.2345cf76.js"><link rel="prefetch" href="/blog/assets/js/337.cd8e4829.js"><link rel="prefetch" href="/blog/assets/js/338.29d9b556.js"><link rel="prefetch" href="/blog/assets/js/339.1b9b9b66.js"><link rel="prefetch" href="/blog/assets/js/34.4e6b702d.js"><link rel="prefetch" href="/blog/assets/js/340.e5974455.js"><link rel="prefetch" href="/blog/assets/js/341.64f128f2.js"><link rel="prefetch" href="/blog/assets/js/342.e5c3effd.js"><link rel="prefetch" href="/blog/assets/js/343.48b6b4d0.js"><link rel="prefetch" href="/blog/assets/js/344.3c38371a.js"><link rel="prefetch" href="/blog/assets/js/345.071b8f1c.js"><link rel="prefetch" href="/blog/assets/js/346.84e89a94.js"><link rel="prefetch" href="/blog/assets/js/347.d46ac5fa.js"><link rel="prefetch" href="/blog/assets/js/348.54337aa4.js"><link rel="prefetch" href="/blog/assets/js/349.c2ea1b9e.js"><link rel="prefetch" href="/blog/assets/js/35.598038c0.js"><link rel="prefetch" href="/blog/assets/js/350.da555436.js"><link rel="prefetch" href="/blog/assets/js/351.b0c44e11.js"><link rel="prefetch" href="/blog/assets/js/352.3687ecba.js"><link rel="prefetch" href="/blog/assets/js/353.2c6c95eb.js"><link rel="prefetch" href="/blog/assets/js/354.8d6948d6.js"><link rel="prefetch" href="/blog/assets/js/355.e92a3da8.js"><link rel="prefetch" href="/blog/assets/js/356.cccfb31e.js"><link rel="prefetch" href="/blog/assets/js/357.0b2ceec8.js"><link rel="prefetch" href="/blog/assets/js/358.b4772ddf.js"><link rel="prefetch" href="/blog/assets/js/359.34474411.js"><link rel="prefetch" href="/blog/assets/js/36.0f31ca89.js"><link rel="prefetch" href="/blog/assets/js/360.da1d5bf5.js"><link rel="prefetch" href="/blog/assets/js/361.283d7aa2.js"><link rel="prefetch" href="/blog/assets/js/362.aa89ba44.js"><link rel="prefetch" href="/blog/assets/js/363.03e8b6a8.js"><link rel="prefetch" href="/blog/assets/js/364.0f73ab0e.js"><link rel="prefetch" href="/blog/assets/js/365.1fed76c9.js"><link rel="prefetch" href="/blog/assets/js/366.da3299e0.js"><link rel="prefetch" href="/blog/assets/js/367.70b63296.js"><link rel="prefetch" href="/blog/assets/js/368.ba9a0782.js"><link rel="prefetch" href="/blog/assets/js/369.291de09d.js"><link rel="prefetch" href="/blog/assets/js/37.b38f876b.js"><link rel="prefetch" href="/blog/assets/js/370.a6c828d7.js"><link rel="prefetch" href="/blog/assets/js/371.d55d28e0.js"><link rel="prefetch" href="/blog/assets/js/372.ee9d61b7.js"><link rel="prefetch" href="/blog/assets/js/373.7dd31917.js"><link rel="prefetch" href="/blog/assets/js/374.0110081e.js"><link rel="prefetch" href="/blog/assets/js/375.0653962a.js"><link rel="prefetch" href="/blog/assets/js/376.57f24876.js"><link rel="prefetch" href="/blog/assets/js/377.c5014bbd.js"><link rel="prefetch" href="/blog/assets/js/378.41a34502.js"><link rel="prefetch" href="/blog/assets/js/379.c75220a6.js"><link rel="prefetch" href="/blog/assets/js/38.d8f30566.js"><link rel="prefetch" href="/blog/assets/js/380.87ed782b.js"><link rel="prefetch" href="/blog/assets/js/381.680871d6.js"><link rel="prefetch" href="/blog/assets/js/382.71e0a98a.js"><link rel="prefetch" href="/blog/assets/js/383.2fe846ab.js"><link rel="prefetch" href="/blog/assets/js/384.5c6a6a16.js"><link rel="prefetch" href="/blog/assets/js/385.724758c6.js"><link rel="prefetch" href="/blog/assets/js/386.cec15292.js"><link rel="prefetch" href="/blog/assets/js/387.38a36025.js"><link rel="prefetch" href="/blog/assets/js/388.673e909e.js"><link rel="prefetch" href="/blog/assets/js/389.f5e911be.js"><link rel="prefetch" href="/blog/assets/js/39.d63a13c3.js"><link rel="prefetch" href="/blog/assets/js/390.c105974a.js"><link rel="prefetch" href="/blog/assets/js/391.ccf03034.js"><link rel="prefetch" href="/blog/assets/js/392.fd2fa35a.js"><link rel="prefetch" href="/blog/assets/js/393.7d105ba7.js"><link rel="prefetch" href="/blog/assets/js/394.ffef1103.js"><link rel="prefetch" href="/blog/assets/js/395.2c2562c7.js"><link rel="prefetch" href="/blog/assets/js/396.e4d6cc3c.js"><link rel="prefetch" href="/blog/assets/js/397.e51a62c5.js"><link rel="prefetch" href="/blog/assets/js/398.c5127a19.js"><link rel="prefetch" href="/blog/assets/js/399.5880ad3b.js"><link rel="prefetch" href="/blog/assets/js/4.9341719f.js"><link rel="prefetch" href="/blog/assets/js/40.78bafb45.js"><link rel="prefetch" href="/blog/assets/js/400.d308a547.js"><link rel="prefetch" href="/blog/assets/js/401.c56b2ee5.js"><link rel="prefetch" href="/blog/assets/js/402.d0bc0f57.js"><link rel="prefetch" href="/blog/assets/js/403.fef12238.js"><link rel="prefetch" href="/blog/assets/js/404.e212db50.js"><link rel="prefetch" href="/blog/assets/js/405.48f711cd.js"><link rel="prefetch" href="/blog/assets/js/406.fbc88515.js"><link rel="prefetch" href="/blog/assets/js/407.789143b0.js"><link rel="prefetch" href="/blog/assets/js/408.1c466d99.js"><link rel="prefetch" href="/blog/assets/js/409.ba527c30.js"><link rel="prefetch" href="/blog/assets/js/41.ac1d6b05.js"><link rel="prefetch" href="/blog/assets/js/410.c44befb8.js"><link rel="prefetch" href="/blog/assets/js/411.cc76588b.js"><link rel="prefetch" href="/blog/assets/js/412.1b25191b.js"><link rel="prefetch" href="/blog/assets/js/413.e717a80e.js"><link rel="prefetch" href="/blog/assets/js/414.bb5008ad.js"><link rel="prefetch" href="/blog/assets/js/415.b1eb1f68.js"><link rel="prefetch" href="/blog/assets/js/416.8abaa496.js"><link rel="prefetch" href="/blog/assets/js/417.60be86e8.js"><link rel="prefetch" href="/blog/assets/js/418.156f807c.js"><link rel="prefetch" href="/blog/assets/js/419.77136c28.js"><link rel="prefetch" href="/blog/assets/js/42.435a5f35.js"><link rel="prefetch" href="/blog/assets/js/420.52637208.js"><link rel="prefetch" href="/blog/assets/js/421.a8be5dd6.js"><link rel="prefetch" href="/blog/assets/js/422.ec91bfd8.js"><link rel="prefetch" href="/blog/assets/js/423.23628b88.js"><link rel="prefetch" href="/blog/assets/js/424.c13bd9f8.js"><link rel="prefetch" href="/blog/assets/js/425.7c5411a6.js"><link rel="prefetch" href="/blog/assets/js/426.9bc3abb4.js"><link rel="prefetch" href="/blog/assets/js/427.6259dd32.js"><link rel="prefetch" href="/blog/assets/js/428.9a52815c.js"><link rel="prefetch" href="/blog/assets/js/429.53b87282.js"><link rel="prefetch" href="/blog/assets/js/43.9873556a.js"><link rel="prefetch" href="/blog/assets/js/430.b563829b.js"><link rel="prefetch" href="/blog/assets/js/431.3d4a96f3.js"><link rel="prefetch" href="/blog/assets/js/432.d9b0e132.js"><link rel="prefetch" href="/blog/assets/js/433.2e67dec4.js"><link rel="prefetch" href="/blog/assets/js/434.cac48e48.js"><link rel="prefetch" href="/blog/assets/js/435.ac9f0409.js"><link rel="prefetch" href="/blog/assets/js/436.49120f56.js"><link rel="prefetch" href="/blog/assets/js/437.e122fd00.js"><link rel="prefetch" href="/blog/assets/js/438.afa65adb.js"><link rel="prefetch" href="/blog/assets/js/439.e54ae52a.js"><link rel="prefetch" href="/blog/assets/js/44.caa45de7.js"><link rel="prefetch" href="/blog/assets/js/440.c9ae9da0.js"><link rel="prefetch" href="/blog/assets/js/441.708b7ecb.js"><link rel="prefetch" href="/blog/assets/js/442.95252c0d.js"><link rel="prefetch" href="/blog/assets/js/443.23e452ee.js"><link rel="prefetch" href="/blog/assets/js/444.1eb0b664.js"><link rel="prefetch" href="/blog/assets/js/445.19301131.js"><link rel="prefetch" href="/blog/assets/js/446.92ed4675.js"><link rel="prefetch" href="/blog/assets/js/447.58ae1546.js"><link rel="prefetch" href="/blog/assets/js/448.985dc37c.js"><link rel="prefetch" href="/blog/assets/js/449.de78bd37.js"><link rel="prefetch" href="/blog/assets/js/45.5db9d795.js"><link rel="prefetch" href="/blog/assets/js/450.e21671fd.js"><link rel="prefetch" href="/blog/assets/js/451.ec95c6b1.js"><link rel="prefetch" href="/blog/assets/js/452.d8137574.js"><link rel="prefetch" href="/blog/assets/js/453.e51ef3e3.js"><link rel="prefetch" href="/blog/assets/js/454.06155201.js"><link rel="prefetch" href="/blog/assets/js/455.38035164.js"><link rel="prefetch" href="/blog/assets/js/456.faf6af44.js"><link rel="prefetch" href="/blog/assets/js/457.7875554d.js"><link rel="prefetch" href="/blog/assets/js/458.4482e89d.js"><link rel="prefetch" href="/blog/assets/js/459.304e41a4.js"><link rel="prefetch" href="/blog/assets/js/46.8461c954.js"><link rel="prefetch" href="/blog/assets/js/460.5e7c2e69.js"><link rel="prefetch" href="/blog/assets/js/461.13b6b5ae.js"><link rel="prefetch" href="/blog/assets/js/462.bc8e68e7.js"><link rel="prefetch" href="/blog/assets/js/463.eb3c6be0.js"><link rel="prefetch" href="/blog/assets/js/464.89828d2a.js"><link rel="prefetch" href="/blog/assets/js/465.d6470118.js"><link rel="prefetch" href="/blog/assets/js/466.1b3b6a39.js"><link rel="prefetch" href="/blog/assets/js/467.8786de0b.js"><link rel="prefetch" href="/blog/assets/js/468.5e441bfa.js"><link rel="prefetch" href="/blog/assets/js/469.a4959480.js"><link rel="prefetch" href="/blog/assets/js/47.09efdb1b.js"><link rel="prefetch" href="/blog/assets/js/470.bf983d4a.js"><link rel="prefetch" href="/blog/assets/js/471.14a0714a.js"><link rel="prefetch" href="/blog/assets/js/472.8567e9cf.js"><link rel="prefetch" href="/blog/assets/js/473.615f2f3c.js"><link rel="prefetch" href="/blog/assets/js/474.fafea22e.js"><link rel="prefetch" href="/blog/assets/js/475.dc748b65.js"><link rel="prefetch" href="/blog/assets/js/476.f3c4d0f8.js"><link rel="prefetch" href="/blog/assets/js/477.4a6ff2fc.js"><link rel="prefetch" href="/blog/assets/js/478.1d891ace.js"><link rel="prefetch" href="/blog/assets/js/479.362097a9.js"><link rel="prefetch" href="/blog/assets/js/48.80823a12.js"><link rel="prefetch" href="/blog/assets/js/480.d0314c37.js"><link rel="prefetch" href="/blog/assets/js/481.8a8206ef.js"><link rel="prefetch" href="/blog/assets/js/482.309a1e85.js"><link rel="prefetch" href="/blog/assets/js/483.fc0f4bb2.js"><link rel="prefetch" href="/blog/assets/js/484.a684ea4f.js"><link rel="prefetch" href="/blog/assets/js/485.d9b8c5d7.js"><link rel="prefetch" href="/blog/assets/js/486.70329d20.js"><link rel="prefetch" href="/blog/assets/js/487.42da36ae.js"><link rel="prefetch" href="/blog/assets/js/488.7179f5e7.js"><link rel="prefetch" href="/blog/assets/js/489.0fb572cb.js"><link rel="prefetch" href="/blog/assets/js/49.dfe596ab.js"><link rel="prefetch" href="/blog/assets/js/490.89ca0116.js"><link rel="prefetch" href="/blog/assets/js/491.d5c12901.js"><link rel="prefetch" href="/blog/assets/js/492.8b76e2d2.js"><link rel="prefetch" href="/blog/assets/js/493.005860cf.js"><link rel="prefetch" href="/blog/assets/js/494.2fa28788.js"><link rel="prefetch" href="/blog/assets/js/495.85823add.js"><link rel="prefetch" href="/blog/assets/js/496.b2d165b3.js"><link rel="prefetch" href="/blog/assets/js/497.bf96065f.js"><link rel="prefetch" href="/blog/assets/js/498.3021c22e.js"><link rel="prefetch" href="/blog/assets/js/499.d1a58e34.js"><link rel="prefetch" href="/blog/assets/js/5.2a4c3fc5.js"><link rel="prefetch" href="/blog/assets/js/50.1c08942d.js"><link rel="prefetch" href="/blog/assets/js/500.c7306f91.js"><link rel="prefetch" href="/blog/assets/js/501.46978126.js"><link rel="prefetch" href="/blog/assets/js/502.97103c2f.js"><link rel="prefetch" href="/blog/assets/js/503.e0e8c3d2.js"><link rel="prefetch" href="/blog/assets/js/504.b917c383.js"><link rel="prefetch" href="/blog/assets/js/505.cfd89a2c.js"><link rel="prefetch" href="/blog/assets/js/506.cc5e7903.js"><link rel="prefetch" href="/blog/assets/js/507.a0cb47e9.js"><link rel="prefetch" href="/blog/assets/js/508.502b751f.js"><link rel="prefetch" href="/blog/assets/js/509.e7c4ef13.js"><link rel="prefetch" href="/blog/assets/js/51.e435d94a.js"><link rel="prefetch" href="/blog/assets/js/510.25ad418a.js"><link rel="prefetch" href="/blog/assets/js/511.227dbdad.js"><link rel="prefetch" href="/blog/assets/js/512.52262569.js"><link rel="prefetch" href="/blog/assets/js/513.b3eba3fe.js"><link rel="prefetch" href="/blog/assets/js/514.8d2c0fdc.js"><link rel="prefetch" href="/blog/assets/js/515.030eb06c.js"><link rel="prefetch" href="/blog/assets/js/516.fbba5cbb.js"><link rel="prefetch" href="/blog/assets/js/517.81abc2ea.js"><link rel="prefetch" href="/blog/assets/js/518.3ed55e78.js"><link rel="prefetch" href="/blog/assets/js/519.980f0292.js"><link rel="prefetch" href="/blog/assets/js/52.af5e2886.js"><link rel="prefetch" href="/blog/assets/js/520.a867ff43.js"><link rel="prefetch" href="/blog/assets/js/521.792d23c4.js"><link rel="prefetch" href="/blog/assets/js/522.7cf1ff48.js"><link rel="prefetch" href="/blog/assets/js/523.0bbc2183.js"><link rel="prefetch" href="/blog/assets/js/524.33c88777.js"><link rel="prefetch" href="/blog/assets/js/525.568acde2.js"><link rel="prefetch" href="/blog/assets/js/526.0f6350f2.js"><link rel="prefetch" href="/blog/assets/js/527.9ac43681.js"><link rel="prefetch" href="/blog/assets/js/528.74427c9a.js"><link rel="prefetch" href="/blog/assets/js/529.b40abe4d.js"><link rel="prefetch" href="/blog/assets/js/53.b19062b8.js"><link rel="prefetch" href="/blog/assets/js/530.a5d5d3e8.js"><link rel="prefetch" href="/blog/assets/js/531.5b6d763f.js"><link rel="prefetch" href="/blog/assets/js/532.6256320b.js"><link rel="prefetch" href="/blog/assets/js/533.9a30880e.js"><link rel="prefetch" href="/blog/assets/js/534.cbc50bf8.js"><link rel="prefetch" href="/blog/assets/js/535.d41344f9.js"><link rel="prefetch" href="/blog/assets/js/536.2ab27bbf.js"><link rel="prefetch" href="/blog/assets/js/537.3ff57b1a.js"><link rel="prefetch" href="/blog/assets/js/54.e8b42f3a.js"><link rel="prefetch" href="/blog/assets/js/55.db4a95c6.js"><link rel="prefetch" href="/blog/assets/js/56.150acf94.js"><link rel="prefetch" href="/blog/assets/js/57.7ef2e680.js"><link rel="prefetch" href="/blog/assets/js/58.f06d3f5d.js"><link rel="prefetch" href="/blog/assets/js/59.41fb2436.js"><link rel="prefetch" href="/blog/assets/js/6.48d6d8fa.js"><link rel="prefetch" href="/blog/assets/js/60.3432fa21.js"><link rel="prefetch" href="/blog/assets/js/61.56d00cdc.js"><link rel="prefetch" href="/blog/assets/js/62.f9ff9b7e.js"><link rel="prefetch" href="/blog/assets/js/63.22689d56.js"><link rel="prefetch" href="/blog/assets/js/64.3b7b14ff.js"><link rel="prefetch" href="/blog/assets/js/65.f71aff90.js"><link rel="prefetch" href="/blog/assets/js/66.cbfe510f.js"><link rel="prefetch" href="/blog/assets/js/67.d1722e7e.js"><link rel="prefetch" href="/blog/assets/js/68.cc0b7053.js"><link rel="prefetch" href="/blog/assets/js/69.83072c71.js"><link rel="prefetch" href="/blog/assets/js/7.03f5ce0c.js"><link rel="prefetch" href="/blog/assets/js/70.4761b3aa.js"><link rel="prefetch" href="/blog/assets/js/71.a87bc326.js"><link rel="prefetch" href="/blog/assets/js/72.163868da.js"><link rel="prefetch" href="/blog/assets/js/73.6cb5fd76.js"><link rel="prefetch" href="/blog/assets/js/74.438eda87.js"><link rel="prefetch" href="/blog/assets/js/75.d438b3d1.js"><link rel="prefetch" href="/blog/assets/js/76.edab97bf.js"><link rel="prefetch" href="/blog/assets/js/77.c29889dc.js"><link rel="prefetch" href="/blog/assets/js/78.6032aee9.js"><link rel="prefetch" href="/blog/assets/js/79.f8f9160e.js"><link rel="prefetch" href="/blog/assets/js/8.e7663de0.js"><link rel="prefetch" href="/blog/assets/js/80.2b028499.js"><link rel="prefetch" href="/blog/assets/js/81.ceda76a5.js"><link rel="prefetch" href="/blog/assets/js/82.1799c88c.js"><link rel="prefetch" href="/blog/assets/js/83.f074f6c2.js"><link rel="prefetch" href="/blog/assets/js/84.610a445b.js"><link rel="prefetch" href="/blog/assets/js/85.074bc122.js"><link rel="prefetch" href="/blog/assets/js/86.5539e33f.js"><link rel="prefetch" href="/blog/assets/js/87.ca666676.js"><link rel="prefetch" href="/blog/assets/js/88.e7a1d161.js"><link rel="prefetch" href="/blog/assets/js/89.4edd87ca.js"><link rel="prefetch" href="/blog/assets/js/9.e7ad7e7c.js"><link rel="prefetch" href="/blog/assets/js/90.1f9c3dd6.js"><link rel="prefetch" href="/blog/assets/js/91.1f465ef5.js"><link rel="prefetch" href="/blog/assets/js/92.266e0a20.js"><link rel="prefetch" href="/blog/assets/js/93.729468e0.js"><link rel="prefetch" href="/blog/assets/js/94.5097b5e5.js"><link rel="prefetch" href="/blog/assets/js/95.403fcfe1.js"><link rel="prefetch" href="/blog/assets/js/96.d6781817.js"><link rel="prefetch" href="/blog/assets/js/97.5253fd24.js"><link rel="prefetch" href="/blog/assets/js/98.e701ed34.js"><link rel="prefetch" href="/blog/assets/js/99.84645da6.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.cd12c23a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/learn.png" alt="zouyu-Blog" class="logo"> <span class="site-name can-hide">zouyu-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Business</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Database</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Deploy</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/" aria-current="page" class="sidebar-link">Deploy笔记</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/Docker/01.Docker.html" class="sidebar-link">Docker - 知识体系</a></li><li><a href="/blog/Deploy/Docker/02.Docker - 概述.html" class="sidebar-link">Docker - 概述</a></li><li><a href="/blog/Deploy/Docker/04.Docker - 安装.html" class="sidebar-link">Docker - 安装</a></li><li><a href="/blog/Deploy/Docker/05.Docker - 镜像和容器.html" class="sidebar-link">Docker  - 镜像和容器</a></li><li><a href="/blog/Deploy/Docker/06.Docker - 常用命令.html" class="sidebar-link">Docker - 常用命令</a></li><li><a href="/blog/Deploy/Docker/08.Docker - 可视化.html" class="sidebar-link">Docker - 可视化</a></li><li><a href="/blog/Deploy/Docker/10.Docker - 镜像和仓库.html" class="sidebar-link">Docker - 镜像和仓库</a></li><li><a href="/blog/Deploy/Docker/100.Docker-汇总.html" class="sidebar-link">Docker - 汇总文档</a></li><li><a href="/blog/Deploy/Docker/12.Docker - 数据卷.html" class="sidebar-link">Docker - 容器数据卷</a></li><li><a href="/blog/Deploy/Docker/14.Docker - DockerFile.html" class="sidebar-link">Docker - DockerFile</a></li><li><a href="/blog/Deploy/Docker/16.Docker - 网络.html" class="sidebar-link">Docker - 网络</a></li><li><a href="/blog/Deploy/Docker/18.Docker - Compose.html" class="sidebar-link">Docker - Compose</a></li><li><a href="/blog/Deploy/Docker/20.Docker - 中间件安装.html" class="sidebar-link">Docker - 常用中间件安装</a></li><li><a href="/blog/Deploy/Docker/50.IDEA使用Docker插件.html" class="sidebar-link">Docker - IDEA-docker插件</a></li><li><a href="/blog/Deploy/Docker/51.Docker - windows硬盘映射.html" class="sidebar-link">Docker - windows硬盘映射</a></li><li><a href="/blog/Deploy/Docker/52.Docker - windows 安装.html" class="sidebar-link">52.Docker - windows 安装</a></li><li><a href="/blog/Deploy/Docker/53.Docker - windows安装docker-compose.html" class="sidebar-link">53.Docker - windows安装docker-compose</a></li><li><a href="/blog/Deploy/Docker/docker/50.IDEA使用Docker插件.html" class="sidebar-link">IDEA使用Docker插件</a></li><li><a href="/blog/Deploy/Docker/docker/DockerFile.html" class="sidebar-link">高级02 DockerFile</a></li><li><a href="/blog/Deploy/Docker/docker/Docker安装.html" class="sidebar-link">Docker安装</a></li><li><a href="/blog/Deploy/Docker/docker/docker-master/Docker.html" class="sidebar-link">/Deploy/Docker/docker/docker-master/Docker.html</a></li><li><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/docker学习.html" class="sidebar-link">将应用打包成镜像</a></li><li><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html" class="sidebar-link">k8s</a></li><li><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html" class="active sidebar-link">Kubernetes核心实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、多副本" class="sidebar-link">1、多副本</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、扩缩容" class="sidebar-link">2、扩缩容</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_3、自愈-故障转移" class="sidebar-link">3、自愈&amp;故障转移</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_4、滚动更新" class="sidebar-link">4、滚动更新</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_5、版本回退" class="sidebar-link">5、版本回退</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、clusterip" class="sidebar-link">1、ClusterIP</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、nodeport" class="sidebar-link">2、NodePort</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、安装" class="sidebar-link">1、安装</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、使用" class="sidebar-link">2、使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#测试环境" class="sidebar-link">测试环境</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、域名访问" class="sidebar-link">1、域名访问</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、路径重写" class="sidebar-link">2、路径重写</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_3、流量限制" class="sidebar-link">3、流量限制</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#环境准备" class="sidebar-link">环境准备</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、所有节点" class="sidebar-link">1、所有节点</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、主节点" class="sidebar-link">2、主节点</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_3、从节点" class="sidebar-link">3、从节点</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_4、原生方式数据挂载" class="sidebar-link">4、原生方式数据挂载</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、pv-pvc" class="sidebar-link">1、PV&amp;PVC</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、创建pv池" class="sidebar-link">1、创建pv池</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、pvc创建与绑定" class="sidebar-link">2、PVC创建与绑定</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_2、configmap" class="sidebar-link">2、ConfigMap</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_1、redis示例" class="sidebar-link">1、redis示例</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html#_3、secret" class="sidebar-link">3、Secret</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Jenkins</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Other</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Server</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Boot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Cloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Work Doc</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>尚硅谷 Redis</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="kubernetes核心实战"><a href="#kubernetes核心实战" class="header-anchor">#</a> Kubernetes核心实战</h1> <h1 id="_1、资源创建方式"><a href="#_1、资源创建方式" class="header-anchor">#</a> 1、资源创建方式</h1> <ul><li>命令行</li> <li>YAML -- 应用</li></ul> <h1 id="_2、namespace"><a href="#_2、namespace" class="header-anchor">#</a> 2、Namespace</h1> <p>名称空间用来隔离资源</p> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl create ns hello
+kubectl delete ns hello
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hello
+</code></pre></div><h1 id="_3、pod"><a href="#_3、pod" class="header-anchor">#</a> 3、Pod</h1> <p>运行中的一组容器，Pod是kubernetes中应用的最小单位.</p> <p><img src="https://cdn.nlark.com/yuque/0/2021/png/1613913/1625484036923-09a15ef3-33dc-4e29-91e4-e7fbc69070ce.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_YXRndWlndS5jb20gIOWwmuehheiwtw%3D%3D%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="img"></p> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl run mynginx <span class="token parameter variable">--image</span><span class="token operator">=</span>nginx
+
+<span class="token comment"># 查看default名称空间的Pod</span>
+kubectl get pod 
+<span class="token comment"># 描述</span>
+kubectl describe pod 你自己的Pod名字
+<span class="token comment"># 删除</span>
+kubectl delete pod Pod名字
+<span class="token comment"># 查看Pod的运行日志</span>
+kubectl logs Pod名字
+
+<span class="token comment"># 每个Pod - k8s都会分配一个ip</span>
+kubectl get pod <span class="token parameter variable">-owide</span>
+<span class="token comment"># 使用Pod的ip+pod里面运行容器的端口</span>
+<span class="token function">curl</span> <span class="token number">192.168</span>.169.136
+
+<span class="token comment"># 集群中的任意一个机器以及任意的应用都能通过Pod分配的ip来访问这个Pod</span>
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: mynginx
+  name: mynginx
+<span class="token comment">#  namespace: default</span>
+spec:
+  containers:
+  - image: nginx
+    name: mynginx
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: myapp
+  name: myapp
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+  - image: tomcat:8.5.68
+    name: tomcat
+</code></pre></div><p><img src="https://cdn.nlark.com/yuque/0/2021/png/1613913/1625553938232-51976552-5bab-4c98-bb8d-c4bf612bf866.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_YXRndWlndS5jb20gIOWwmuehheiwtw%3D%3D%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="img"></p> <p>*<strong>此时的应用还不能外部访问*</strong></p> <h1 id="_4、deployment"><a href="#_4、deployment" class="header-anchor">#</a> 4、Deployment</h1> <p>控制Pod，使Pod拥有多副本，自愈，扩缩容等能力</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 清除所有Pod，比较下面两个命令有何不同效果？</span>
+kubectl run mynginx <span class="token parameter variable">--image</span><span class="token operator">=</span>nginx
+
+kubectl create deployment mytomcat <span class="token parameter variable">--image</span><span class="token operator">=</span>tomcat:8.5.68
+<span class="token comment"># 自愈能力</span>
+</code></pre></div><h2 id="_1、多副本"><a href="#_1、多副本" class="header-anchor">#</a> 1、多副本</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl create deployment my-dep <span class="token parameter variable">--image</span><span class="token operator">=</span>nginx <span class="token parameter variable">--replicas</span><span class="token operator">=</span><span class="token number">3</span>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-dep
+  name: my-dep
+spec:
+  replicas: <span class="token number">3</span>
+  selector:
+    matchLabels:
+      app: my-dep
+  template:
+    metadata:
+      labels:
+        app: my-dep
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+</code></pre></div><h2 id="_2、扩缩容"><a href="#_2、扩缩容" class="header-anchor">#</a> 2、扩缩容</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl scale <span class="token parameter variable">--replicas</span><span class="token operator">=</span><span class="token number">5</span> deployment/my-dep
+kubectl edit deployment my-dep
+
+<span class="token comment">#修改 replicas</span>
+</code></pre></div><h2 id="_3、自愈-故障转移"><a href="#_3、自愈-故障转移" class="header-anchor">#</a> 3、自愈&amp;故障转移</h2> <ul><li><p>停机</p></li> <li><p>删除Pod</p></li> <li><p>容器崩溃</p></li> <li><p>....</p></li></ul> <h2 id="_4、滚动更新"><a href="#_4、滚动更新" class="header-anchor">#</a> 4、滚动更新</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl <span class="token builtin class-name">set</span> image deployment/my-dep <span class="token assign-left variable">nginx</span><span class="token operator">=</span>nginx:1.16.1 <span class="token parameter variable">--record</span>
+kubectl rollout status deployment/my-dep
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># 修改 kubectl edit deployment/my-dep</span>
+</code></pre></div><h2 id="_5、版本回退"><a href="#_5、版本回退" class="header-anchor">#</a> 5、版本回退</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#历史记录</span>
+kubectl rollout <span class="token function">history</span> deployment/my-dep
+
+
+<span class="token comment">#查看某个历史详情</span>
+kubectl rollout <span class="token function">history</span> deployment/my-dep <span class="token parameter variable">--revision</span><span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token comment">#回滚(回到上次)</span>
+kubectl rollout undo deployment/my-dep
+
+<span class="token comment">#回滚(回到指定版本)</span>
+kubectl rollout undo deployment/my-dep --to-revision<span class="token operator">=</span><span class="token number">2</span>
+</code></pre></div><p>更多：</p> <p>除了Deployment，k8s还有 <code>StatefulSet</code> 、<code>DaemonSet</code> 、<code>Job</code>  等 类型资源。我们都称为 <code>工作负载</code>。</p> <p>有状态应用使用  <code>StatefulSet</code>  部署，无状态应用使用 <code>Deployment</code> 部署</p> <p>https://kubernetes.io/zh/docs/concepts/workloads/controllers/</p> <h1 id="_5、service"><a href="#_5、service" class="header-anchor">#</a> 5、Service</h1> <p>将一组 <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/" target="_blank" rel="noopener noreferrer">Pods<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 公开为网络服务的抽象方法。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#暴露Deploy</span>
+kubectl expose deployment my-dep <span class="token parameter variable">--port</span><span class="token operator">=</span><span class="token number">8000</span> --target-port<span class="token operator">=</span><span class="token number">80</span>
+
+<span class="token comment">#使用标签检索Pod</span>
+kubectl get pod <span class="token parameter variable">-l</span> <span class="token assign-left variable">app</span><span class="token operator">=</span>my-dep
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: my-dep
+  name: my-dep
+spec:
+  selector:
+    app: my-dep
+  ports:
+  - port: <span class="token number">8000</span>
+    protocol: TCP
+    targetPort: <span class="token number">80</span>
+</code></pre></div><h2 id="_1、clusterip"><a href="#_1、clusterip" class="header-anchor">#</a> 1、ClusterIP</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 等同于没有--type的</span>
+kubectl expose deployment my-dep <span class="token parameter variable">--port</span><span class="token operator">=</span><span class="token number">8000</span> --target-port<span class="token operator">=</span><span class="token number">80</span> <span class="token parameter variable">--type</span><span class="token operator">=</span>ClusterIP
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: my-dep
+  name: my-dep
+spec:
+  ports:
+  - port: <span class="token number">8000</span>
+    protocol: TCP
+    targetPort: <span class="token number">80</span>
+  selector:
+    app: my-dep
+  type: ClusterIP
+</code></pre></div><h2 id="_2、nodeport"><a href="#_2、nodeport" class="header-anchor">#</a> 2、NodePort</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl expose deployment my-dep <span class="token parameter variable">--port</span><span class="token operator">=</span><span class="token number">8000</span> --target-port<span class="token operator">=</span><span class="token number">80</span> <span class="token parameter variable">--type</span><span class="token operator">=</span>NodePort
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: my-dep
+  name: my-dep
+spec:
+  ports:
+  - port: <span class="token number">8000</span>
+    protocol: TCP
+    targetPort: <span class="token number">80</span>
+  selector:
+    app: my-dep
+  type: NodePort
+</code></pre></div><p>NodePort范围在 30000-32767 之间</p> <h1 id="_6、ingress"><a href="#_6、ingress" class="header-anchor">#</a> 6、Ingress</h1> <h2 id="_1、安装"><a href="#_1、安装" class="header-anchor">#</a> 1、安装</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.47.0/deploy/static/provider/baremetal/deploy.yaml
+
+<span class="token comment">#修改镜像</span>
+<span class="token function">vi</span> deploy.yaml
+<span class="token comment">#将image的值改为如下值：</span>
+registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/ingress-nginx-controller:v0.46.0
+
+<span class="token comment"># 检查安装的结果</span>
+kubectl get pod,svc <span class="token parameter variable">-n</span> ingress-nginx
+
+<span class="token comment"># 最后别忘记把svc暴露的端口要放行</span>
+</code></pre></div><p><img src="https://cdn.nlark.com/yuque/0/2021/png/1613913/1631010459687-252bb01e-e532-4992-830b-c097cddf9935.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_49%2Ctext_YXRndWlndS5jb20gIOWwmuehheiwtw%3D%3D%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="img"></p> <p>如果下载不到，用以下文件</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Namespace
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-serviceaccount.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">automountServiceAccountToken</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-configmap.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">data</span><span class="token punctuation">:</span>
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/clusterrole.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> configmaps
+      <span class="token punctuation">-</span> endpoints
+      <span class="token punctuation">-</span> nodes
+      <span class="token punctuation">-</span> pods
+      <span class="token punctuation">-</span> secrets
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> nodes
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> services
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> extensions
+      <span class="token punctuation">-</span> networking.k8s.io   <span class="token comment"># k8s 1.14+</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingresses
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> events
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> create
+      <span class="token punctuation">-</span> patch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> extensions
+      <span class="token punctuation">-</span> networking.k8s.io   <span class="token comment"># k8s 1.14+</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingresses/status
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> update
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> networking.k8s.io   <span class="token comment"># k8s 1.14+</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingressclasses
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/clusterrolebinding.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-role.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Role
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> namespaces
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> configmaps
+      <span class="token punctuation">-</span> pods
+      <span class="token punctuation">-</span> secrets
+      <span class="token punctuation">-</span> endpoints
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> services
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> extensions
+      <span class="token punctuation">-</span> networking.k8s.io   <span class="token comment"># k8s 1.14+</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingresses
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> extensions
+      <span class="token punctuation">-</span> networking.k8s.io   <span class="token comment"># k8s 1.14+</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingresses/status
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> update
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> networking.k8s.io   <span class="token comment"># k8s 1.14+</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingressclasses
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> list
+      <span class="token punctuation">-</span> watch
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> configmaps
+    <span class="token key atrule">resourceNames</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ingress<span class="token punctuation">-</span>controller<span class="token punctuation">-</span>leader<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> update
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> configmaps
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> create
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> events
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> create
+      <span class="token punctuation">-</span> patch
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-rolebinding.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> RoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> Role
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-service-webhook.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller<span class="token punctuation">-</span>admission
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> ClusterIP
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https<span class="token punctuation">-</span>webhook
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">443</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> webhook
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-service.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+      <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> http
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">443</span>
+      <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> https
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/controller-deployment.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+      <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+      <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+  <span class="token key atrule">revisionHistoryLimit</span><span class="token punctuation">:</span> <span class="token number">10</span>
+  <span class="token key atrule">minReadySeconds</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> controller
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">dnsPolicy</span><span class="token punctuation">:</span> ClusterFirst
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> controller
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> registry.cn<span class="token punctuation">-</span>hangzhou.aliyuncs.com/lfy_k8s_images/ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller<span class="token punctuation">:</span>v0.46.0
+          <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> IfNotPresent
+          <span class="token key atrule">lifecycle</span><span class="token punctuation">:</span>
+            <span class="token key atrule">preStop</span><span class="token punctuation">:</span>
+              <span class="token key atrule">exec</span><span class="token punctuation">:</span>
+                <span class="token key atrule">command</span><span class="token punctuation">:</span>
+                  <span class="token punctuation">-</span> /wait<span class="token punctuation">-</span>shutdown
+          <span class="token key atrule">args</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> /nginx<span class="token punctuation">-</span>ingress<span class="token punctuation">-</span>controller
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>election<span class="token punctuation">-</span>id=ingress<span class="token punctuation">-</span>controller<span class="token punctuation">-</span>leader
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>ingress<span class="token punctuation">-</span>class=nginx
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>configmap=$(POD_NAMESPACE)/ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>validating<span class="token punctuation">-</span>webhook=<span class="token punctuation">:</span><span class="token number">8443</span>
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>validating<span class="token punctuation">-</span>webhook<span class="token punctuation">-</span>certificate=/usr/local/certificates/cert
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>validating<span class="token punctuation">-</span>webhook<span class="token punctuation">-</span>key=/usr/local/certificates/key
+          <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+            <span class="token key atrule">capabilities</span><span class="token punctuation">:</span>
+              <span class="token key atrule">drop</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> ALL
+              <span class="token key atrule">add</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> NET_BIND_SERVICE
+            <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">101</span>
+            <span class="token key atrule">allowPrivilegeEscalation</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">env</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> POD_NAME
+              <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+                <span class="token key atrule">fieldRef</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">fieldPath</span><span class="token punctuation">:</span> metadata.name
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> POD_NAMESPACE
+              <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+                <span class="token key atrule">fieldRef</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">fieldPath</span><span class="token punctuation">:</span> metadata.namespace
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> LD_PRELOAD
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> /usr/local/lib/libmimalloc.so
+          <span class="token key atrule">livenessProbe</span><span class="token punctuation">:</span>
+            <span class="token key atrule">failureThreshold</span><span class="token punctuation">:</span> <span class="token number">5</span>
+            <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+              <span class="token key atrule">path</span><span class="token punctuation">:</span> /healthz
+              <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">10254</span>
+              <span class="token key atrule">scheme</span><span class="token punctuation">:</span> HTTP
+            <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+            <span class="token key atrule">periodSeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+            <span class="token key atrule">successThreshold</span><span class="token punctuation">:</span> <span class="token number">1</span>
+            <span class="token key atrule">timeoutSeconds</span><span class="token punctuation">:</span> <span class="token number">1</span>
+          <span class="token key atrule">readinessProbe</span><span class="token punctuation">:</span>
+            <span class="token key atrule">failureThreshold</span><span class="token punctuation">:</span> <span class="token number">3</span>
+            <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+              <span class="token key atrule">path</span><span class="token punctuation">:</span> /healthz
+              <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">10254</span>
+              <span class="token key atrule">scheme</span><span class="token punctuation">:</span> HTTP
+            <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+            <span class="token key atrule">periodSeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+            <span class="token key atrule">successThreshold</span><span class="token punctuation">:</span> <span class="token number">1</span>
+            <span class="token key atrule">timeoutSeconds</span><span class="token punctuation">:</span> <span class="token number">1</span>
+          <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+              <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+              <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https
+              <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">443</span>
+              <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> webhook
+              <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+              <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+          <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> webhook<span class="token punctuation">-</span>cert
+              <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /usr/local/certificates/
+              <span class="token key atrule">readOnly</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+            <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+              <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 100m
+              <span class="token key atrule">memory</span><span class="token punctuation">:</span> 90Mi
+      <span class="token key atrule">nodeSelector</span><span class="token punctuation">:</span>
+        <span class="token key atrule">kubernetes.io/os</span><span class="token punctuation">:</span> linux
+      <span class="token key atrule">serviceAccountName</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+      <span class="token key atrule">terminationGracePeriodSeconds</span><span class="token punctuation">:</span> <span class="token number">300</span>
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> webhook<span class="token punctuation">-</span>cert
+          <span class="token key atrule">secret</span><span class="token punctuation">:</span>
+            <span class="token key atrule">secretName</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/validating-webhook.yaml</span>
+<span class="token comment"># before changing this value, check the required kubernetes version</span>
+<span class="token comment"># https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#prerequisites</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> admissionregistration.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ValidatingWebhookConfiguration
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+<span class="token key atrule">webhooks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> validate.nginx.ingress.kubernetes.io
+    <span class="token key atrule">matchPolicy</span><span class="token punctuation">:</span> Equivalent
+    <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> networking.k8s.io
+        <span class="token key atrule">apiVersions</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> v1beta1
+        <span class="token key atrule">operations</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> CREATE
+          <span class="token punctuation">-</span> UPDATE
+        <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> ingresses
+    <span class="token key atrule">failurePolicy</span><span class="token punctuation">:</span> Fail
+    <span class="token key atrule">sideEffects</span><span class="token punctuation">:</span> None
+    <span class="token key atrule">admissionReviewVersions</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> v1
+      <span class="token punctuation">-</span> v1beta1
+    <span class="token key atrule">clientConfig</span><span class="token punctuation">:</span>
+      <span class="token key atrule">service</span><span class="token punctuation">:</span>
+        <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller<span class="token punctuation">-</span>admission
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> /networking/v1beta1/ingresses
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/serviceaccount.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>pre<span class="token punctuation">-</span>upgrade<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/clusterrole.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>pre<span class="token punctuation">-</span>upgrade<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> admissionregistration.k8s.io
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> validatingwebhookconfigurations
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> update
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/clusterrolebinding.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>pre<span class="token punctuation">-</span>upgrade<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+    <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/role.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Role
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>pre<span class="token punctuation">-</span>upgrade<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">''</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> secrets
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> get
+      <span class="token punctuation">-</span> create
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/rolebinding.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> RoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>pre<span class="token punctuation">-</span>upgrade<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> Role
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+    <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/job-createSecret.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> batch/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Job
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission<span class="token punctuation">-</span>create
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>pre<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission<span class="token punctuation">-</span>create
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+        <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+        <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+        <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> create
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> docker.io/jettech/kube<span class="token punctuation">-</span>webhook<span class="token punctuation">-</span>certgen<span class="token punctuation">:</span>v1.5.1
+          <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> IfNotPresent
+          <span class="token key atrule">args</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> create
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>host=ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller<span class="token punctuation">-</span>admission<span class="token punctuation">,</span>ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>controller<span class="token punctuation">-</span>admission.$(POD_NAMESPACE).svc
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace=$(POD_NAMESPACE)
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>secret<span class="token punctuation">-</span>name=ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+          <span class="token key atrule">env</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> POD_NAMESPACE
+              <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+                <span class="token key atrule">fieldRef</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">fieldPath</span><span class="token punctuation">:</span> metadata.namespace
+      <span class="token key atrule">restartPolicy</span><span class="token punctuation">:</span> OnFailure
+      <span class="token key atrule">serviceAccountName</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+      <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+        <span class="token key atrule">runAsNonRoot</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+        <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">2000</span>
+<span class="token punctuation">---</span>
+<span class="token comment"># Source: ingress-nginx/templates/admission-webhooks/job-patch/job-patchWebhook.yaml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> batch/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Job
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission<span class="token punctuation">-</span>patch
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/hook</span><span class="token punctuation">:</span> post<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>upgrade
+    <span class="token key atrule">helm.sh/hook-delete-policy</span><span class="token punctuation">:</span> before<span class="token punctuation">-</span>hook<span class="token punctuation">-</span>creation<span class="token punctuation">,</span>hook<span class="token punctuation">-</span>succeeded
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+    <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+    <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+    <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+    <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission<span class="token punctuation">-</span>patch
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">helm.sh/chart</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>3.33.0
+        <span class="token key atrule">app.kubernetes.io/name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">app.kubernetes.io/instance</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx
+        <span class="token key atrule">app.kubernetes.io/version</span><span class="token punctuation">:</span> 0.47.0
+        <span class="token key atrule">app.kubernetes.io/managed-by</span><span class="token punctuation">:</span> Helm
+        <span class="token key atrule">app.kubernetes.io/component</span><span class="token punctuation">:</span> admission<span class="token punctuation">-</span>webhook
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> patch
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> docker.io/jettech/kube<span class="token punctuation">-</span>webhook<span class="token punctuation">-</span>certgen<span class="token punctuation">:</span>v1.5.1
+          <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> IfNotPresent
+          <span class="token key atrule">args</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> patch
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>webhook<span class="token punctuation">-</span>name=ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace=$(POD_NAMESPACE)
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>patch<span class="token punctuation">-</span>mutating=false
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>secret<span class="token punctuation">-</span>name=ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>patch<span class="token punctuation">-</span>failure<span class="token punctuation">-</span>policy=Fail
+          <span class="token key atrule">env</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> POD_NAMESPACE
+              <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+                <span class="token key atrule">fieldRef</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">fieldPath</span><span class="token punctuation">:</span> metadata.namespace
+      <span class="token key atrule">restartPolicy</span><span class="token punctuation">:</span> OnFailure
+      <span class="token key atrule">serviceAccountName</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>nginx<span class="token punctuation">-</span>admission
+      <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+        <span class="token key atrule">runAsNonRoot</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+        <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">2000</span>
+</code></pre></div><h2 id="_2、使用"><a href="#_2、使用" class="header-anchor">#</a> 2、使用</h2> <p>官网地址：https://kubernetes.github.io/ingress-nginx/</p> <p>就是nginx做的</p> <p>https://139.198.163.211:32401/</p> <p><a href="https://139.198.163.211:32401/" target="_blank" rel="noopener noreferrer">http://139.198.163.211:31405/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="测试环境"><a href="#测试环境" class="header-anchor">#</a> 测试环境</h3> <p>应用如下yaml，准备好测试环境</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> registry.cn<span class="token punctuation">-</span>hangzhou.aliyuncs.com/lfy_k8s_images/hello<span class="token punctuation">-</span>server
+        <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">9000</span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+    <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+    <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+    <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+    <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">9000</span>
+</code></pre></div><h3 id="_1、域名访问"><a href="#_1、域名访问" class="header-anchor">#</a> 1、域名访问</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> networking.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Ingress  
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>host<span class="token punctuation">-</span>bar
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ingressClassName</span><span class="token punctuation">:</span> nginx
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> <span class="token string">&quot;hello.atguigu.com&quot;</span>
+    <span class="token key atrule">http</span><span class="token punctuation">:</span>
+      <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">pathType</span><span class="token punctuation">:</span> Prefix
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> <span class="token string">&quot;/&quot;</span>
+        <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+          <span class="token key atrule">service</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+            <span class="token key atrule">port</span><span class="token punctuation">:</span>
+              <span class="token key atrule">number</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> <span class="token string">&quot;demo.atguigu.com&quot;</span>
+    <span class="token key atrule">http</span><span class="token punctuation">:</span>
+      <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">pathType</span><span class="token punctuation">:</span> Prefix
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> <span class="token string">&quot;/nginx&quot;</span>  <span class="token comment"># 把请求会转给下面的服务，下面的服务一定要能处理这个路径，不能处理就是404</span>
+        <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+          <span class="token key atrule">service</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo  <span class="token comment">## java，比如使用路径重写，去掉前缀nginx</span>
+            <span class="token key atrule">port</span><span class="token punctuation">:</span>
+              <span class="token key atrule">number</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+</code></pre></div><p>问题： path: &quot;/nginx&quot; 与  path: &quot;/&quot; 为什么会有不同的效果？</p> <h3 id="_2、路径重写"><a href="#_2、路径重写" class="header-anchor">#</a> 2、路径重写</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> networking.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Ingress  
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">nginx.ingress.kubernetes.io/rewrite-target</span><span class="token punctuation">:</span> /$2
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>host<span class="token punctuation">-</span>bar
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ingressClassName</span><span class="token punctuation">:</span> nginx
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> <span class="token string">&quot;hello.atguigu.com&quot;</span>
+    <span class="token key atrule">http</span><span class="token punctuation">:</span>
+      <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">pathType</span><span class="token punctuation">:</span> Prefix
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> <span class="token string">&quot;/&quot;</span>
+        <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+          <span class="token key atrule">service</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> hello<span class="token punctuation">-</span>server
+            <span class="token key atrule">port</span><span class="token punctuation">:</span>
+              <span class="token key atrule">number</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> <span class="token string">&quot;demo.atguigu.com&quot;</span>
+    <span class="token key atrule">http</span><span class="token punctuation">:</span>
+      <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">pathType</span><span class="token punctuation">:</span> Prefix
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> <span class="token string">&quot;/nginx(/|$)(.*)&quot;</span>  <span class="token comment"># 把请求会转给下面的服务，下面的服务一定要能处理这个路径，不能处理就是404</span>
+        <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+          <span class="token key atrule">service</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo  <span class="token comment">## java，比如使用路径重写，去掉前缀nginx</span>
+            <span class="token key atrule">port</span><span class="token punctuation">:</span>
+              <span class="token key atrule">number</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+</code></pre></div><h3 id="_3、流量限制"><a href="#_3、流量限制" class="header-anchor">#</a> 3、流量限制</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> networking.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Ingress
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ingress<span class="token punctuation">-</span>limit<span class="token punctuation">-</span>rate
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">nginx.ingress.kubernetes.io/limit-rps</span><span class="token punctuation">:</span> <span class="token string">&quot;1&quot;</span>
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ingressClassName</span><span class="token punctuation">:</span> nginx
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> <span class="token string">&quot;haha.atguigu.com&quot;</span>
+    <span class="token key atrule">http</span><span class="token punctuation">:</span>
+      <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">pathType</span><span class="token punctuation">:</span> Exact
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> <span class="token string">&quot;/&quot;</span>
+        <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+          <span class="token key atrule">service</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>demo
+            <span class="token key atrule">port</span><span class="token punctuation">:</span>
+              <span class="token key atrule">number</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+</code></pre></div><h1 id="_7、存储抽象"><a href="#_7、存储抽象" class="header-anchor">#</a> 7、存储抽象</h1> <h2 id="环境准备"><a href="#环境准备" class="header-anchor">#</a> 环境准备</h2> <h3 id="_1、所有节点"><a href="#_1、所有节点" class="header-anchor">#</a> 1、所有节点</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#所有机器安装</span>
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> nfs-utils
+</code></pre></div><h3 id="_2、主节点"><a href="#_2、主节点" class="header-anchor">#</a> 2、主节点</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#nfs主节点</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;/nfs/data/ *(insecure,rw,sync,no_root_squash)&quot;</span> <span class="token operator">&gt;</span> /etc/exports
+
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /nfs/data
+systemctl <span class="token builtin class-name">enable</span> rpcbind <span class="token parameter variable">--now</span>
+systemctl <span class="token builtin class-name">enable</span> nfs-server <span class="token parameter variable">--now</span>
+<span class="token comment">#配置生效</span>
+exportfs <span class="token parameter variable">-r</span>
+</code></pre></div><h3 id="_3、从节点"><a href="#_3、从节点" class="header-anchor">#</a> 3、从节点</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>showmount <span class="token parameter variable">-e</span> <span class="token number">172.31</span>.0.4
+
+<span class="token comment">#执行以下命令挂载 nfs 服务器上的共享目录到本机路径 /root/nfsmount</span>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /nfs/data
+
+<span class="token function">mount</span> <span class="token parameter variable">-t</span> nfs <span class="token number">172.31</span>.0.4:/nfs/data /nfs/data
+<span class="token comment"># 写入一个测试文件</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;hello nfs server&quot;</span> <span class="token operator">&gt;</span> /nfs/data/test.txt
+</code></pre></div><h3 id="_4、原生方式数据挂载"><a href="#_4、原生方式数据挂载" class="header-anchor">#</a> 4、原生方式数据挂载</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>pv<span class="token punctuation">-</span>demo
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>pv<span class="token punctuation">-</span>demo
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>pv<span class="token punctuation">-</span>demo
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>pv<span class="token punctuation">-</span>demo
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+        <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> html
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /usr/share/nginx/html
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> html
+          <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
+            <span class="token key atrule">server</span><span class="token punctuation">:</span> 172.31.0.4
+            <span class="token key atrule">path</span><span class="token punctuation">:</span> /nfs/data/nginx<span class="token punctuation">-</span>pv
+</code></pre></div><h2 id="_1、pv-pvc"><a href="#_1、pv-pvc" class="header-anchor">#</a> 1、PV&amp;PVC</h2> <p><em>PV：持久卷（Persistent Volume），将应用需要持久化的数据保存到指定位置</em></p> <p><em>PVC：持久卷申明（<strong>Persistent Volume Claim</strong>），申明需要使用的持久卷规格</em></p> <h3 id="_1、创建pv池"><a href="#_1、创建pv池" class="header-anchor">#</a> 1、创建pv池</h3> <p>静态供应</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#nfs主节点</span>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /nfs/data/01
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /nfs/data/02
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /nfs/data/03
+</code></pre></div><p>创建PV</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolume
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pv01<span class="token punctuation">-</span>10m
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">capacity</span><span class="token punctuation">:</span>
+    <span class="token key atrule">storage</span><span class="token punctuation">:</span> 10M
+  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ReadWriteMany
+  <span class="token key atrule">storageClassName</span><span class="token punctuation">:</span> nfs
+  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">path</span><span class="token punctuation">:</span> /nfs/data/01
+    <span class="token key atrule">server</span><span class="token punctuation">:</span> 172.31.0.4
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolume
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pv02<span class="token punctuation">-</span>1gi
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">capacity</span><span class="token punctuation">:</span>
+    <span class="token key atrule">storage</span><span class="token punctuation">:</span> 1Gi
+  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ReadWriteMany
+  <span class="token key atrule">storageClassName</span><span class="token punctuation">:</span> nfs
+  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">path</span><span class="token punctuation">:</span> /nfs/data/02
+    <span class="token key atrule">server</span><span class="token punctuation">:</span> 172.31.0.4
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolume
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pv03<span class="token punctuation">-</span>3gi
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">capacity</span><span class="token punctuation">:</span>
+    <span class="token key atrule">storage</span><span class="token punctuation">:</span> 3Gi
+  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ReadWriteMany
+  <span class="token key atrule">storageClassName</span><span class="token punctuation">:</span> nfs
+  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">path</span><span class="token punctuation">:</span> /nfs/data/03
+    <span class="token key atrule">server</span><span class="token punctuation">:</span> 172.31.0.4
+</code></pre></div><h3 id="_2、pvc创建与绑定"><a href="#_2、pvc创建与绑定" class="header-anchor">#</a> 2、PVC创建与绑定</h3> <p>创建PVC</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolumeClaim
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>pvc
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ReadWriteMany
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+    <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+      <span class="token key atrule">storage</span><span class="token punctuation">:</span> 200Mi
+  <span class="token key atrule">storageClassName</span><span class="token punctuation">:</span> nfs
+</code></pre></div><p>创建Pod绑定PVC</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>pvc
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>pvc
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>pvc
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>pvc
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+        <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> html
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /usr/share/nginx/html
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> html
+          <span class="token key atrule">persistentVolumeClaim</span><span class="token punctuation">:</span>
+            <span class="token key atrule">claimName</span><span class="token punctuation">:</span> nginx<span class="token punctuation">-</span>pvc
+</code></pre></div><h2 id="_2、configmap"><a href="#_2、configmap" class="header-anchor">#</a> 2、ConfigMap</h2> <p>抽取应用配置，并且可以自动更新</p> <h3 id="_1、redis示例"><a href="#_1、redis示例" class="header-anchor">#</a> 1、redis示例</h3> <h4 id="_1、把之前的配置文件创建为配置集"><a href="#_1、把之前的配置文件创建为配置集" class="header-anchor">#</a> 1、把之前的配置文件创建为配置集</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 创建配置，redis保存到k8s的etcd；</span>
+kubectl create cm redis-conf --from-file<span class="token operator">=</span>redis.conf
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">data</span><span class="token punctuation">:</span>    <span class="token comment">#data是所有真正的数据，key：默认是文件名   value：配置文件的内容</span>
+  <span class="token key atrule">redis.conf</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    appendonly yes</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>conf
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> default
+</code></pre></div><h4 id="_2、创建pod"><a href="#_2、创建pod" class="header-anchor">#</a> 2、创建Pod</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> redis
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> redis
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+    <span class="token key atrule">command</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> redis<span class="token punctuation">-</span>server
+      <span class="token punctuation">-</span> <span class="token string">&quot;/redis-master/redis.conf&quot;</span>  <span class="token comment">#指的是redis容器内部的位置</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">6379</span>
+    <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /data
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> data
+    <span class="token punctuation">-</span> <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /redis<span class="token punctuation">-</span>master
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> config
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> data
+      <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> config
+      <span class="token key atrule">configMap</span><span class="token punctuation">:</span>
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>conf
+        <span class="token key atrule">items</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> redis.conf
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> redis.conf
+</code></pre></div><h4 id=""><a href="#" class="header-anchor">#</a></h4> <h4 id="_3、检查默认配置"><a href="#_3、检查默认配置" class="header-anchor">#</a> 3、检查默认配置</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> redis -- redis-cli
+
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> CONFIG GET appendonly
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> CONFIG GET requirepass
+</code></pre></div><h4 id="_4、修改configmap"><a href="#_4、修改configmap" class="header-anchor">#</a> 4、修改ConfigMap</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> example<span class="token punctuation">-</span>redis<span class="token punctuation">-</span>config
+<span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">redis-config</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    maxmemory 2mb
+    maxmemory-policy allkeys-lru </span>
+</code></pre></div><h4 id="_5、检查配置是否更新"><a href="#_5、检查配置是否更新" class="header-anchor">#</a> 5、检查配置是否更新</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> redis -- redis-cli
+
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> CONFIG GET maxmemory
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> CONFIG GET maxmemory-policy
+</code></pre></div><p>检查指定文件内容是否已经更新</p> <p>修改了CM。Pod里面的配置文件会跟着变</p> <p>*<strong>配置值未更改，因为需要重新启动 Pod 才能从关联的 ConfigMap 中获取更新的值。*</strong></p> <p>*<strong>原因：我们的Pod部署的中间件自己本身没有热更新能力*</strong></p> <h2 id="_3、secret"><a href="#_3、secret" class="header-anchor">#</a> 3、Secret</h2> <p>Secret 对象类型用来保存敏感信息，例如密码、OAuth 令牌和 SSH 密钥。 将这些信息放在 secret 中比放在 <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/" target="_blank" rel="noopener noreferrer">Pod<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 的定义或者 <a href="https://kubernetes.io/zh/docs/reference/glossary/?all=true#term-image" target="_blank" rel="noopener noreferrer">容器镜像<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 中来说更加安全和灵活。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl create secret docker-registry leifengyang-docker <span class="token punctuation">\</span>
+--docker-username<span class="token operator">=</span>leifengyang <span class="token punctuation">\</span>
+--docker-password<span class="token operator">=</span>Lfy123456 <span class="token punctuation">\</span>
+--docker-email<span class="token operator">=</span><span class="token number">534096094</span>@qq.com
+
+<span class="token comment">##命令格式</span>
+kubectl create secret docker-registry regcred <span class="token punctuation">\</span>
+  --docker-server<span class="token operator">=</span><span class="token operator">&lt;</span>你的镜像仓库服务器<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+  --docker-username<span class="token operator">=</span><span class="token operator">&lt;</span>你的用户名<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+  --docker-password<span class="token operator">=</span><span class="token operator">&lt;</span>你的密码<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+  --docker-email<span class="token operator">=</span><span class="token operator">&lt;</span>你的邮箱地址<span class="token operator">&gt;</span>
+apiVersion: v1
+kind: Pod
+metadata:
+  name: private-nginx
+spec:
+  containers:
+  - name: private-nginx
+    image: leifengyang/guignginx:v1.0
+  imagePullSecrets:
+  - name: leifengyang-docker
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html" class="prev">
+        k8s
+      </a></span> <span class="next"><a href="/blog/git/">
+        Git - 知识体系
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.240fe854.js" defer></script><script src="/blog/assets/js/3.ae24385a.js" defer></script><script src="/blog/assets/js/204.ce4afd24.js" defer></script>
+  </body>
+</html>

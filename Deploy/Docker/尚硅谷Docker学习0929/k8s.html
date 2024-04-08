@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>k8s | zouyu-Blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/blog/images/learn.png">
+    <meta name="description" content="求知若渴，虚心若愚。 愿你每天都在成长">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.cd12c23a.css" as="style"><link rel="preload" href="/blog/assets/js/app.240fe854.js" as="script"><link rel="preload" href="/blog/assets/js/3.ae24385a.js" as="script"><link rel="preload" href="/blog/assets/js/203.093fd7f3.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.c8aa137e.js"><link rel="prefetch" href="/blog/assets/js/100.270782a2.js"><link rel="prefetch" href="/blog/assets/js/101.493d5eb4.js"><link rel="prefetch" href="/blog/assets/js/102.f4d2b665.js"><link rel="prefetch" href="/blog/assets/js/103.f6820da5.js"><link rel="prefetch" href="/blog/assets/js/104.335025f6.js"><link rel="prefetch" href="/blog/assets/js/105.64ec1288.js"><link rel="prefetch" href="/blog/assets/js/106.76269974.js"><link rel="prefetch" href="/blog/assets/js/107.7b3aaee5.js"><link rel="prefetch" href="/blog/assets/js/108.312eef06.js"><link rel="prefetch" href="/blog/assets/js/109.01851b03.js"><link rel="prefetch" href="/blog/assets/js/11.8cc9f3e2.js"><link rel="prefetch" href="/blog/assets/js/110.d6b3c161.js"><link rel="prefetch" href="/blog/assets/js/111.231ed1b7.js"><link rel="prefetch" href="/blog/assets/js/112.54c9047e.js"><link rel="prefetch" href="/blog/assets/js/113.fd88393e.js"><link rel="prefetch" href="/blog/assets/js/114.c69e2d56.js"><link rel="prefetch" href="/blog/assets/js/115.2572716d.js"><link rel="prefetch" href="/blog/assets/js/116.189a6636.js"><link rel="prefetch" href="/blog/assets/js/117.8d989008.js"><link rel="prefetch" href="/blog/assets/js/118.aaeb8e90.js"><link rel="prefetch" href="/blog/assets/js/119.2606fb02.js"><link rel="prefetch" href="/blog/assets/js/12.af114223.js"><link rel="prefetch" href="/blog/assets/js/120.c14a928c.js"><link rel="prefetch" href="/blog/assets/js/121.c6e62fd8.js"><link rel="prefetch" href="/blog/assets/js/122.311bf078.js"><link rel="prefetch" href="/blog/assets/js/123.751fda12.js"><link rel="prefetch" href="/blog/assets/js/124.34d44472.js"><link rel="prefetch" href="/blog/assets/js/125.23f54255.js"><link rel="prefetch" href="/blog/assets/js/126.55ff03bd.js"><link rel="prefetch" href="/blog/assets/js/127.6fe293d9.js"><link rel="prefetch" href="/blog/assets/js/128.aabf99a3.js"><link rel="prefetch" href="/blog/assets/js/129.cf92fb63.js"><link rel="prefetch" href="/blog/assets/js/13.c7f5915c.js"><link rel="prefetch" href="/blog/assets/js/130.3b951bb4.js"><link rel="prefetch" href="/blog/assets/js/131.6625f8db.js"><link rel="prefetch" href="/blog/assets/js/132.d5c8c008.js"><link rel="prefetch" href="/blog/assets/js/133.9d4ce3ac.js"><link rel="prefetch" href="/blog/assets/js/134.e2bd85f3.js"><link rel="prefetch" href="/blog/assets/js/135.62242add.js"><link rel="prefetch" href="/blog/assets/js/136.b0b59ec3.js"><link rel="prefetch" href="/blog/assets/js/137.a67f8c25.js"><link rel="prefetch" href="/blog/assets/js/138.d5eb5ab3.js"><link rel="prefetch" href="/blog/assets/js/139.4ac04d47.js"><link rel="prefetch" href="/blog/assets/js/14.bc31c02e.js"><link rel="prefetch" href="/blog/assets/js/140.d0a01472.js"><link rel="prefetch" href="/blog/assets/js/141.05aea2bc.js"><link rel="prefetch" href="/blog/assets/js/142.69d20be0.js"><link rel="prefetch" href="/blog/assets/js/143.3d7c0b6d.js"><link rel="prefetch" href="/blog/assets/js/144.062351b1.js"><link rel="prefetch" href="/blog/assets/js/145.a68dd8a9.js"><link rel="prefetch" href="/blog/assets/js/146.73bfc9cb.js"><link rel="prefetch" href="/blog/assets/js/147.a2b62153.js"><link rel="prefetch" href="/blog/assets/js/148.42936083.js"><link rel="prefetch" href="/blog/assets/js/149.79350bd2.js"><link rel="prefetch" href="/blog/assets/js/15.287be67a.js"><link rel="prefetch" href="/blog/assets/js/150.a89a5c46.js"><link rel="prefetch" href="/blog/assets/js/151.7681eaa3.js"><link rel="prefetch" href="/blog/assets/js/152.b297623f.js"><link rel="prefetch" href="/blog/assets/js/153.41f33b66.js"><link rel="prefetch" href="/blog/assets/js/154.b552e41e.js"><link rel="prefetch" href="/blog/assets/js/155.c1780c4a.js"><link rel="prefetch" href="/blog/assets/js/156.d540891e.js"><link rel="prefetch" href="/blog/assets/js/157.90063e48.js"><link rel="prefetch" href="/blog/assets/js/158.9d279d50.js"><link rel="prefetch" href="/blog/assets/js/159.5698a318.js"><link rel="prefetch" href="/blog/assets/js/16.583e55e8.js"><link rel="prefetch" href="/blog/assets/js/160.169f579d.js"><link rel="prefetch" href="/blog/assets/js/161.1513e70a.js"><link rel="prefetch" href="/blog/assets/js/162.977253b8.js"><link rel="prefetch" href="/blog/assets/js/163.fcb2d19a.js"><link rel="prefetch" href="/blog/assets/js/164.f58050b6.js"><link rel="prefetch" href="/blog/assets/js/165.549d9d88.js"><link rel="prefetch" href="/blog/assets/js/166.fa8b0c13.js"><link rel="prefetch" href="/blog/assets/js/167.54127a7d.js"><link rel="prefetch" href="/blog/assets/js/168.c386b069.js"><link rel="prefetch" href="/blog/assets/js/169.86ccc045.js"><link rel="prefetch" href="/blog/assets/js/17.d5b55ec0.js"><link rel="prefetch" href="/blog/assets/js/170.f3128553.js"><link rel="prefetch" href="/blog/assets/js/171.5e1de0de.js"><link rel="prefetch" href="/blog/assets/js/172.648d45ab.js"><link rel="prefetch" href="/blog/assets/js/173.07acf940.js"><link rel="prefetch" href="/blog/assets/js/174.e6f7b802.js"><link rel="prefetch" href="/blog/assets/js/175.cd188d94.js"><link rel="prefetch" href="/blog/assets/js/176.f483c35a.js"><link rel="prefetch" href="/blog/assets/js/177.b41f375b.js"><link rel="prefetch" href="/blog/assets/js/178.b9209612.js"><link rel="prefetch" href="/blog/assets/js/179.5c1f33e3.js"><link rel="prefetch" href="/blog/assets/js/18.a7a7247c.js"><link rel="prefetch" href="/blog/assets/js/180.e127d877.js"><link rel="prefetch" href="/blog/assets/js/181.5e5cea9d.js"><link rel="prefetch" href="/blog/assets/js/182.274ce929.js"><link rel="prefetch" href="/blog/assets/js/183.107655d8.js"><link rel="prefetch" href="/blog/assets/js/184.2324abb5.js"><link rel="prefetch" href="/blog/assets/js/185.31f67006.js"><link rel="prefetch" href="/blog/assets/js/186.46fc1fa6.js"><link rel="prefetch" href="/blog/assets/js/187.c2319eae.js"><link rel="prefetch" href="/blog/assets/js/188.a54369a1.js"><link rel="prefetch" href="/blog/assets/js/189.4c39d6fd.js"><link rel="prefetch" href="/blog/assets/js/19.926806e9.js"><link rel="prefetch" href="/blog/assets/js/190.ded7a7a3.js"><link rel="prefetch" href="/blog/assets/js/191.78e47ec7.js"><link rel="prefetch" href="/blog/assets/js/192.dd6f4b06.js"><link rel="prefetch" href="/blog/assets/js/193.6ccb8b3e.js"><link rel="prefetch" href="/blog/assets/js/194.7f45ac5c.js"><link rel="prefetch" href="/blog/assets/js/195.548c8e52.js"><link rel="prefetch" href="/blog/assets/js/196.a8a7f4a9.js"><link rel="prefetch" href="/blog/assets/js/197.d6f98046.js"><link rel="prefetch" href="/blog/assets/js/198.d49aebef.js"><link rel="prefetch" href="/blog/assets/js/199.e6d26edb.js"><link rel="prefetch" href="/blog/assets/js/2.d23f741a.js"><link rel="prefetch" href="/blog/assets/js/20.a23b68f4.js"><link rel="prefetch" href="/blog/assets/js/200.24626fe3.js"><link rel="prefetch" href="/blog/assets/js/201.6141363f.js"><link rel="prefetch" href="/blog/assets/js/202.a532dd9e.js"><link rel="prefetch" href="/blog/assets/js/204.ce4afd24.js"><link rel="prefetch" href="/blog/assets/js/205.b57df238.js"><link rel="prefetch" href="/blog/assets/js/206.55765cc7.js"><link rel="prefetch" href="/blog/assets/js/207.839ddc4b.js"><link rel="prefetch" href="/blog/assets/js/208.2f4c887b.js"><link rel="prefetch" href="/blog/assets/js/209.1374e5ab.js"><link rel="prefetch" href="/blog/assets/js/21.85d3a2b1.js"><link rel="prefetch" href="/blog/assets/js/210.09694973.js"><link rel="prefetch" href="/blog/assets/js/211.bc1bbd21.js"><link rel="prefetch" href="/blog/assets/js/212.72e05506.js"><link rel="prefetch" href="/blog/assets/js/213.b9145807.js"><link rel="prefetch" href="/blog/assets/js/214.cd9e23aa.js"><link rel="prefetch" href="/blog/assets/js/215.b2b67600.js"><link rel="prefetch" href="/blog/assets/js/216.dc2a02ee.js"><link rel="prefetch" href="/blog/assets/js/217.d19dcb1e.js"><link rel="prefetch" href="/blog/assets/js/218.9c81e734.js"><link rel="prefetch" href="/blog/assets/js/219.b1ac0e00.js"><link rel="prefetch" href="/blog/assets/js/22.6e23e584.js"><link rel="prefetch" href="/blog/assets/js/220.93f53cfc.js"><link rel="prefetch" href="/blog/assets/js/221.074e9447.js"><link rel="prefetch" href="/blog/assets/js/222.6e03ca0d.js"><link rel="prefetch" href="/blog/assets/js/223.b7e6fe7c.js"><link rel="prefetch" href="/blog/assets/js/224.4f52c16c.js"><link rel="prefetch" href="/blog/assets/js/225.4bcc73fc.js"><link rel="prefetch" href="/blog/assets/js/226.1374e026.js"><link rel="prefetch" href="/blog/assets/js/227.fe5a14e4.js"><link rel="prefetch" href="/blog/assets/js/228.aabeafb8.js"><link rel="prefetch" href="/blog/assets/js/229.8687cc25.js"><link rel="prefetch" href="/blog/assets/js/23.32dde742.js"><link rel="prefetch" href="/blog/assets/js/230.2fe412a5.js"><link rel="prefetch" href="/blog/assets/js/231.e182f7eb.js"><link rel="prefetch" href="/blog/assets/js/232.edf8f7cc.js"><link rel="prefetch" href="/blog/assets/js/233.ba47ef76.js"><link rel="prefetch" href="/blog/assets/js/234.880256a5.js"><link rel="prefetch" href="/blog/assets/js/235.0dbc5bda.js"><link rel="prefetch" href="/blog/assets/js/236.8dafeba3.js"><link rel="prefetch" href="/blog/assets/js/237.968a9a73.js"><link rel="prefetch" href="/blog/assets/js/238.eb7c71a8.js"><link rel="prefetch" href="/blog/assets/js/239.e95eea8e.js"><link rel="prefetch" href="/blog/assets/js/24.a61a4cae.js"><link rel="prefetch" href="/blog/assets/js/240.c37ecc02.js"><link rel="prefetch" href="/blog/assets/js/241.ec51435d.js"><link rel="prefetch" href="/blog/assets/js/242.6ae497b5.js"><link rel="prefetch" href="/blog/assets/js/243.55451e89.js"><link rel="prefetch" href="/blog/assets/js/244.0c270160.js"><link rel="prefetch" href="/blog/assets/js/245.886bff86.js"><link rel="prefetch" href="/blog/assets/js/246.27a72098.js"><link rel="prefetch" href="/blog/assets/js/247.62f1c507.js"><link rel="prefetch" href="/blog/assets/js/248.ae75b928.js"><link rel="prefetch" href="/blog/assets/js/249.57768d69.js"><link rel="prefetch" href="/blog/assets/js/25.3470b5ee.js"><link rel="prefetch" href="/blog/assets/js/250.5571a31b.js"><link rel="prefetch" href="/blog/assets/js/251.8d55e285.js"><link rel="prefetch" href="/blog/assets/js/252.009ef4ee.js"><link rel="prefetch" href="/blog/assets/js/253.88bc4b47.js"><link rel="prefetch" href="/blog/assets/js/254.f8afbd66.js"><link rel="prefetch" href="/blog/assets/js/255.236cf0b5.js"><link rel="prefetch" href="/blog/assets/js/256.35fb5433.js"><link rel="prefetch" href="/blog/assets/js/257.7703cce4.js"><link rel="prefetch" href="/blog/assets/js/258.4ae50a79.js"><link rel="prefetch" href="/blog/assets/js/259.c776e8b3.js"><link rel="prefetch" href="/blog/assets/js/26.edbac6a6.js"><link rel="prefetch" href="/blog/assets/js/260.1f9afb9e.js"><link rel="prefetch" href="/blog/assets/js/261.ea003769.js"><link rel="prefetch" href="/blog/assets/js/262.caa70ff9.js"><link rel="prefetch" href="/blog/assets/js/263.879b10fc.js"><link rel="prefetch" href="/blog/assets/js/264.75cfb0a1.js"><link rel="prefetch" href="/blog/assets/js/265.665fa6d7.js"><link rel="prefetch" href="/blog/assets/js/266.a8a06bdf.js"><link rel="prefetch" href="/blog/assets/js/267.99d5d3e8.js"><link rel="prefetch" href="/blog/assets/js/268.14c0f1fb.js"><link rel="prefetch" href="/blog/assets/js/269.244cb9c8.js"><link rel="prefetch" href="/blog/assets/js/27.c2eea375.js"><link rel="prefetch" href="/blog/assets/js/270.25e8ac77.js"><link rel="prefetch" href="/blog/assets/js/271.4403b7ab.js"><link rel="prefetch" href="/blog/assets/js/272.01761491.js"><link rel="prefetch" href="/blog/assets/js/273.d2bff916.js"><link rel="prefetch" href="/blog/assets/js/274.61bad449.js"><link rel="prefetch" href="/blog/assets/js/275.8ac7e7d8.js"><link rel="prefetch" href="/blog/assets/js/276.e7bc4cfc.js"><link rel="prefetch" href="/blog/assets/js/277.b9527c01.js"><link rel="prefetch" href="/blog/assets/js/278.590697fe.js"><link rel="prefetch" href="/blog/assets/js/279.f101ac11.js"><link rel="prefetch" href="/blog/assets/js/28.0cdfd145.js"><link rel="prefetch" href="/blog/assets/js/280.21c8bee0.js"><link rel="prefetch" href="/blog/assets/js/281.e7c958b8.js"><link rel="prefetch" href="/blog/assets/js/282.582d642f.js"><link rel="prefetch" href="/blog/assets/js/283.bf8d15f7.js"><link rel="prefetch" href="/blog/assets/js/284.270a605f.js"><link rel="prefetch" href="/blog/assets/js/285.d5cae855.js"><link rel="prefetch" href="/blog/assets/js/286.682c8ec8.js"><link rel="prefetch" href="/blog/assets/js/287.f58d2f4f.js"><link rel="prefetch" href="/blog/assets/js/288.f7d70ca5.js"><link rel="prefetch" href="/blog/assets/js/289.fd6b4709.js"><link rel="prefetch" href="/blog/assets/js/29.a643cda4.js"><link rel="prefetch" href="/blog/assets/js/290.081f5f8a.js"><link rel="prefetch" href="/blog/assets/js/291.cf15ac79.js"><link rel="prefetch" href="/blog/assets/js/292.7d35dc55.js"><link rel="prefetch" href="/blog/assets/js/293.95f5ddb9.js"><link rel="prefetch" href="/blog/assets/js/294.10f642bc.js"><link rel="prefetch" href="/blog/assets/js/295.99d451ff.js"><link rel="prefetch" href="/blog/assets/js/296.2de8e371.js"><link rel="prefetch" href="/blog/assets/js/297.8380dbb2.js"><link rel="prefetch" href="/blog/assets/js/298.dbe85090.js"><link rel="prefetch" href="/blog/assets/js/299.fac8c236.js"><link rel="prefetch" href="/blog/assets/js/30.d5eca20b.js"><link rel="prefetch" href="/blog/assets/js/300.bb89c720.js"><link rel="prefetch" href="/blog/assets/js/301.7c2eb7d2.js"><link rel="prefetch" href="/blog/assets/js/302.fe668698.js"><link rel="prefetch" href="/blog/assets/js/303.16ee5b13.js"><link rel="prefetch" href="/blog/assets/js/304.346b7c98.js"><link rel="prefetch" href="/blog/assets/js/305.f094cb22.js"><link rel="prefetch" href="/blog/assets/js/306.933a33ce.js"><link rel="prefetch" href="/blog/assets/js/307.8fe7522d.js"><link rel="prefetch" href="/blog/assets/js/308.c6d53ac1.js"><link rel="prefetch" href="/blog/assets/js/309.092bd7e1.js"><link rel="prefetch" href="/blog/assets/js/31.801bc54e.js"><link rel="prefetch" href="/blog/assets/js/310.7645cb2e.js"><link rel="prefetch" href="/blog/assets/js/311.7652d5ac.js"><link rel="prefetch" href="/blog/assets/js/312.cf32efa8.js"><link rel="prefetch" href="/blog/assets/js/313.f5519b6c.js"><link rel="prefetch" href="/blog/assets/js/314.e47b6364.js"><link rel="prefetch" href="/blog/assets/js/315.982e7bcd.js"><link rel="prefetch" href="/blog/assets/js/316.01417b69.js"><link rel="prefetch" href="/blog/assets/js/317.153a06af.js"><link rel="prefetch" href="/blog/assets/js/318.03df427b.js"><link rel="prefetch" href="/blog/assets/js/319.dd0b64cf.js"><link rel="prefetch" href="/blog/assets/js/32.efc62012.js"><link rel="prefetch" href="/blog/assets/js/320.bf51f663.js"><link rel="prefetch" href="/blog/assets/js/321.e79d63f4.js"><link rel="prefetch" href="/blog/assets/js/322.c366fda4.js"><link rel="prefetch" href="/blog/assets/js/323.ffa3a9ff.js"><link rel="prefetch" href="/blog/assets/js/324.16c04cb0.js"><link rel="prefetch" href="/blog/assets/js/325.5bf117df.js"><link rel="prefetch" href="/blog/assets/js/326.6488d46d.js"><link rel="prefetch" href="/blog/assets/js/327.0cb839e6.js"><link rel="prefetch" href="/blog/assets/js/328.8649d18f.js"><link rel="prefetch" href="/blog/assets/js/329.1ec78b09.js"><link rel="prefetch" href="/blog/assets/js/33.cf917892.js"><link rel="prefetch" href="/blog/assets/js/330.cb995b25.js"><link rel="prefetch" href="/blog/assets/js/331.64ff6868.js"><link rel="prefetch" href="/blog/assets/js/332.90db52e5.js"><link rel="prefetch" href="/blog/assets/js/333.2d261b4f.js"><link rel="prefetch" href="/blog/assets/js/334.960ab532.js"><link rel="prefetch" href="/blog/assets/js/335.6e7176c7.js"><link rel="prefetch" href="/blog/assets/js/336.2345cf76.js"><link rel="prefetch" href="/blog/assets/js/337.cd8e4829.js"><link rel="prefetch" href="/blog/assets/js/338.29d9b556.js"><link rel="prefetch" href="/blog/assets/js/339.1b9b9b66.js"><link rel="prefetch" href="/blog/assets/js/34.4e6b702d.js"><link rel="prefetch" href="/blog/assets/js/340.e5974455.js"><link rel="prefetch" href="/blog/assets/js/341.64f128f2.js"><link rel="prefetch" href="/blog/assets/js/342.e5c3effd.js"><link rel="prefetch" href="/blog/assets/js/343.48b6b4d0.js"><link rel="prefetch" href="/blog/assets/js/344.3c38371a.js"><link rel="prefetch" href="/blog/assets/js/345.071b8f1c.js"><link rel="prefetch" href="/blog/assets/js/346.84e89a94.js"><link rel="prefetch" href="/blog/assets/js/347.d46ac5fa.js"><link rel="prefetch" href="/blog/assets/js/348.54337aa4.js"><link rel="prefetch" href="/blog/assets/js/349.c2ea1b9e.js"><link rel="prefetch" href="/blog/assets/js/35.598038c0.js"><link rel="prefetch" href="/blog/assets/js/350.da555436.js"><link rel="prefetch" href="/blog/assets/js/351.b0c44e11.js"><link rel="prefetch" href="/blog/assets/js/352.3687ecba.js"><link rel="prefetch" href="/blog/assets/js/353.2c6c95eb.js"><link rel="prefetch" href="/blog/assets/js/354.8d6948d6.js"><link rel="prefetch" href="/blog/assets/js/355.e92a3da8.js"><link rel="prefetch" href="/blog/assets/js/356.cccfb31e.js"><link rel="prefetch" href="/blog/assets/js/357.0b2ceec8.js"><link rel="prefetch" href="/blog/assets/js/358.b4772ddf.js"><link rel="prefetch" href="/blog/assets/js/359.34474411.js"><link rel="prefetch" href="/blog/assets/js/36.0f31ca89.js"><link rel="prefetch" href="/blog/assets/js/360.da1d5bf5.js"><link rel="prefetch" href="/blog/assets/js/361.283d7aa2.js"><link rel="prefetch" href="/blog/assets/js/362.aa89ba44.js"><link rel="prefetch" href="/blog/assets/js/363.03e8b6a8.js"><link rel="prefetch" href="/blog/assets/js/364.0f73ab0e.js"><link rel="prefetch" href="/blog/assets/js/365.1fed76c9.js"><link rel="prefetch" href="/blog/assets/js/366.da3299e0.js"><link rel="prefetch" href="/blog/assets/js/367.70b63296.js"><link rel="prefetch" href="/blog/assets/js/368.ba9a0782.js"><link rel="prefetch" href="/blog/assets/js/369.291de09d.js"><link rel="prefetch" href="/blog/assets/js/37.b38f876b.js"><link rel="prefetch" href="/blog/assets/js/370.a6c828d7.js"><link rel="prefetch" href="/blog/assets/js/371.d55d28e0.js"><link rel="prefetch" href="/blog/assets/js/372.ee9d61b7.js"><link rel="prefetch" href="/blog/assets/js/373.7dd31917.js"><link rel="prefetch" href="/blog/assets/js/374.0110081e.js"><link rel="prefetch" href="/blog/assets/js/375.0653962a.js"><link rel="prefetch" href="/blog/assets/js/376.57f24876.js"><link rel="prefetch" href="/blog/assets/js/377.c5014bbd.js"><link rel="prefetch" href="/blog/assets/js/378.41a34502.js"><link rel="prefetch" href="/blog/assets/js/379.c75220a6.js"><link rel="prefetch" href="/blog/assets/js/38.d8f30566.js"><link rel="prefetch" href="/blog/assets/js/380.87ed782b.js"><link rel="prefetch" href="/blog/assets/js/381.680871d6.js"><link rel="prefetch" href="/blog/assets/js/382.71e0a98a.js"><link rel="prefetch" href="/blog/assets/js/383.2fe846ab.js"><link rel="prefetch" href="/blog/assets/js/384.5c6a6a16.js"><link rel="prefetch" href="/blog/assets/js/385.724758c6.js"><link rel="prefetch" href="/blog/assets/js/386.cec15292.js"><link rel="prefetch" href="/blog/assets/js/387.38a36025.js"><link rel="prefetch" href="/blog/assets/js/388.673e909e.js"><link rel="prefetch" href="/blog/assets/js/389.f5e911be.js"><link rel="prefetch" href="/blog/assets/js/39.d63a13c3.js"><link rel="prefetch" href="/blog/assets/js/390.c105974a.js"><link rel="prefetch" href="/blog/assets/js/391.ccf03034.js"><link rel="prefetch" href="/blog/assets/js/392.fd2fa35a.js"><link rel="prefetch" href="/blog/assets/js/393.7d105ba7.js"><link rel="prefetch" href="/blog/assets/js/394.ffef1103.js"><link rel="prefetch" href="/blog/assets/js/395.2c2562c7.js"><link rel="prefetch" href="/blog/assets/js/396.e4d6cc3c.js"><link rel="prefetch" href="/blog/assets/js/397.e51a62c5.js"><link rel="prefetch" href="/blog/assets/js/398.c5127a19.js"><link rel="prefetch" href="/blog/assets/js/399.5880ad3b.js"><link rel="prefetch" href="/blog/assets/js/4.9341719f.js"><link rel="prefetch" href="/blog/assets/js/40.78bafb45.js"><link rel="prefetch" href="/blog/assets/js/400.d308a547.js"><link rel="prefetch" href="/blog/assets/js/401.c56b2ee5.js"><link rel="prefetch" href="/blog/assets/js/402.d0bc0f57.js"><link rel="prefetch" href="/blog/assets/js/403.fef12238.js"><link rel="prefetch" href="/blog/assets/js/404.e212db50.js"><link rel="prefetch" href="/blog/assets/js/405.48f711cd.js"><link rel="prefetch" href="/blog/assets/js/406.fbc88515.js"><link rel="prefetch" href="/blog/assets/js/407.789143b0.js"><link rel="prefetch" href="/blog/assets/js/408.1c466d99.js"><link rel="prefetch" href="/blog/assets/js/409.ba527c30.js"><link rel="prefetch" href="/blog/assets/js/41.ac1d6b05.js"><link rel="prefetch" href="/blog/assets/js/410.c44befb8.js"><link rel="prefetch" href="/blog/assets/js/411.cc76588b.js"><link rel="prefetch" href="/blog/assets/js/412.1b25191b.js"><link rel="prefetch" href="/blog/assets/js/413.e717a80e.js"><link rel="prefetch" href="/blog/assets/js/414.bb5008ad.js"><link rel="prefetch" href="/blog/assets/js/415.b1eb1f68.js"><link rel="prefetch" href="/blog/assets/js/416.8abaa496.js"><link rel="prefetch" href="/blog/assets/js/417.60be86e8.js"><link rel="prefetch" href="/blog/assets/js/418.156f807c.js"><link rel="prefetch" href="/blog/assets/js/419.77136c28.js"><link rel="prefetch" href="/blog/assets/js/42.435a5f35.js"><link rel="prefetch" href="/blog/assets/js/420.52637208.js"><link rel="prefetch" href="/blog/assets/js/421.a8be5dd6.js"><link rel="prefetch" href="/blog/assets/js/422.ec91bfd8.js"><link rel="prefetch" href="/blog/assets/js/423.23628b88.js"><link rel="prefetch" href="/blog/assets/js/424.c13bd9f8.js"><link rel="prefetch" href="/blog/assets/js/425.7c5411a6.js"><link rel="prefetch" href="/blog/assets/js/426.9bc3abb4.js"><link rel="prefetch" href="/blog/assets/js/427.6259dd32.js"><link rel="prefetch" href="/blog/assets/js/428.9a52815c.js"><link rel="prefetch" href="/blog/assets/js/429.53b87282.js"><link rel="prefetch" href="/blog/assets/js/43.9873556a.js"><link rel="prefetch" href="/blog/assets/js/430.b563829b.js"><link rel="prefetch" href="/blog/assets/js/431.3d4a96f3.js"><link rel="prefetch" href="/blog/assets/js/432.d9b0e132.js"><link rel="prefetch" href="/blog/assets/js/433.2e67dec4.js"><link rel="prefetch" href="/blog/assets/js/434.cac48e48.js"><link rel="prefetch" href="/blog/assets/js/435.ac9f0409.js"><link rel="prefetch" href="/blog/assets/js/436.49120f56.js"><link rel="prefetch" href="/blog/assets/js/437.e122fd00.js"><link rel="prefetch" href="/blog/assets/js/438.afa65adb.js"><link rel="prefetch" href="/blog/assets/js/439.e54ae52a.js"><link rel="prefetch" href="/blog/assets/js/44.caa45de7.js"><link rel="prefetch" href="/blog/assets/js/440.c9ae9da0.js"><link rel="prefetch" href="/blog/assets/js/441.708b7ecb.js"><link rel="prefetch" href="/blog/assets/js/442.95252c0d.js"><link rel="prefetch" href="/blog/assets/js/443.23e452ee.js"><link rel="prefetch" href="/blog/assets/js/444.1eb0b664.js"><link rel="prefetch" href="/blog/assets/js/445.19301131.js"><link rel="prefetch" href="/blog/assets/js/446.92ed4675.js"><link rel="prefetch" href="/blog/assets/js/447.58ae1546.js"><link rel="prefetch" href="/blog/assets/js/448.985dc37c.js"><link rel="prefetch" href="/blog/assets/js/449.de78bd37.js"><link rel="prefetch" href="/blog/assets/js/45.5db9d795.js"><link rel="prefetch" href="/blog/assets/js/450.e21671fd.js"><link rel="prefetch" href="/blog/assets/js/451.ec95c6b1.js"><link rel="prefetch" href="/blog/assets/js/452.d8137574.js"><link rel="prefetch" href="/blog/assets/js/453.e51ef3e3.js"><link rel="prefetch" href="/blog/assets/js/454.06155201.js"><link rel="prefetch" href="/blog/assets/js/455.38035164.js"><link rel="prefetch" href="/blog/assets/js/456.faf6af44.js"><link rel="prefetch" href="/blog/assets/js/457.7875554d.js"><link rel="prefetch" href="/blog/assets/js/458.4482e89d.js"><link rel="prefetch" href="/blog/assets/js/459.304e41a4.js"><link rel="prefetch" href="/blog/assets/js/46.8461c954.js"><link rel="prefetch" href="/blog/assets/js/460.5e7c2e69.js"><link rel="prefetch" href="/blog/assets/js/461.13b6b5ae.js"><link rel="prefetch" href="/blog/assets/js/462.bc8e68e7.js"><link rel="prefetch" href="/blog/assets/js/463.eb3c6be0.js"><link rel="prefetch" href="/blog/assets/js/464.89828d2a.js"><link rel="prefetch" href="/blog/assets/js/465.d6470118.js"><link rel="prefetch" href="/blog/assets/js/466.1b3b6a39.js"><link rel="prefetch" href="/blog/assets/js/467.8786de0b.js"><link rel="prefetch" href="/blog/assets/js/468.5e441bfa.js"><link rel="prefetch" href="/blog/assets/js/469.a4959480.js"><link rel="prefetch" href="/blog/assets/js/47.09efdb1b.js"><link rel="prefetch" href="/blog/assets/js/470.bf983d4a.js"><link rel="prefetch" href="/blog/assets/js/471.14a0714a.js"><link rel="prefetch" href="/blog/assets/js/472.8567e9cf.js"><link rel="prefetch" href="/blog/assets/js/473.615f2f3c.js"><link rel="prefetch" href="/blog/assets/js/474.fafea22e.js"><link rel="prefetch" href="/blog/assets/js/475.dc748b65.js"><link rel="prefetch" href="/blog/assets/js/476.f3c4d0f8.js"><link rel="prefetch" href="/blog/assets/js/477.4a6ff2fc.js"><link rel="prefetch" href="/blog/assets/js/478.1d891ace.js"><link rel="prefetch" href="/blog/assets/js/479.362097a9.js"><link rel="prefetch" href="/blog/assets/js/48.80823a12.js"><link rel="prefetch" href="/blog/assets/js/480.d0314c37.js"><link rel="prefetch" href="/blog/assets/js/481.8a8206ef.js"><link rel="prefetch" href="/blog/assets/js/482.309a1e85.js"><link rel="prefetch" href="/blog/assets/js/483.fc0f4bb2.js"><link rel="prefetch" href="/blog/assets/js/484.a684ea4f.js"><link rel="prefetch" href="/blog/assets/js/485.d9b8c5d7.js"><link rel="prefetch" href="/blog/assets/js/486.70329d20.js"><link rel="prefetch" href="/blog/assets/js/487.42da36ae.js"><link rel="prefetch" href="/blog/assets/js/488.7179f5e7.js"><link rel="prefetch" href="/blog/assets/js/489.0fb572cb.js"><link rel="prefetch" href="/blog/assets/js/49.dfe596ab.js"><link rel="prefetch" href="/blog/assets/js/490.89ca0116.js"><link rel="prefetch" href="/blog/assets/js/491.d5c12901.js"><link rel="prefetch" href="/blog/assets/js/492.8b76e2d2.js"><link rel="prefetch" href="/blog/assets/js/493.005860cf.js"><link rel="prefetch" href="/blog/assets/js/494.2fa28788.js"><link rel="prefetch" href="/blog/assets/js/495.85823add.js"><link rel="prefetch" href="/blog/assets/js/496.b2d165b3.js"><link rel="prefetch" href="/blog/assets/js/497.bf96065f.js"><link rel="prefetch" href="/blog/assets/js/498.3021c22e.js"><link rel="prefetch" href="/blog/assets/js/499.d1a58e34.js"><link rel="prefetch" href="/blog/assets/js/5.2a4c3fc5.js"><link rel="prefetch" href="/blog/assets/js/50.1c08942d.js"><link rel="prefetch" href="/blog/assets/js/500.c7306f91.js"><link rel="prefetch" href="/blog/assets/js/501.46978126.js"><link rel="prefetch" href="/blog/assets/js/502.97103c2f.js"><link rel="prefetch" href="/blog/assets/js/503.e0e8c3d2.js"><link rel="prefetch" href="/blog/assets/js/504.b917c383.js"><link rel="prefetch" href="/blog/assets/js/505.cfd89a2c.js"><link rel="prefetch" href="/blog/assets/js/506.cc5e7903.js"><link rel="prefetch" href="/blog/assets/js/507.a0cb47e9.js"><link rel="prefetch" href="/blog/assets/js/508.502b751f.js"><link rel="prefetch" href="/blog/assets/js/509.e7c4ef13.js"><link rel="prefetch" href="/blog/assets/js/51.e435d94a.js"><link rel="prefetch" href="/blog/assets/js/510.25ad418a.js"><link rel="prefetch" href="/blog/assets/js/511.227dbdad.js"><link rel="prefetch" href="/blog/assets/js/512.52262569.js"><link rel="prefetch" href="/blog/assets/js/513.b3eba3fe.js"><link rel="prefetch" href="/blog/assets/js/514.8d2c0fdc.js"><link rel="prefetch" href="/blog/assets/js/515.030eb06c.js"><link rel="prefetch" href="/blog/assets/js/516.fbba5cbb.js"><link rel="prefetch" href="/blog/assets/js/517.81abc2ea.js"><link rel="prefetch" href="/blog/assets/js/518.3ed55e78.js"><link rel="prefetch" href="/blog/assets/js/519.980f0292.js"><link rel="prefetch" href="/blog/assets/js/52.af5e2886.js"><link rel="prefetch" href="/blog/assets/js/520.a867ff43.js"><link rel="prefetch" href="/blog/assets/js/521.792d23c4.js"><link rel="prefetch" href="/blog/assets/js/522.7cf1ff48.js"><link rel="prefetch" href="/blog/assets/js/523.0bbc2183.js"><link rel="prefetch" href="/blog/assets/js/524.33c88777.js"><link rel="prefetch" href="/blog/assets/js/525.568acde2.js"><link rel="prefetch" href="/blog/assets/js/526.0f6350f2.js"><link rel="prefetch" href="/blog/assets/js/527.9ac43681.js"><link rel="prefetch" href="/blog/assets/js/528.74427c9a.js"><link rel="prefetch" href="/blog/assets/js/529.b40abe4d.js"><link rel="prefetch" href="/blog/assets/js/53.b19062b8.js"><link rel="prefetch" href="/blog/assets/js/530.a5d5d3e8.js"><link rel="prefetch" href="/blog/assets/js/531.5b6d763f.js"><link rel="prefetch" href="/blog/assets/js/532.6256320b.js"><link rel="prefetch" href="/blog/assets/js/533.9a30880e.js"><link rel="prefetch" href="/blog/assets/js/534.cbc50bf8.js"><link rel="prefetch" href="/blog/assets/js/535.d41344f9.js"><link rel="prefetch" href="/blog/assets/js/536.2ab27bbf.js"><link rel="prefetch" href="/blog/assets/js/537.3ff57b1a.js"><link rel="prefetch" href="/blog/assets/js/54.e8b42f3a.js"><link rel="prefetch" href="/blog/assets/js/55.db4a95c6.js"><link rel="prefetch" href="/blog/assets/js/56.150acf94.js"><link rel="prefetch" href="/blog/assets/js/57.7ef2e680.js"><link rel="prefetch" href="/blog/assets/js/58.f06d3f5d.js"><link rel="prefetch" href="/blog/assets/js/59.41fb2436.js"><link rel="prefetch" href="/blog/assets/js/6.48d6d8fa.js"><link rel="prefetch" href="/blog/assets/js/60.3432fa21.js"><link rel="prefetch" href="/blog/assets/js/61.56d00cdc.js"><link rel="prefetch" href="/blog/assets/js/62.f9ff9b7e.js"><link rel="prefetch" href="/blog/assets/js/63.22689d56.js"><link rel="prefetch" href="/blog/assets/js/64.3b7b14ff.js"><link rel="prefetch" href="/blog/assets/js/65.f71aff90.js"><link rel="prefetch" href="/blog/assets/js/66.cbfe510f.js"><link rel="prefetch" href="/blog/assets/js/67.d1722e7e.js"><link rel="prefetch" href="/blog/assets/js/68.cc0b7053.js"><link rel="prefetch" href="/blog/assets/js/69.83072c71.js"><link rel="prefetch" href="/blog/assets/js/7.03f5ce0c.js"><link rel="prefetch" href="/blog/assets/js/70.4761b3aa.js"><link rel="prefetch" href="/blog/assets/js/71.a87bc326.js"><link rel="prefetch" href="/blog/assets/js/72.163868da.js"><link rel="prefetch" href="/blog/assets/js/73.6cb5fd76.js"><link rel="prefetch" href="/blog/assets/js/74.438eda87.js"><link rel="prefetch" href="/blog/assets/js/75.d438b3d1.js"><link rel="prefetch" href="/blog/assets/js/76.edab97bf.js"><link rel="prefetch" href="/blog/assets/js/77.c29889dc.js"><link rel="prefetch" href="/blog/assets/js/78.6032aee9.js"><link rel="prefetch" href="/blog/assets/js/79.f8f9160e.js"><link rel="prefetch" href="/blog/assets/js/8.e7663de0.js"><link rel="prefetch" href="/blog/assets/js/80.2b028499.js"><link rel="prefetch" href="/blog/assets/js/81.ceda76a5.js"><link rel="prefetch" href="/blog/assets/js/82.1799c88c.js"><link rel="prefetch" href="/blog/assets/js/83.f074f6c2.js"><link rel="prefetch" href="/blog/assets/js/84.610a445b.js"><link rel="prefetch" href="/blog/assets/js/85.074bc122.js"><link rel="prefetch" href="/blog/assets/js/86.5539e33f.js"><link rel="prefetch" href="/blog/assets/js/87.ca666676.js"><link rel="prefetch" href="/blog/assets/js/88.e7a1d161.js"><link rel="prefetch" href="/blog/assets/js/89.4edd87ca.js"><link rel="prefetch" href="/blog/assets/js/9.e7ad7e7c.js"><link rel="prefetch" href="/blog/assets/js/90.1f9c3dd6.js"><link rel="prefetch" href="/blog/assets/js/91.1f465ef5.js"><link rel="prefetch" href="/blog/assets/js/92.266e0a20.js"><link rel="prefetch" href="/blog/assets/js/93.729468e0.js"><link rel="prefetch" href="/blog/assets/js/94.5097b5e5.js"><link rel="prefetch" href="/blog/assets/js/95.403fcfe1.js"><link rel="prefetch" href="/blog/assets/js/96.d6781817.js"><link rel="prefetch" href="/blog/assets/js/97.5253fd24.js"><link rel="prefetch" href="/blog/assets/js/98.e701ed34.js"><link rel="prefetch" href="/blog/assets/js/99.84645da6.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.cd12c23a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/learn.png" alt="zouyu-Blog" class="logo"> <span class="site-name can-hide">zouyu-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记文章" class="dropdown-title"><span class="title">笔记文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记文章" class="mobile-dropdown-title"><span class="title">笔记文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/Jenkins/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Deploy/" class="nav-link router-link-active">
+  Deploy
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="邹宇的Blog" class="dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="邹宇的Blog" class="mobile-dropdown-title"><span class="title">邹宇的Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog/issues/235" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zouyu0310.github.io/chatGPT_html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  chatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="官方文档学习" class="dropdown-title"><span class="title">官方文档学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="官方文档学习" class="mobile-dropdown-title"><span class="title">官方文档学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  跳转
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Business</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Database</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Deploy</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/" aria-current="page" class="sidebar-link">Deploy笔记</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Deploy/Docker/01.Docker.html" class="sidebar-link">Docker - 知识体系</a></li><li><a href="/blog/Deploy/Docker/02.Docker - 概述.html" class="sidebar-link">Docker - 概述</a></li><li><a href="/blog/Deploy/Docker/04.Docker - 安装.html" class="sidebar-link">Docker - 安装</a></li><li><a href="/blog/Deploy/Docker/05.Docker - 镜像和容器.html" class="sidebar-link">Docker  - 镜像和容器</a></li><li><a href="/blog/Deploy/Docker/06.Docker - 常用命令.html" class="sidebar-link">Docker - 常用命令</a></li><li><a href="/blog/Deploy/Docker/08.Docker - 可视化.html" class="sidebar-link">Docker - 可视化</a></li><li><a href="/blog/Deploy/Docker/10.Docker - 镜像和仓库.html" class="sidebar-link">Docker - 镜像和仓库</a></li><li><a href="/blog/Deploy/Docker/100.Docker-汇总.html" class="sidebar-link">Docker - 汇总文档</a></li><li><a href="/blog/Deploy/Docker/12.Docker - 数据卷.html" class="sidebar-link">Docker - 容器数据卷</a></li><li><a href="/blog/Deploy/Docker/14.Docker - DockerFile.html" class="sidebar-link">Docker - DockerFile</a></li><li><a href="/blog/Deploy/Docker/16.Docker - 网络.html" class="sidebar-link">Docker - 网络</a></li><li><a href="/blog/Deploy/Docker/18.Docker - Compose.html" class="sidebar-link">Docker - Compose</a></li><li><a href="/blog/Deploy/Docker/20.Docker - 中间件安装.html" class="sidebar-link">Docker - 常用中间件安装</a></li><li><a href="/blog/Deploy/Docker/50.IDEA使用Docker插件.html" class="sidebar-link">Docker - IDEA-docker插件</a></li><li><a href="/blog/Deploy/Docker/51.Docker - windows硬盘映射.html" class="sidebar-link">Docker - windows硬盘映射</a></li><li><a href="/blog/Deploy/Docker/52.Docker - windows 安装.html" class="sidebar-link">52.Docker - windows 安装</a></li><li><a href="/blog/Deploy/Docker/53.Docker - windows安装docker-compose.html" class="sidebar-link">53.Docker - windows安装docker-compose</a></li><li><a href="/blog/Deploy/Docker/docker/50.IDEA使用Docker插件.html" class="sidebar-link">IDEA使用Docker插件</a></li><li><a href="/blog/Deploy/Docker/docker/DockerFile.html" class="sidebar-link">高级02 DockerFile</a></li><li><a href="/blog/Deploy/Docker/docker/Docker安装.html" class="sidebar-link">Docker安装</a></li><li><a href="/blog/Deploy/Docker/docker/docker-master/Docker.html" class="sidebar-link">/Deploy/Docker/docker/docker-master/Docker.html</a></li><li><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/docker学习.html" class="sidebar-link">将应用打包成镜像</a></li><li><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html" class="active sidebar-link">k8s</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_1、安装kubeadm" class="sidebar-link">1、安装kubeadm</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_1、基础环境" class="sidebar-link">1、基础环境</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_2、安装kubelet、kubeadm、kubectl" class="sidebar-link">2、安装kubelet、kubeadm、kubectl</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_2、使用kubeadm引导集群" class="sidebar-link">2、使用kubeadm引导集群</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_1、下载各个机器需要的镜像" class="sidebar-link">1、下载各个机器需要的镜像</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_2、初始化主节点" class="sidebar-link">2、初始化主节点</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_3、根据提示继续" class="sidebar-link">3、根据提示继续</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_4、加入node节点-按照master初始化成功给出的提示-如" class="sidebar-link">4、加入node节点--按照master初始化成功给出的提示 如</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_5、验证集群" class="sidebar-link">5、验证集群</a></li><li class="sidebar-sub-header"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s.html#_6、部署dashboard" class="sidebar-link">6、部署dashboard</a></li></ul></li></ul></li><li><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html" class="sidebar-link">Kubernetes核心实战</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Jenkins</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Other</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Server</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Boot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring Cloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Work Doc</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>尚硅谷 Redis</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="k8s"><a href="#k8s" class="header-anchor">#</a> k8s</h1> <hr> <h1 id="安装docker容器环境"><a href="#安装docker容器环境" class="header-anchor">#</a> 安装docker容器环境</h1> <h3 id="_1、移除以前docker相关包"><a href="#_1、移除以前docker相关包" class="header-anchor">#</a> 1、移除以前docker相关包</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>yum remove <span class="token function">docker</span> *
+</code></pre></div><h3 id="_2、配置yum源-注意如果使用多窗口命令行控制软件需要逐一执行-不可以统一执行-因为有分隔符"><a href="#_2、配置yum源-注意如果使用多窗口命令行控制软件需要逐一执行-不可以统一执行-因为有分隔符" class="header-anchor">#</a> 2、配置yum源(注意如果使用多窗口命令行控制软件需要逐一执行,不可以统一执行 因为有分隔符)</h3> <div class="language- extra-class"><pre class="language-text"><code>yum install -y yum-utils
+
+yum-config-manager \
+--add-repo \
+http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+</code></pre></div><h3 id="_3、安装docker"><a href="#_3、安装docker" class="header-anchor">#</a> 3、安装docker</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>yum <span class="token function">install</span> <span class="token parameter variable">-y</span> docker-ce docker-ce-cli containerd.io
+
+<span class="token comment"># 注意:默认下最新版本 如果指定版本在ce后指定</span>
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> docker-ce-19.0.3 docker-ce-cli containerd.io
+
+<span class="token comment">#以下是在安装k8s的时候使用 使用20.10.7版本 </span>
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> docker-ce-20.10.7 docker-ce-cli-20.10.7  containerd.io-1.4.6
+</code></pre></div><h3 id="_4、启动"><a href="#_4、启动" class="header-anchor">#</a> 4、启动</h3> <p>开机启动并立即启动</p> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl <span class="token builtin class-name">enable</span> <span class="token function">docker</span> <span class="token parameter variable">--now</span>
+</code></pre></div><h3 id="_5、配置加速"><a href="#_5、配置加速" class="header-anchor">#</a> 5、配置加速</h3> <p>这里额外添加了docker的生产环境核心配置cgroup</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /etc/docker
+<span class="token function">sudo</span> <span class="token function">tee</span> /etc/docker/daemon.json <span class="token operator">&lt;&lt;-</span><span class="token string">'EOF'
+{
+  &quot;registry-mirrors&quot;: [&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],
+  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
+  &quot;log-driver&quot;: &quot;json-file&quot;,
+  &quot;log-opts&quot;: {
+    &quot;max-size&quot;: &quot;100m&quot;
+  },
+  &quot;storage-driver&quot;: &quot;overlay2&quot;
+}
+EOF</span>
+<span class="token function">sudo</span> systemctl daemon-reload
+<span class="token function">sudo</span> systemctl restart <span class="token function">docker</span>
+</code></pre></div><p>注:</p> <div class="language- extra-class"><pre class="language-text"><code>[&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],  为加速器地址可以使用自己的阿里云的免费加速器
+</code></pre></div><p>阿里云-产品服务--容器镜像服务--镜像工作-(加速器)</p> <p>解析:</p> <div class="language- extra-class"><pre class="language-text"><code>sudo mkdir -p /etc/docker # 先创建文件夹/etc/docker 
+sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF' #核心配置
+{
+  &quot;registry-mirrors&quot;: [&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],
+  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
+  &quot;log-driver&quot;: &quot;json-file&quot;,
+  &quot;log-opts&quot;: {
+    &quot;max-size&quot;: &quot;100m&quot;
+  },
+  &quot;storage-driver&quot;: &quot;overlay2&quot;
+}
+EOF
+sudo systemctl daemon-reload  #后台重启
+sudo systemctl restart docker #docker重启
+</code></pre></div><p>检查: 查看是否配置了加速镜像地址</p> <div class="language- extra-class"><pre class="language-text"><code>docker info
+</code></pre></div><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211006180654.png" alt="image-20211006180647421"></p> <p>至此,docker环境就安装完毕</p> <hr> <h1 id="_3、kubeadm创建集群"><a href="#_3、kubeadm创建集群" class="header-anchor">#</a> 3、kubeadm创建集群</h1> <p>请参照以前Docker安装。先提前为所有机器安装Docker</p> <h2 id="_1、安装kubeadm"><a href="#_1、安装kubeadm" class="header-anchor">#</a> 1、安装kubeadm</h2> <ul><li><p>一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux 发行版以及一些不提供包管理器的发行版提供通用的指令</p></li> <li><p>每台机器 2 GB 或更多的 RAM （如果少于这个数字将会影响你应用的运行内存)</p></li> <li><p>2 CPU 核或更多</p></li> <li><p>集群中的所有机器的网络彼此均能相互连接(公网和内网都可以)</p></li> <li><ul><li><strong>设置防火墙放行规则</strong></li></ul></li> <li><p>节点之中不可以有重复的主机名、MAC 地址或 product_uuid。请参见<a href="https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#verify-mac-address" target="_blank" rel="noopener noreferrer">这里<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>了解更多详细信息。</p></li> <li><ul><li><strong>设置不同hostname</strong></li></ul></li> <li><p>开启机器上的某些端口。请参见<a href="https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#check-required-ports" target="_blank" rel="noopener noreferrer">这里<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 了解更多详细信息。</p></li> <li><ul><li><strong>内网互信</strong></li></ul></li> <li><p>禁用交换分区。为了保证 kubelet 正常工作，你 <strong>必须</strong> 禁用交换分区。</p></li> <li><ul><li><strong>永久关闭</strong></li></ul></li> <li><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211006181809.png" alt=""></p></li></ul> <p>Swap 为0,0,0</p> <h3 id="_1、基础环境"><a href="#_1、基础环境" class="header-anchor">#</a> 1、基础环境</h3> <p>所有机器执行以下操作</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#各个机器设置自己的主机名</span>
+hostnamectl set-hostname xxxx
+<span class="token comment"># 查看主机名</span>
+<span class="token function">hostname</span>
+
+<span class="token comment"># 将 SELinux 设置为 permissive 模式（相当于将其禁用）</span>
+<span class="token comment">#临时禁用</span>
+<span class="token function">sudo</span> setenforce <span class="token number">0</span> 
+<span class="token comment"># 永久禁用</span>
+<span class="token function">sudo</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'s/^SELINUX=enforcing$/SELINUX=permissive/'</span> /etc/selinux/config
+
+<span class="token comment">#关闭swap</span>
+swapoff <span class="token parameter variable">-a</span>  
+<span class="token function">sed</span> <span class="token parameter variable">-ri</span> <span class="token string">'s/.*swap.*/#&amp;/'</span> /etc/fstab
+
+<span class="token comment">#允许 iptables 检查桥接流量</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/modules-load.d/k8s.conf</span>
+br_netfilter
+EOF</span>
+
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/sysctl.d/k8s.conf</span>
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF</span>
+
+<span class="token comment"># 让以上的配置生效,可查看到linux内核中启用的规则</span>
+<span class="token function">sudo</span> <span class="token function">sysctl</span> <span class="token parameter variable">--system</span>
+</code></pre></div><p>到此为止,每一台服务器的预备环境准备完毕</p> <h3 id="_2、安装kubelet、kubeadm、kubectl"><a href="#_2、安装kubelet、kubeadm、kubectl" class="header-anchor">#</a> 2、安装kubelet、kubeadm、kubectl</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 配置k8s下载源</span>
+
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/yum.repos.d/kubernetes.repo</span>
+[kubernetes]
+name=Kubernetes
+baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=0
+repo_gpgcheck=0
+gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
+   http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+exclude=kubelet kubeadm kubectl
+EOF</span>
+
+<span class="token comment">#下载三大件</span>
+<span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> kubelet-1.20.9 kubeadm-1.20.9 kubectl-1.20.9 <span class="token parameter variable">--disableexcludes</span><span class="token operator">=</span>kubernetes
+<span class="token comment">#启动kubelet (厂长)</span>
+<span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> <span class="token parameter variable">--now</span> kubelet
+</code></pre></div><p>kubelet 现在每隔几秒就会重启，因为它陷入了一个等待 kubeadm 指令的死循环</p> <div class="language- extra-class"><pre class="language-text"><code>systemctl status kubelet
+</code></pre></div><h2 id="_2、使用kubeadm引导集群"><a href="#_2、使用kubeadm引导集群" class="header-anchor">#</a> 2、使用kubeadm引导集群</h2> <h3 id="_1、下载各个机器需要的镜像"><a href="#_1、下载各个机器需要的镜像" class="header-anchor">#</a> 1、下载各个机器需要的镜像</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#在 master节点执行下述语句,创建images.sh脚本</span>
+<span class="token comment"># 为了方便,可以在其他节点也安装</span>
+<span class="token function">sudo</span> <span class="token function">tee</span> ./images.sh <span class="token operator">&lt;&lt;-</span><span class="token string">'EOF'
+#!/bin/bash
+images=(
+kube-apiserver:v1.20.9
+kube-proxy:v1.20.9
+kube-controller-manager:v1.20.9
+kube-scheduler:v1.20.9
+coredns:1.7.0
+etcd:3.4.13-0
+pause:3.2
+)
+for imageName in ${images[@]} ; do
+docker pull registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/$imageName
+done
+EOF</span>
+<span class="token comment"># 添加权限,并执行脚本 下载所需镜像</span>
+<span class="token function">chmod</span> +x ./images.sh <span class="token operator">&amp;&amp;</span> ./images.sh
+</code></pre></div><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211006232548.png" alt="image-20211006232548326"></p> <h3 id="_2、初始化主节点"><a href="#_2、初始化主节点" class="header-anchor">#</a> 2、初始化主节点</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#所有机器添加master的 域名映射，以下需要修改为自己的ip</span>
+<span class="token comment"># hosts文件添加maste的域名</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;192.168.152.134  cluster-endpoint&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/hosts
+<span class="token comment">#在其他节点添加好master域名后 ping 域名能通就说明配置成功</span>
+
+
+<span class="token comment">#主节点初始化(只在主节点运行)</span>
+<span class="token comment">#注: apiserver-advertise-address 后为自己master的ip</span>
+<span class="token comment"># control-plane-endpoint后为自己定义的域名</span>
+<span class="token comment">#image-repository 镜像仓库</span>
+
+kubeadm init <span class="token punctuation">\</span>
+--apiserver-advertise-address<span class="token operator">=</span><span class="token number">192.168</span>.152.134 <span class="token punctuation">\</span>
+--control-plane-endpoint<span class="token operator">=</span>cluster-endpoint <span class="token punctuation">\</span>
+--image-repository registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images <span class="token punctuation">\</span>
+--kubernetes-version v1.20.9 <span class="token punctuation">\</span>
+--service-cidr<span class="token operator">=</span><span class="token number">10.96</span>.0.0/16 <span class="token punctuation">\</span>
+--pod-network-cidr<span class="token operator">=</span><span class="token number">192.168</span>.0.0/16
+
+<span class="token comment">#如果修改service-cidr和-pod-network-cidr所有网络范围不重叠</span>
+</code></pre></div><p>注意:产生如下报错说明服务器配置太差</p> <div class="language- extra-class"><pre class="language-text"><code>error execution phase preflight: [preflight] Some fatal errors occurred:
+        [ERROR NumCPU]: the number of available CPUs 1 is less than the required 2
+        [ERROR Mem]: the system RAM (972 MB) is less than the minimum 1700 MB
+</code></pre></div><p>如果成功会显示:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>Your Kubernetes control-plane has initialized successfully<span class="token operator">!</span>
+
+To start using your cluster, you need to run the following as a regular user:
+
+  <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token environment constant">$HOME</span>/.kube
+  <span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-i</span> /etc/kubernetes/admin.conf <span class="token environment constant">$HOME</span>/.kube/config
+  <span class="token function">sudo</span> <span class="token function">chown</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> <span class="token parameter variable">-u</span><span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> <span class="token parameter variable">-g</span><span class="token variable">)</span></span> <span class="token environment constant">$HOME</span>/.kube/config
+
+Alternatively, <span class="token keyword">if</span> you are the root user, you can run:
+
+  <span class="token builtin class-name">export</span> <span class="token assign-left variable">KUBECONFIG</span><span class="token operator">=</span>/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run <span class="token string">&quot;kubectl apply -f [podnetwork].yaml&quot;</span> with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+You can now <span class="token function">join</span> any number of control-plane nodes by copying certificate authorities
+and <span class="token function">service</span> account keys on each <span class="token function">node</span> and <span class="token keyword">then</span> running the following as root:
+
+  kubeadm <span class="token function">join</span> cluster-endpoint:6443 <span class="token parameter variable">--token</span> 4r7apl.vrg934ajnfso0viz <span class="token punctuation">\</span>
+    --discovery-token-ca-cert-hash sha256:43cbb9f4932ff9a6c9c2baf26c2ae744367f15031214cc901dc13d46bdf55b2a <span class="token punctuation">\</span>
+    --control-plane 
+
+Then you can <span class="token function">join</span> any number of worker nodes by running the following on each as root:
+
+kubeadm <span class="token function">join</span> cluster-endpoint:6443 <span class="token parameter variable">--token</span> 4r7apl.vrg934ajnfso0viz <span class="token punctuation">\</span>
+    --discovery-token-ca-cert-hash sha256:43cbb9f4932ff9a6c9c2baf26c2ae744367f15031214cc901dc13d46bdf55b2a 
+</code></pre></div><p>k8s命令小结:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#查看集群所有节点</span>
+kubectl get nodes
+
+<span class="token comment">#根据配置文件，给集群创建资源</span>
+kubectl apply <span class="token parameter variable">-f</span> xxxx.yaml
+
+<span class="token comment">#查看集群部署了哪些应用？</span>
+<span class="token comment"># docker中:</span>
+<span class="token function">docker</span> <span class="token function">ps</span>   <span class="token operator">==</span><span class="token operator">=</span><span class="token punctuation">(</span>等同<span class="token punctuation">)</span>   kubectl get pods <span class="token parameter variable">-A</span>
+<span class="token comment"># 运行中的应用在docker里面叫容器，在k8s里面叫Pod</span>
+kubectl get pods <span class="token parameter variable">-A</span>
+</code></pre></div><h3 id="_3、根据提示继续"><a href="#_3、根据提示继续" class="header-anchor">#</a> 3、根据提示继续</h3> <p>master成功后提示如下：</p> <p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211006181254.png" alt="img"></p> <h4 id="_1、设置-kube-config"><a href="#_1、设置-kube-config" class="header-anchor">#</a> 1、设置.kube/config</h4> <p>复制初始化成功给出的命令,如</p> <div class="language- extra-class"><pre class="language-text"><code>  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+</code></pre></div><h4 id="_2、安装网络组件-master节点运行"><a href="#_2、安装网络组件-master节点运行" class="header-anchor">#</a> 2、安装网络组件 --master节点运行</h4> <p><a href="https://docs.projectcalico.org/getting-started/kubernetes/self-managed-onprem/onpremises#install-calico-with-kubernetes-api-datastore-more-than-50-nodes" target="_blank" rel="noopener noreferrer">calico官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#下载calico配置文件</span>
+<span class="token function">curl</span> https://docs.projectcalico.org/manifests/calico.yaml <span class="token parameter variable">-O</span>
+
+<span class="token comment"># kubectl 应用某个文件的配置</span>
+kubectl  apply <span class="token parameter variable">-f</span> calico.yaml
+</code></pre></div><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211007231208.png" alt="image-20211007231201067"></p> <p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211007231314.png" alt="image-20211007231314435"></p> <p>目前位置master节点 总部已经部署完毕</p> <h3 id="_4、加入node节点-按照master初始化成功给出的提示-如"><a href="#_4、加入node节点-按照master初始化成功给出的提示-如" class="header-anchor">#</a> 4、加入node节点--按照master初始化成功给出的提示 如</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>kubeadm <span class="token function">join</span> cluster-endpoint:6443 <span class="token parameter variable">--token</span> 4r7apl.vrg934ajnfso0viz <span class="token punctuation">\</span>
+    --discovery-token-ca-cert-hash sha256:43cbb9f4932ff9a6c9c2baf26c2ae744367f15031214cc901dc13d46bdf55b2a 
+</code></pre></div><p>以上参考命令24小时之内有效</p> <p>新令牌</p> <div class="language- extra-class"><pre class="language-text"><code>kubeadm token create --print-join-command
+</code></pre></div><p>*<strong>高可用部署方式，也是在这一步的时候，使用添加主节点的命令即可*</strong></p> <p>如果加入节点等待时间较长,参考k8s api server不可达</p> <div class="language- extra-class"><pre class="language-text"><code>https://blog.csdn.net/YouMing_Li/article/details/117553658
+</code></pre></div><p>成功截图:</p> <p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211008192428.png" alt="image-20211008192421052"></p> <h3 id="_5、验证集群"><a href="#_5、验证集群" class="header-anchor">#</a> 5、验证集群</h3> <ul><li><p>验证集群节点状态---在master节点</p></li> <li><ul><li>kubectl get nodes</li></ul></li></ul> <p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211008192457.png" alt="image-20211008192457367"></p> <p>实时监控节点 都是running才可以</p> <div class="language- extra-class"><pre class="language-text"><code>kubectl get pod -A -w
+</code></pre></div><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211008195839.png" alt="image-20211008195838768"></p> <h3 id="_6、部署dashboard"><a href="#_6、部署dashboard" class="header-anchor">#</a> 6、部署dashboard</h3> <h4 id="_1、部署"><a href="#_1、部署" class="header-anchor">#</a> 1、部署</h4> <p>kubernetes官方提供的可视化界面</p> <p>https://github.com/kubernetes/dashboard</p> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl apply <span class="token parameter variable">-f</span> https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml
+</code></pre></div><p>没办法下载的话 直接把yaml下载下来</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 下载wget</span>
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> <span class="token function">wget</span>
+<span class="token comment"># wget 下载</span>
+<span class="token function">wget</span> https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml
+</code></pre></div><p>实在不行就直接创建文件,复制下方</p> <div class="language- extra-class"><pre class="language-text"><code>vi dashboard.yaml
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># Copyright 2017 The Kubernetes Authors.</span>
+<span class="token comment">#</span>
+<span class="token comment"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="token comment"># you may not use this file except in compliance with the License.</span>
+<span class="token comment"># You may obtain a copy of the License at</span>
+<span class="token comment">#</span>
+<span class="token comment">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="token comment">#</span>
+<span class="token comment"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="token comment"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="token comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="token comment"># See the License for the specific language governing permissions and</span>
+<span class="token comment"># limitations under the License.</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Namespace
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">443</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>certs
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">type</span><span class="token punctuation">:</span> Opaque
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>csrf
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">type</span><span class="token punctuation">:</span> Opaque
+<span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">csrf</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>key<span class="token punctuation">-</span>holder
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">type</span><span class="token punctuation">:</span> Opaque
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>settings
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Role
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token comment"># Allow Dashboard to get, update and delete Dashboard exclusive secrets.</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;secrets&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resourceNames</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;kubernetes-dashboard-key-holder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;kubernetes-dashboard-certs&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;kubernetes-dashboard-csrf&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;update&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;delete&quot;</span><span class="token punctuation">]</span>
+    <span class="token comment"># Allow Dashboard to get and update 'kubernetes-dashboard-settings' config map.</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;configmaps&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resourceNames</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;kubernetes-dashboard-settings&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;update&quot;</span><span class="token punctuation">]</span>
+    <span class="token comment"># Allow Dashboard to get metrics.</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;services&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resourceNames</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;heapster&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;dashboard-metrics-scraper&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;proxy&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;services/proxy&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resourceNames</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;heapster&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;http:heapster:&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;https:heapster:&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;dashboard-metrics-scraper&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;http:dashboard-metrics-scraper&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;get&quot;</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token comment"># Allow Metrics Scraper to get metrics from the Metrics server</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;metrics.k8s.io&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;pods&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;nodes&quot;</span><span class="token punctuation">]</span>
+    <span class="token key atrule">verbs</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;watch&quot;</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> RoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> Role
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+    <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+    <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">revisionHistoryLimit</span><span class="token punctuation">:</span> <span class="token number">10</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> kubernetesui/dashboard<span class="token punctuation">:</span>v2.3.1
+          <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> Always
+          <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+              <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+          <span class="token key atrule">args</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>auto<span class="token punctuation">-</span>generate<span class="token punctuation">-</span>certificates
+            <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace=kubernetes<span class="token punctuation">-</span>dashboard
+            <span class="token comment"># Uncomment the following line to manually specify Kubernetes API server Host</span>
+            <span class="token comment"># If not specified, Dashboard will attempt to auto discover the API server and connect</span>
+            <span class="token comment"># to it. Uncomment only if the default does not work.</span>
+            <span class="token comment"># - --apiserver-host=http://my-address:port</span>
+          <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>certs
+              <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /certs
+              <span class="token comment"># Create on-disk volume to store exec logs</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /tmp
+              <span class="token key atrule">name</span><span class="token punctuation">:</span> tmp<span class="token punctuation">-</span>volume
+          <span class="token key atrule">livenessProbe</span><span class="token punctuation">:</span>
+            <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+              <span class="token key atrule">scheme</span><span class="token punctuation">:</span> HTTPS
+              <span class="token key atrule">path</span><span class="token punctuation">:</span> /
+              <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+            <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">30</span>
+            <span class="token key atrule">timeoutSeconds</span><span class="token punctuation">:</span> <span class="token number">30</span>
+          <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+            <span class="token key atrule">allowPrivilegeEscalation</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+            <span class="token key atrule">readOnlyRootFilesystem</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+            <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">1001</span>
+            <span class="token key atrule">runAsGroup</span><span class="token punctuation">:</span> <span class="token number">2001</span>
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>certs
+          <span class="token key atrule">secret</span><span class="token punctuation">:</span>
+            <span class="token key atrule">secretName</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard<span class="token punctuation">-</span>certs
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> tmp<span class="token punctuation">-</span>volume
+          <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">serviceAccountName</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+      <span class="token key atrule">nodeSelector</span><span class="token punctuation">:</span>
+        <span class="token key atrule">&quot;kubernetes.io/os&quot;</span><span class="token punctuation">:</span> linux
+      <span class="token comment"># Comment the following tolerations if Dashboard must not be deployed on master</span>
+      <span class="token key atrule">tolerations</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span>role.kubernetes.io/master
+          <span class="token key atrule">effect</span><span class="token punctuation">:</span> NoSchedule
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+
+<span class="token punctuation">---</span>
+
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">revisionHistoryLimit</span><span class="token punctuation">:</span> <span class="token number">10</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">k8s-app</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+      <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+        <span class="token key atrule">seccomp.security.alpha.kubernetes.io/pod</span><span class="token punctuation">:</span> <span class="token string">'runtime/default'</span>
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> dashboard<span class="token punctuation">-</span>metrics<span class="token punctuation">-</span>scraper
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> kubernetesui/metrics<span class="token punctuation">-</span>scraper<span class="token punctuation">:</span>v1.0.6
+          <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+              <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+          <span class="token key atrule">livenessProbe</span><span class="token punctuation">:</span>
+            <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+              <span class="token key atrule">scheme</span><span class="token punctuation">:</span> HTTP
+              <span class="token key atrule">path</span><span class="token punctuation">:</span> /
+              <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8000</span>
+            <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">30</span>
+            <span class="token key atrule">timeoutSeconds</span><span class="token punctuation">:</span> <span class="token number">30</span>
+          <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /tmp
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> tmp<span class="token punctuation">-</span>volume
+          <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+            <span class="token key atrule">allowPrivilegeEscalation</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+            <span class="token key atrule">readOnlyRootFilesystem</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+            <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">1001</span>
+            <span class="token key atrule">runAsGroup</span><span class="token punctuation">:</span> <span class="token number">2001</span>
+      <span class="token key atrule">serviceAccountName</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+      <span class="token key atrule">nodeSelector</span><span class="token punctuation">:</span>
+        <span class="token key atrule">&quot;kubernetes.io/os&quot;</span><span class="token punctuation">:</span> linux
+      <span class="token comment"># Comment the following tolerations if Dashboard must not be deployed on master</span>
+      <span class="token key atrule">tolerations</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span>role.kubernetes.io/master
+          <span class="token key atrule">effect</span><span class="token punctuation">:</span> NoSchedule
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> tmp<span class="token punctuation">-</span>volume
+          <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>然后应用</p> <div class="language- extra-class"><pre class="language-text"><code>kubectl apply -f dashboard.yaml 
+</code></pre></div><p>很多配置文件使用,就会产生很多应用,等待创建完成</p> <p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211008200956.png" alt="image-20211008200956341"></p> <h4 id="_2、设置访问端口"><a href="#_2、设置访问端口" class="header-anchor">#</a> 2、设置访问端口</h4> <p>把端口暴露到机器上</p> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl edit svc kubernetes-dashboard <span class="token parameter variable">-n</span> kubernetes-dashboard
+</code></pre></div><p>type: ClusterIP 改为 type: NodePort</p> <div class="language-bash extra-class"><pre class="language-bash"><code>kubectl get svc <span class="token parameter variable">-A</span> <span class="token operator">|</span><span class="token function">grep</span> kubernetes-dashboard
+<span class="token comment">## 找到端口  3w多的 ，在安全组放行</span>
+</code></pre></div><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211008201442.png" alt="image-20211008201442827"></p> <p>虚拟机则 开放端口</p> <div class="language- extra-class"><pre class="language-text"><code>1、开启防火墙 
+    systemctl start firewalld
+
+2、开放指定端口
+      firewall-cmd --zone=public --add-port=31033/tcp --permanent
+ 命令含义：
+--zone #作用域
+--add-port=1935/tcp  #添加端口，格式为：端口/通讯协议
+--permanent  #永久生效，没有此参数重启后失效
+
+3、重启防火墙
+      firewall-cmd --reload
+
+4、查看端口号
+netstat -ntlp   //查看当前所有tcp端口·
+
+netstat -ntulp |grep 1935   //查看所有1935端口使用情况·
+
+关闭防火墙 systemctl stop firewalld
+</code></pre></div><p>访问： https://集群任意IP:端口      https://192.168.152.134:31033</p> <h4 id="_3、创建访问账号"><a href="#_3、创建访问账号" class="header-anchor">#</a> 3、创建访问账号</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment">#创建访问账号，准备一个yaml文件； vi dash-user.yaml</span>
+<span class="token comment"># 注意: 全部粘贴 如果报错 检查配置文件第一行是否有问题</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> admin<span class="token punctuation">-</span>user
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRoleBinding
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> admin<span class="token punctuation">-</span>user
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> cluster<span class="token punctuation">-</span>admin
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> admin<span class="token punctuation">-</span>user
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kubernetes<span class="token punctuation">-</span>dashboard
+
+
+<span class="token comment"># 应用  kubectl apply -f dash-user.yaml</span>
+</code></pre></div><p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211009123318.png" alt="image-20211009123317721"></p> <h4 id="_4、令牌访问"><a href="#_4、令牌访问" class="header-anchor">#</a> 4、令牌访问</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#获取访问令牌</span>
+kubectl <span class="token parameter variable">-n</span> kubernetes-dashboard get secret <span class="token variable"><span class="token variable">$(</span>kubectl <span class="token parameter variable">-n</span> kubernetes-dashboard get sa/admin-user <span class="token parameter variable">-o</span> <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.secrets[0].name}&quot;</span><span class="token variable">)</span></span> <span class="token parameter variable">-o</span> go-template<span class="token operator">=</span><span class="token string">&quot;{{.data.token | base64decode}}&quot;</span>
+</code></pre></div><p>得到令牌</p> <div class="language-json extra-class"><pre class="language-json"><code>eyJhbGciOiJSUzI1NiIsImtpZCI6IjNMZzNyNFVhOTRuN0s2cVBpZmpFREt5RGFDQ0xjM2hjNFY1bDZ3WlF4SDgifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXE2OWhmIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIyYmEzMTRkZS00NmVkLTQyMzUtODg4MC02OGJjOTcxMGZhNjkiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.Wb3Bg-Gp-yiyisybRCEYArhj8E5j8XcZnCsmELPsJYlrzV367sfmMzp17_LmsC3vjyOyWoEux3PcYn5lTnxzbcVvpbEWThdbkPyx7c4z6wqTcuj-B2UKteHw6QAnNJdhH3hEJEdUQAo3L961uz-TNFNDzbyt_-hZEtOyRBYS8aysL2a5Wyy77f10TN19Pn2kyZRq_lseOXIJRpYZlARe107PaLmEelvBwZPKSj93XukKRkpk7sD8Pe_AFc9jJzBa6ciQfRJ37OVQL3vDZXQmDuCsdCLCytKFycP2wJod-QixiPmC4mKSW2IqSvn2Mj57iAOBrUuOgKfjswVtZNpSMQ
+</code></pre></div><h4 id="_5、界面"><a href="#_5、界面" class="header-anchor">#</a> 5、界面</h4> <p><img src="https://gitee.com/zouyu0310/images/raw/master/img/20211009123608.png" alt="image-20211009123607809"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/docker学习.html" class="prev">
+        将应用打包成镜像
+      </a></span> <span class="next"><a href="/blog/Deploy/Docker/尚硅谷Docker学习0929/k8s核心实战.html">
+        Kubernetes核心实战
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.240fe854.js" defer></script><script src="/blog/assets/js/3.ae24385a.js" defer></script><script src="/blog/assets/js/203.093fd7f3.js" defer></script>
+  </body>
+</html>
